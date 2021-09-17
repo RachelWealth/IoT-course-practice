@@ -308,7 +308,7 @@ u8 LD3320::LD_AsrAddFixed(void)
   u8 nAsrAddLength;
   
   #define DATE_A 6   //数组二维数值
-  #define DATE_B 20   //数组一维数值
+  #define DATE_B 13   //数组一维数值
   
   
   u8 sRecog[DATE_A][DATE_B] = {
@@ -342,16 +342,16 @@ u8 LD3320::LD_AsrAddFixed(void)
                           CODE_1KL1,\
                           CODE_1KL2,\
                           CODE_1KL3,\
-                          CODE_1KL4,\
+                          // CODE_1KL4,\
     
-                          CODE_2KL1,\
-                          CODE_2KL2,\
-                          CODE_2KL3,\
-                          CODE_2KL4,\
+                          // CODE_2KL1,\
+                          // CODE_2KL2,\
+                          // CODE_2KL3,\
+                          // CODE_2KL4,\
     
-                          CODE_3KL1,\
-                          CODE_3KL2,\
-                          CODE_5KL1,
+                          // CODE_3KL1,\
+                          // CODE_3KL2,\
+                          // CODE_5KL1,
                           
                         };  /*添加识别码，用户修改*/  
   flag = 1;
