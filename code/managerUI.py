@@ -33,16 +33,16 @@ class Ui_MainWindow(object):
         self.button_add.setStyleSheet("QPushButton{border:none;\ncolor:white;\nfont-size:26px;}"
 "QPushButton:hover{border:none;color:white;font-weight:700;}")
         self.button_add.setObjectName("button_add")
-        self.label_clothe = QtWidgets.QLabel(self.centralwidget)
-        self.label_clothe.setGeometry(QtCore.QRect(10, 140, 240, 30))
-        self.label_clothe.setStyleSheet("color:white;\n"
+        self.label_cloth = QtWidgets.QLabel(self.centralwidget)
+        self.label_cloth.setGeometry(QtCore.QRect(10, 140, 240, 30))
+        self.label_cloth.setStyleSheet("color:white;\n"
 "border:none;\n"
 "border-bottom:1px solid white;\n"
 "font-size:25px;\n"
 "font-weight:700;\n"
 "font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;")
-        self.label_clothe.setAlignment(QtCore.Qt.AlignCenter)
-        self.label_clothe.setObjectName("label_clothe")
+        self.label_cloth.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_cloth.setObjectName("label_cloth")
         self.label_flavoring = QtWidgets.QLabel(self.centralwidget)
         self.label_flavoring.setGeometry(QtCore.QRect(10, 400, 240, 30))
         self.label_flavoring.setStyleSheet("color:white;\n"
@@ -138,7 +138,7 @@ class Ui_MainWindow(object):
         self.columnView_header.raise_()
         self.button_manager.raise_()
         self.button_add.raise_()
-        self.label_clothe.raise_()
+        self.label_cloth.raise_()
         self.label_flavoring.raise_()
         self.label_book.raise_()
         self.button_color.raise_()
@@ -168,7 +168,7 @@ class Ui_MainWindow(object):
         MainWindow.setWindowTitle(_translate("MainWindow", "家庭管家系统"))
         self.button_manager.setText(_translate("MainWindow", "管理"))
         self.button_add.setText(_translate("MainWindow", "添加"))
-        self.label_clothe.setText(_translate("MainWindow", "衣服"))
+        self.label_cloth.setText(_translate("MainWindow", "衣服"))
         self.label_flavoring.setText(_translate("MainWindow", "调料"))
         self.label_book.setText(_translate("MainWindow", "图书"))
         self.button_color.setText(_translate("MainWindow", "颜色"))

@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="46ac82c7-a19f-48a5-bfd2-a3486266766a" name="默认更改列表" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IoT.db" beforeDir="false" afterPath="$PROJECT_DIR$/IoT.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/managerUI.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/managerSQL.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/managerSQL.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/managerUI.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/managerUI.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,16 +13,16 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/IoTPractice$managerUI.coverage" NAME="managerUI Coverage Results" MODIFIED="1632114929381" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/code" />
+    <SUITE FILE_PATH="coverage/IoTPractice$managerUI.coverage" NAME="managerUI Coverage Results" MODIFIED="1632116304445" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/code" />
     <SUITE FILE_PATH="coverage/IoTPractice$My07Gui.coverage" NAME="My07Gui Coverage Results" MODIFIED="1631932518065" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Desktop/My07Gui" />
-    <SUITE FILE_PATH="coverage/IoTPractice$managerSQL.coverage" NAME="managerSQL Coverage Results" MODIFIED="1631935149224" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/code" />
+    <SUITE FILE_PATH="coverage/IoTPractice$managerSQL.coverage" NAME="managerSQL Coverage Results" MODIFIED="1632116310690" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/code" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../prac/managerUI.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
+            <state relative-caret-position="2520">
               <caret line="87" column="87" selection-start-line="87" selection-start-column="36" selection-end-line="87" selection-end-column="87" />
               <folding>
                 <element signature="e#15#55#0" expanded="true" />
@@ -31,13 +31,25 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/code/managerUI.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1321">
-              <caret line="106" column="61" selection-start-line="106" selection-start-column="61" selection-end-line="106" selection-end-column="61" />
+            <state relative-caret-position="3005">
+              <caret line="139" column="32" lean-forward="true" selection-start-line="139" selection-start-column="32" selection-end-line="139" selection-end-column="32" />
               <folding>
                 <element signature="e#292#334#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/code/managerSQL.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="122">
+              <caret line="15" column="11" lean-forward="true" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
+              <folding>
+                <element signature="e#0#14#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -52,6 +64,11 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>clothe</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -60,8 +77,8 @@
       <list>
         <option value="$PROJECT_DIR$/code/wardrobe.py" />
         <option value="$USER_HOME$/Desktop/My07Gui/My07Gui.py" />
-        <option value="$PROJECT_DIR$/code/managerSQL.py" />
         <option value="$PROJECT_DIR$/code/managerUI.py" />
+        <option value="$PROJECT_DIR$/code/managerSQL.py" />
       </list>
     </option>
   </component>
@@ -113,7 +130,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.managerUI">
+  <component name="RunManager" selected="Python.managerSQL">
     <configuration name="My07Gui" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="IoTPractice" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -182,8 +199,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.managerUI" />
         <item itemvalue="Python.managerSQL" />
+        <item itemvalue="Python.managerUI" />
         <item itemvalue="Python.My07Gui" />
       </list>
     </recent_temporary>
@@ -203,16 +220,17 @@
       <workItem from="1631931611092" duration="3607000" />
       <workItem from="1632059436715" duration="2449000" />
       <workItem from="1632106559165" duration="4540000" />
+      <workItem from="1632116110282" duration="219000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24104000" />
+    <option name="totallyTimeSpent" value="24323000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="704" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13177042" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13338722" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -290,19 +308,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/code/managerSQL.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="106" column="26" lean-forward="true" selection-start-line="106" selection-start-column="26" selection-end-line="106" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../prac/managerUI.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
+        <state relative-caret-position="2520">
           <caret line="87" column="87" selection-start-line="87" selection-start-column="36" selection-end-line="87" selection-end-column="87" />
           <folding>
             <element signature="e#15#55#0" expanded="true" />
@@ -312,10 +320,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/code/managerUI.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1321">
-          <caret line="106" column="61" selection-start-line="106" selection-start-column="61" selection-end-line="106" selection-end-column="61" />
+        <state relative-caret-position="3005">
+          <caret line="139" column="32" lean-forward="true" selection-start-line="139" selection-start-column="32" selection-end-line="139" selection-end-column="32" />
           <folding>
             <element signature="e#292#334#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/managerSQL.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="122">
+          <caret line="15" column="11" lean-forward="true" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -12,28 +12,28 @@ class managerSQL():
 
     def createTable(self):
         """
-            数据库中表的创建，共三个表，分别为clothe,flavoring,book
+            数据库中表的创建，共三个表，分别为cloth,flavoring,book
         """
         try:
-            self.cursor.execute("create table clothe (id integer primary key,type varchar,gender varchar,color varchar,season varchar,brand varchar,create_time,updata_time,deleted integer)")
+            self.cursor.execute("create table cloth (id integer primary key,type varchar,gender varchar,color varchar,season varchar,brand varchar,create_time,updata_time,deleted integer)")
             self.cursor.execute("create table flavoring (id integer primary key,type varchar,brand varchar,create_time,updata_time,deleted integer)")
             self.cursor.execute("create table book (id integer primary key,type varchar,author varchar,language varchar,publisher varchar,create_time,updata_time,deleted integer)")
             self.con.commit()
         except Exception as e:
             self.con.rollback()
 
-    def executeInsertClothe(self,id,gender,color,season,brand):
+    def executeInsertcloth(self,id,gender,color,season,brand):
         """
-            数据库中clothe表的插入操作
+            数据库中cloth表的插入操作
             @:param id: 唯一标识
             @:param gender: 性别
             @:param color: 颜色
             @:param season: 季节
             @:param brand: 品牌
         """
-        sql='insert into clothe(id,type,gender,color,season,brand,create_time,updata_time,deleted) values(?,?,?,?,?,?,?,?,?)'
+        sql='insert into cloth(id,type,gender,color,season,brand,create_time,updata_time,deleted) values(?,?,?,?,?,?,?,?,?)'
         try:
-            self.cursor.execute(sql, (id,"clothe",gender,color,season,brand,now_time,now_time,0))
+            self.cursor.execute(sql, (id,"cloth",gender,color,season,brand,now_time,now_time,0))
             self.con.commit()
         except Exception as e:
             self.con.rollback()
