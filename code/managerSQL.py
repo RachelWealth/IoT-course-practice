@@ -87,9 +87,9 @@ class managerSQL():
             @:param table_name: 需要进行删除操作的表名
             @:param id: 唯一标识，根据id进行数据库的删除
         """
-        sql='delete from '+table_name+' where id=?'
+        sql='update '+table_name+' set deleted =? where id=?'
         try:
-            self.cursor.execute(sql, (id,))
+            self.cursor.execute(sql, (1,id))
             self.con.commit()
         except Exception as e:
             self.con.rollback()
@@ -99,19 +99,20 @@ class managerSQL():
             数据库的无条件查询
             @:param table_name: 需要进行查询操作的表名
         """
-        sql = 'select * from ' + table_name
+        sql = 'select * from ' + table_name+' where deleted=0'
         cur = self.cursor.execute(sql)
         for row in cur:
             print(row)
 
-    def executeQuery2(self, table_name, id):
+    def executeQuery2(self, table_name, key, value):
         """
             数据库的查询
             @:param table_name: 需要进行查询操作的表名
-            @:param id: 唯一标识,根据id进行数据库的查询
+            @:param key: 需要修改的字段名
+            @:param value: 更新后的值
         """
-        sql = 'select * from '+table_name+' where id = ? '
-        cur=self.cursor.execute(sql,(id,))
+        sql = 'select * from '+table_name+' where '+key+' = ? and deleted=0'  # exception where deleted=1
+        cur=self.cursor.execute(sql,(value,))
         for row in cur:
             print(row)
 
@@ -127,10 +128,11 @@ if __name__ == '__main__':
     db.createTable()
     db.executeInsertBook(1,'maijia','Chinese','suibian')
     db.executeInsertBook(2,'antusheng','English','suibian')
+    db.executeInsertBook(3, 'liucixin', 'Chinese', 'suibian')
     db.executeQuery1('book')
-    db.executeQuery2('book',2)
-    db.executeUpdate('book',2,'publisher','111')
-    db.executeQuery2('book',2)
+    db.executeQuery2('book','author','liucixin')
+    db.executeUpdate('book',2,'publisher','222')
+    #db.executeQuery2('book',2)
     db.executeDelete('book',1)
     db.executeQuery1('book')
     db.close()
