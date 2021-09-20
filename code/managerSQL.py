@@ -98,11 +98,14 @@ class managerSQL():
         """
             数据库的无条件查询
             @:param table_name: 需要进行查询操作的表名
+            @:return id_value：查询结果的id数组
         """
         sql = 'select * from ' + table_name+' where deleted=0'
         cur = self.cursor.execute(sql)
+        id_value=[]
         for row in cur:
-            print(row)
+            id_value.append(row[0])
+        return id_value
 
     def executeQuery2(self, table_name, key, value):
         """
@@ -110,11 +113,14 @@ class managerSQL():
             @:param table_name: 需要进行查询操作的表名
             @:param key: 需要修改的字段名
             @:param value: 更新后的值
+            @:return id_value：查询结果的id数组
         """
         sql = 'select * from '+table_name+' where '+key+' = ? and deleted=0'  # exception where deleted=1
         cur=self.cursor.execute(sql,(value,))
+        id_value = []
         for row in cur:
-            print(row)
+            id_value.append(row[0])
+        return id_value
 
     def close(self):
         self.cursor.close()
@@ -129,10 +135,11 @@ if __name__ == '__main__':
     db.executeInsertBook(1,'maijia','Chinese','suibian')
     db.executeInsertBook(2,'antusheng','English','suibian')
     db.executeInsertBook(3, 'liucixin', 'Chinese', 'suibian')
-    db.executeQuery1('book')
-    db.executeQuery2('book','author','liucixin')
+    a=db.executeQuery1('book')
+    b=db.executeQuery2('book','author','liucixin')
     db.executeUpdate('book',2,'publisher','222')
     #db.executeQuery2('book',2)
     db.executeDelete('book',1)
-    db.executeQuery1('book')
+    c=db.executeQuery1('book')
+    print(a)
     db.close()
