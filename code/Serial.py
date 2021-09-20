@@ -87,12 +87,14 @@ class Serial:
         flag = 0
         if self.__ser.in_waiting():
             self.__data = self.__ser.readline()
-            if self.__data == 'yi fu':
+            if self.__data == 'xiao jie':
                 flag = 1
-            elif self.__data == 'tu shu':
+            elif self.__data == 'yi fu':
                 flag = 2
-            elif self.__data == 'tiao liao':
+            elif self.__data == 'tu shu':
                 flag = 3
+            elif self.__data == 'tiao liao':
+                flag = 4
             else:
                 flag = -1
             logging.info("data from serial:" + str(flag))

@@ -1,19 +1,19 @@
-
+import sys
+from PyQt5.QtWidgets import *
+from application import AppWindow
 objs = ['cloth', 'flovoring', 'book']
 databases=['cloth', 'flovoring', 'book']
 
 
 
 
-def findObj(objtype):
-    """
-    this function can search the id of object we need to find and return the retuslt
-    :param objtype: type->string,
-    :return: result:type->list   value:list of id we need to find
-    """
-    index = objs.index(objtype)
-    if index ==0:
-        result = queryClothDatabase()
+
+
+if __name__ == "__main__":
+    app = QApplication(sys.argv)
+    win = AppWindow()
+    win.show()
+    sys.exit(app.exec_())
 
 
 
