@@ -2,11 +2,12 @@ from managerUI import MainUi
 from PyQt5 import QtWidgets, QtCore
 from PyQt5.QtWidgets import *
 import threading
-from PyQt5.QtCore import QTimer, pyqtSlot
+from PyQt5.QtCore import QTimer, pyqtSlot, QStringListModel
 from managerSQL import managerSQL
 import logging
 from Serial import Serial
 from WarningQDialog import WarningQDialog
+from classfier import classfier
 
 LOG_FORMAT = "%(asctime)s - %(levelname)s - %(message)s"
 DATE_FORMAT = "%m/%d/%Y %H:%M:%S %p"
@@ -22,6 +23,7 @@ class AppWindow(QMainWindow, MainUi):
         self.result = []
         self.queryTableName = ''  # the name of table we need to query
         self.sqlHelper = managerSQL()
+        self.classHelper = classfier()
 
         self._timer.timeout.connect(self.voiceManager)
         self._timer.start(1000)  # plot after 1s delay
@@ -31,12 +33,26 @@ class AppWindow(QMainWindow, MainUi):
         self.__searchHelper__('cloth')
 
     @pyqtSlot()
-    def on_left_label_2_click(self):
+    def on_label_flavoring_click(self):
         self.__searchHelper__('flavoring')
 
     @pyqtSlot()
-    def on_left_label_3_click(self):
+    def on_label_book_click(self):
         self.__searchHelper__('book')
+
+    @pyqtSlot()
+    def on_button_color_click(self):
+        self.showMyObject(self)
+
+    @pyqtSlot()
+    def on_button_cbranch_click(self):
+
+    @pyqtSlot()
+    def on_button_season_click(self):
+
+    @pyqtSlot()
+    def on_button_fbrand_click(self):
+
 
     def __searchHelper__(self, tableName):
         """
@@ -47,6 +63,36 @@ class AppWindow(QMainWindow, MainUi):
         logging.info("search from " + tableName + '...')
         self.queryTableName = tableName
         self.sqlHelper.executeQuery1(tableName)
+
+    def __subClassDisplay__(self,objName):
+        """
+        this function to dispaly the subclass list of every type of object
+        :param objName: value:cloth, flavoring, book and so on
+        :return:
+        """
+        slm = QStringListModel()
+        myList = list(self.classHelper.home.get(objName))
+        slm.setStringList(myList)
+        self.listView.setModel(slm)
+        self.listView.clicked.connect(self.subClassRes)
+        layout.addWidget(self.listView)
+        self.setLayout(layout)
+
+    def subClassRes(self, classNmae):
+        """
+        this function used to show the right
+        :return:
+        """
+
+    def __subSearchHelper__(self, tableName, subClass, reSubClass):
+        """
+
+        :param tableName: the same with type name
+        :param subClass: the detailed class of the object
+        :param reSubClass: the class of subClass
+        :return:
+        """
+
 
     def __voiceManager__(self):
         """
@@ -71,4 +117,3 @@ class AppWindow(QMainWindow, MainUi):
         Show the object we have in the right side
         :return:
         """
-        

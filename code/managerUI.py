@@ -11,6 +11,7 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 import sys
 
+
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
@@ -26,113 +27,113 @@ class Ui_MainWindow(object):
         self.button_manager = QtWidgets.QPushButton(self.centralwidget)
         self.button_manager.setGeometry(QtCore.QRect(30, 80, 80, 45))
         self.button_manager.setStyleSheet("QPushButton{border:none;\ncolor:white;\nfont-size:26px;}"
-"QPushButton:hover{border:none;color:white;font-weight:700;}")
+                                          "QPushButton:hover{border:none;color:white;font-weight:700;}")
         self.button_manager.setObjectName("button_manager")
         self.button_add = QtWidgets.QPushButton(self.centralwidget)
         self.button_add.setGeometry(QtCore.QRect(140, 80, 80, 45))
         self.button_add.setStyleSheet("QPushButton{border:none;\ncolor:white;\nfont-size:26px;}"
-"QPushButton:hover{border:none;color:white;font-weight:700;}")
+                                      "QPushButton:hover{border:none;color:white;font-weight:700;}")
         self.button_add.setObjectName("button_add")
         self.label_cloth = QtWidgets.QLabel(self.centralwidget)
         self.label_cloth.setGeometry(QtCore.QRect(10, 140, 240, 30))
         self.label_cloth.setStyleSheet("color:white;\n"
-"border:none;\n"
-"border-bottom:1px solid white;\n"
-"font-size:25px;\n"
-"font-weight:700;\n"
-"font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;")
+                                       "border:none;\n"
+                                       "border-bottom:1px solid white;\n"
+                                       "font-size:25px;\n"
+                                       "font-weight:700;\n"
+                                       "font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;")
         self.label_cloth.setAlignment(QtCore.Qt.AlignCenter)
         self.label_cloth.setObjectName("label_cloth")
         self.label_flavoring = QtWidgets.QLabel(self.centralwidget)
         self.label_flavoring.setGeometry(QtCore.QRect(10, 400, 240, 30))
         self.label_flavoring.setStyleSheet("color:white;\n"
-"border:none;\n"
-"border-bottom:1px solid white;\n"
-"font-size:25px;\n"
-"font-weight:700;\n"
-"font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;")
+                                           "border:none;\n"
+                                           "border-bottom:1px solid white;\n"
+                                           "font-size:25px;\n"
+                                           "font-weight:700;\n"
+                                           "font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;")
         self.label_flavoring.setAlignment(QtCore.Qt.AlignCenter)
         self.label_flavoring.setObjectName("label_flavoring")
         self.label_book = QtWidgets.QLabel(self.centralwidget)
         self.label_book.setGeometry(QtCore.QRect(10, 660, 240, 30))
         self.label_book.setStyleSheet("color:white;\n"
-"border:none;\n"
-"border-bottom:1px solid white;\n"
-"font-size:25px;\n"
-"font-weight:700;\n"
-"font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;")
+                                      "border:none;\n"
+                                      "border-bottom:1px solid white;\n"
+                                      "font-size:25px;\n"
+                                      "font-weight:700;\n"
+                                      "font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;")
         self.label_book.setAlignment(QtCore.Qt.AlignCenter)
         self.label_book.setObjectName("label_book")
         self.button_color = QtWidgets.QPushButton(self.centralwidget)
         self.button_color.setGeometry(QtCore.QRect(10, 200, 240, 30))
         self.button_color.setStyleSheet("QPushButton{border:none;\ncolor:white;\nfont-size:25px;}"
-"QPushButton:hover{border-left:4px solid white;font-weight:700;}")
+                                        "QPushButton:hover{border-left:4px solid white;font-weight:700;}")
         self.button_color.setObjectName("button_color")
         self.button_cbrand = QtWidgets.QPushButton(self.centralwidget)
         self.button_cbrand.setGeometry(QtCore.QRect(10, 260, 240, 30))
         self.button_cbrand.setStyleSheet("QPushButton{border:none;\ncolor:white;\nfont-size:25px;}"
-"QPushButton:hover{border-left:4px solid white;font-weight:700;}")
+                                         "QPushButton:hover{border-left:4px solid white;font-weight:700;}")
         self.button_cbrand.setObjectName("button_cbrand")
         self.button_season = QtWidgets.QPushButton(self.centralwidget)
         self.button_season.setGeometry(QtCore.QRect(10, 320, 240, 30))
         self.button_season.setStyleSheet("QPushButton{border:none;\ncolor:white;\nfont-size:25px;}"
-"QPushButton:hover{border-left:4px solid white;font-weight:700;}")
+                                         "QPushButton:hover{border-left:4px solid white;font-weight:700;}")
         self.button_season.setObjectName("button_season")
         self.button_fbrand = QtWidgets.QPushButton(self.centralwidget)
         self.button_fbrand.setGeometry(QtCore.QRect(10, 460, 240, 30))
         self.button_fbrand.setStyleSheet("QPushButton{border:none;\ncolor:white;\nfont-size:25px;}"
-"QPushButton:hover{border-left:4px solid white;font-weight:700;}")
+                                         "QPushButton:hover{border-left:4px solid white;font-weight:700;}")
         self.button_fbrand.setObjectName("button_fbrand")
         self.button_f2 = QtWidgets.QPushButton(self.centralwidget)
         self.button_f2.setGeometry(QtCore.QRect(10, 520, 240, 30))
         self.button_f2.setStyleSheet("QPushButton{border:none;\ncolor:white;\nfont-size:25px;}"
-"QPushButton:hover{border-left:4px solid white;font-weight:700;}")
+                                     "QPushButton:hover{border-left:4px solid white;font-weight:700;}")
         self.button_f2.setObjectName("button_f2")
         self.button_f3 = QtWidgets.QPushButton(self.centralwidget)
         self.button_f3.setGeometry(QtCore.QRect(10, 580, 240, 30))
         self.button_f3.setStyleSheet("QPushButton{border:none;\ncolor:white;\nfont-size:25px;}"
-"QPushButton:hover{border-left:4px solid white;font-weight:700;}")
+                                     "QPushButton:hover{border-left:4px solid white;font-weight:700;}")
         self.button_f3.setObjectName("button_f3")
         self.button_author = QtWidgets.QPushButton(self.centralwidget)
         self.button_author.setGeometry(QtCore.QRect(10, 720, 240, 30))
         self.button_author.setStyleSheet("QPushButton{border:none;\ncolor:white;\nfont-size:25px;}"
-"QPushButton:hover{border-left:4px solid white;font-weight:700;}")
+                                         "QPushButton:hover{border-left:4px solid white;font-weight:700;}")
         self.button_author.setObjectName("button_author")
         self.button_language = QtWidgets.QPushButton(self.centralwidget)
         self.button_language.setGeometry(QtCore.QRect(10, 780, 240, 30))
         self.button_language.setStyleSheet("QPushButton{border:none;\ncolor:white;\nfont-size:25px;}"
-"QPushButton:hover{border-left:4px solid white;font-weight:700;}")
+                                           "QPushButton:hover{border-left:4px solid white;font-weight:700;}")
         self.button_language.setObjectName("button_language")
         self.button_publisher = QtWidgets.QPushButton(self.centralwidget)
         self.button_publisher.setGeometry(QtCore.QRect(10, 840, 240, 30))
         self.button_publisher.setStyleSheet("QPushButton{border:none;\ncolor:white;\nfont-size:25px;}"
-"QPushButton:hover{border-left:4px solid white;font-weight:700;}")
+                                            "QPushButton:hover{border-left:4px solid white;font-weight:700;}")
         self.button_publisher.setObjectName("button_publisher")
         self.columnView_left = QtWidgets.QColumnView(self.centralwidget)
         self.columnView_left.setGeometry(QtCore.QRect(0, 0, 270, 1200))
         self.columnView_left.setStyleSheet("background-color:rgb(106, 208, 255);\n"
-"color:white;\n"
-"border-top:1px solid white;\n"
-"border-bottom:1px solid white;\n"
-"border-left:1px solid white;\n"
-"border-top-left-radius:10px;\n"
-"border-bottom-left-radius:10px;")
+                                           "color:white;\n"
+                                           "border-top:1px solid white;\n"
+                                           "border-bottom:1px solid white;\n"
+                                           "border-left:1px solid white;\n"
+                                           "border-top-left-radius:10px;\n"
+                                           "border-bottom-left-radius:10px;")
         self.columnView_left.setObjectName("columnView_left")
         self.columnView_header = QtWidgets.QColumnView(self.centralwidget)
         self.columnView_header.setGeometry(QtCore.QRect(270, 0, 1800, 120))
         self.columnView_header.setStyleSheet("background-color:rgb(106, 208, 255);\n"
-"border-top:1px solid white;\n"
-"border-top-right-radius:10px;\n"
-"border-bottom:1px solid white;")
+                                             "border-top:1px solid white;\n"
+                                             "border-top-right-radius:10px;\n"
+                                             "border-bottom:1px solid white;")
         self.columnView_header.setObjectName("columnView_header")
         self.columnView_main = QtWidgets.QColumnView(self.centralwidget)
         self.columnView_main.setGeometry(QtCore.QRect(270, 120, 1800, 1080))
         self.columnView_main.setStyleSheet("color:#87CEFA;\n"
-"background:white;\n"
-"border-top:1px solid darkGray;\n"
-"border-bottom:1px solid darkGray;\n"
-"border-right:1px solid darkGray;\n"
-"border-bottom-right-radius:10px;")
+                                           "background:white;\n"
+                                           "border-top:1px solid darkGray;\n"
+                                           "border-bottom:1px solid darkGray;\n"
+                                           "border-right:1px solid darkGray;\n"
+                                           "border-bottom-right-radius:10px;")
         self.columnView_main.setObjectName("columnView_main")
         self.columnView_left.raise_()
         self.columnView_header.raise_()
@@ -181,10 +182,11 @@ class Ui_MainWindow(object):
         self.button_language.setText(_translate("MainWindow", "语言"))
         self.button_publisher.setText(_translate("MainWindow", "出版社"))
 
+
 if __name__ == "__main__":
-    app=QtWidgets.QApplication(sys.argv)    #创建一个QApplication
-    MainWindow=QtWidgets.QMainWindow()      #创建一个QMainWindow
-    ui=Ui_MainWindow()                      #ui是Ui_MainWindow()类的实例化对象
-    ui.setupUi(MainWindow)                  #执行类中的setupUi方法
+    app = QtWidgets.QApplication(sys.argv)  # 创建一个QApplication
+    MainWindow = QtWidgets.QMainWindow()  # 创建一个QMainWindow
+    ui = Ui_MainWindow()  # ui是Ui_MainWindow()类的实例化对象
+    ui.setupUi(MainWindow)  # 执行类中的setupUi方法
     MainWindow.show()
     sys.exit(app.exec_())
