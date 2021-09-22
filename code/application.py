@@ -31,14 +31,17 @@ class AppWindow(QMainWindow, MainUi):
     @pyqtSlot()
     def on_label_cloth_click(self):
         self.__searchHelper__('cloth')
+        self.__subClassDisplay__('cloth')
 
     @pyqtSlot()
     def on_label_flavoring_click(self):
         self.__searchHelper__('flavoring')
+        self.__subClassDisplay__('flavoring')
 
     @pyqtSlot()
     def on_label_book_click(self):
         self.__searchHelper__('book')
+        self.__subClassDisplay__('book')
 
     @pyqtSlot()
     def on_button_color_click(self):
@@ -71,16 +74,30 @@ class AppWindow(QMainWindow, MainUi):
         :return:
         """
         slm = QStringListModel()
-        myList = list(self.classHelper.home.get(objName))
-        slm.setStringList(myList)
+        self.currentObject = objName
+        self.myList = list(self.classHelper.home.get(objName))
+        slm.setStringList(self.myList)
         self.listView.setModel(slm)
         self.listView.clicked.connect(self.subClassRes)
         layout.addWidget(self.listView)
         self.setLayout(layout)
 
-    def subClassRes(self, classNmae):
+    def subClassRes(self, qModelIndex):
         """
-        this function used to show the right
+        click feature area to get more detailed classfier
+        :return:
+        """
+        if self.currentObject == 'cloth':
+            self.rightClass = list(self.classHelper.homeCloth.get(self.myList[qModelIndex.row()]))
+        elif self.currentObject == 'flavoring':
+            self.rightClass = list(self.classHelper.homeFlavoring.get(self.myList[qModelIndex.row()]))
+        elif self.currentObject == 'book':
+            self.rightClass = list(self.classHelper.homeBook.get(self.myList[qModelIndex.row()]))
+        self.rightFieldShow()
+
+    def rightFieldShow(self):
+        """
+        this function used to switch the display content
         :return:
         """
 
@@ -112,8 +129,4 @@ class AppWindow(QMainWindow, MainUi):
         else:
             pass
 
-    def showMyObject(self):
-        """
-        Show the object we have in the right side
-        :return:
-        """
+    
