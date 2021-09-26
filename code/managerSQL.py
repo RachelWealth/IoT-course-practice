@@ -18,11 +18,32 @@ class managerSQL():
         """
         try:
             self.cursor.execute(
-                "create table cloth (id integer primary key,type varchar,gender varchar,color varchar,season varchar,brand varchar,create_time,updata_time,deleted integer)")
+                "create table cloth (id integer primary key,"
+                "type varchar unique,"
+                "gender varchar,"
+                "color varchar,"
+                "season varchar,"
+                "brand varchar,"
+                "create_time,"
+                "updata_time,"
+                "deleted integer)"  # exist-1 deleted-0
+            )
             self.cursor.execute(
-                "create table flavoring (id integer primary key,type varchar,brand varchar,create_time,updata_time,deleted integer)")
+                "create table flavoring (id integer primary key,"
+                "type varchar unique,"
+                "brand varchar,"
+                "create_time,"
+                "updata_time,"
+                "deleted integer)")
             self.cursor.execute(
-                "create table book (id integer primary key,type varchar,author varchar,language varchar,publisher varchar,create_time,updata_time,deleted integer)")
+                "create table book (id integer primary key,"
+                "type varchar unique,"
+                "author varchar,"
+                "language varchar,"
+                "publisher varchar,"
+                "create_time,"
+                "updata_time,"
+                "deleted integer)")
             self.con.commit()
         except Exception as e:
             self.con.rollback()
