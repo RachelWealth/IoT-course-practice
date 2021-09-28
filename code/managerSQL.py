@@ -129,7 +129,8 @@ class managerSQL():
         cur = self.cursor.execute(sql)
         id_value = []
         for row in cur:
-            id_value.append(row[0])
+            a = list(row)
+            id_value.append(a)
         return id_value
 
     def executeQuery2(self, table_name, key, value):
@@ -144,7 +145,8 @@ class managerSQL():
         cur = self.cursor.execute(sql, (value,))
         id_value = []
         for row in cur:
-            id_value.append(row[0])
+            a = list(row)
+            id_value.append(a)
         return id_value
 
     def close(self):
@@ -157,6 +159,7 @@ class managerSQL():
 """
 if __name__ == '__main__':
     db = managerSQL()
+    """
     db.createTable()
     db.executeInsertcloth(1, '女', '红', '秋', 'Veromoda')
     db.executeInsertcloth(2, '女', '绿', '秋', 'Veromoda')
@@ -228,6 +231,9 @@ if __name__ == '__main__':
     print(a)
     print(b)
     print(c)
+    """
+    d = db.executeQuery1('cloth')
+    print(d)
     #b = db.executeQuery2('book', 'author', 'liucixin')
     #db.executeUpdate('book', 2, 'publisher', '222')
     # db.executeQuery2('book',2)
