@@ -49,7 +49,7 @@ class AppWindow(QMainWindow, Ui_MainWindow):
 
         self.browser = QWebEngineView()
         # 加载外部的web界面
-        self.browser.load(QUrl('https://www.baidu.com'))
+        self.browser.load(QUrl('file:///E:/workplace/pycharmWork/IoTPractice/IoTPractice/code/embedweb/ma.html'))
         # self.setCentralWidget(self.browser)
         self.grid = QGridLayout(self.groupBox_2)
         self.grid.addWidget(self.browser)
@@ -60,10 +60,10 @@ class AppWindow(QMainWindow, Ui_MainWindow):
     def __firstClassClick__(self):
         logging.info('------------------------------')
         num = self.listWidget.selectedIndexes()[0].row()
-        print('__objectClick__'+str(num))
+        print('__objectClick__' + str(num))
         self.firstClass = self.classHelper.homeObj.get(num)
-        logging.info('click '+self.firstClass+'item')
-        print('click '+self.firstClass+' item')
+        logging.info('click ' + self.firstClass + 'item')
+        print('click ' + self.firstClass + ' item')
         self.__searchHelper__(self.firstClass)
         self.__subClassDisplay__(num)
 
@@ -133,10 +133,10 @@ class AppWindow(QMainWindow, Ui_MainWindow):
                 item = QtWidgets.QTableWidgetItem(itemName)
                 self.tableWidget.setItem(row, col, item)
 
-    def __thirdClassClick__(self,qTableIndex):
-        self.thirdClass = self.tableWidget.item(qTableIndex.row(),qTableIndex.column()).text()
+    def __thirdClassClick__(self, qTableIndex):
+        self.thirdClass = self.tableWidget.item(qTableIndex.row(), qTableIndex.column()).text()
         logging.info('third class click:' + self.thirdClass)
-        self.objSet = self.sqlHelper.executeQuery2(self.firstClass,self.secondClass,self.thirdClass)
+        self.objSet = self.sqlHelper.executeQuery2(self.firstClass, self.secondClass, self.thirdClass)
         self.__objFieldShow__()
 
     def __objFieldShow__(self):
@@ -144,7 +144,6 @@ class AppWindow(QMainWindow, Ui_MainWindow):
         this function used to switch the display content
         :return:
         """
-
 
     def __subSearchHelper__(self, tableName, subClass, reSubClass):
         """

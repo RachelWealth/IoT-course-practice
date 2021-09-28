@@ -57,7 +57,7 @@ border-bottom-left-radius:10px;</string>
            <x>0</x>
            <y>0</y>
            <width>138</width>
-           <height>701</height>
+           <height>707</height>
           </rect>
          </property>
          <widget class="QWidget" name="layoutWidget">
@@ -65,8 +65,8 @@ border-bottom-left-radius:10px;</string>
            <rect>
             <x>20</x>
             <y>30</y>
-            <width>101</width>
-            <height>504</height>
+            <width>110</width>
+            <height>655</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout">
@@ -525,7 +525,7 @@ border:none;</string>
      <x>0</x>
      <y>0</y>
      <width>974</width>
-     <height>29</height>
+     <height>26</height>
     </rect>
    </property>
   </widget>
