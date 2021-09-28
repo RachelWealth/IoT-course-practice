@@ -3,7 +3,6 @@ import datetime
 
 now_time = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 
-
 class managerSQL():
     def __init__(self):
         """
@@ -18,32 +17,32 @@ class managerSQL():
         """
         try:
             self.cursor.execute(
-                "create table cloth (id integer primary key,"
-                "type varchar unique,"
-                "gender varchar,"
-                "color varchar,"
-                "season varchar,"
-                "brand varchar,"
-                "create_time,"
-                "updata_time,"
-                "deleted integer)"  # exist-1 deleted-0
+                """create table cloth (id integer primary key,
+                type varchar,
+                gender varchar,
+                color varchar,
+                season varchar,
+                brand varchar,
+                create_time,
+                updata_time,
+                deleted integer)"""  # exist-1 deleted-0
             )
             self.cursor.execute(
-                "create table flavoring (id integer primary key,"
-                "type varchar unique,"
-                "brand varchar,"
-                "create_time,"
-                "updata_time,"
-                "deleted integer)")
+                """create table flavoring (id integer primary key,
+                type varchar,
+                brand varchar,
+                create_time,
+                updata_time,
+                deleted integer)""")
             self.cursor.execute(
-                "create table book (id integer primary key,"
-                "type varchar unique,"
-                "author varchar,"
-                "language varchar,"
-                "publisher varchar,"
-                "create_time,"
-                "updata_time,"
-                "deleted integer)")
+                """create table book (id integer primary key,
+                type varchar,
+                author varchar,
+                language varchar,
+                publisher varchar,
+                create_time,
+                updata_time,
+                deleted integer)""")
             self.con.commit()
         except Exception as e:
             self.con.rollback()
@@ -222,11 +221,17 @@ if __name__ == '__main__':
     db.executeInsertBook(13, '东野圭吾', '中文', '南海出版社')
     db.executeInsertBook(14, '东野圭吾', '中文', '南海出版社')
     db.executeInsertBook(15, '东野圭吾', '中文', '南海出版社')
-    #a = db.executeQuery1('book')
+
+    a = db.executeQuery1('book')
+    b = db.executeQuery1('cloth')
+    c = db.executeQuery1('flavoring')
+    print(a)
+    print(b)
+    print(c)
     #b = db.executeQuery2('book', 'author', 'liucixin')
     #db.executeUpdate('book', 2, 'publisher', '222')
     # db.executeQuery2('book',2)
     #db.executeDelete('book', 1)
     #c = db.executeQuery1('book')
-    #print(a)
+
     db.close()
