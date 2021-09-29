@@ -3,6 +3,7 @@ import datetime
 
 now_time = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 
+
 class managerSQL():
     def __init__(self):
         """
@@ -149,6 +150,17 @@ class managerSQL():
             id_value.append(a)
         return id_value
 
+    def executeQuery3(self, table_name, key, value):
+        sql = 'select * from ' + table_name + ' where ' + key + ' = ? and deleted=0'  # exception where deleted=1
+        cur = self.cursor.execute(sql, (value,))
+        id_value = []
+        for row in cur:
+            value = {}
+            for idx, col in enumerate(cur.description):
+                value[col[0]] = list(row)[idx]
+            id_value.append(value)
+        return id_value
+
     def close(self):
         self.cursor.close()
         self.con.close()
@@ -234,10 +246,14 @@ if __name__ == '__main__':
     """
     d = db.executeQuery1('cloth')
     print(d)
-    #b = db.executeQuery2('book', 'author', 'liucixin')
-    #db.executeUpdate('book', 2, 'publisher', '222')
-    # db.executeQuery2('book',2)
-    #db.executeDelete('book', 1)
-    #c = db.executeQuery1('book')
+    print('----------------------------------')
+    b = db.executeQuery2('book', 'author', 'liucixin')
+    print('dic----------------------------------')
+    b = db.executeQuery3('book', 'author', '安托万·德·圣埃克苏佩里')
+    print(b)
+    # db.executeUpdate('book', 2, 'publisher', '222')
+    # db.executeQuery2('book',2)安托万·德·圣埃克苏佩里
+    # db.executeDelete('book', 1)
+    # c = db.executeQuery1('book')
 
     db.close()
