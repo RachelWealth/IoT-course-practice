@@ -172,3 +172,36 @@
 09/28/2021 16:27:49 PM - INFO - ---------------set timeer---------------
 09/28/2021 16:27:49 PM - INFO - ---------------set list item response action---------------
 09/28/2021 16:27:49 PM - INFO - finish initial
+09/30/2021 18:07:58 PM - INFO - ---------------set timeer---------------
+09/30/2021 18:07:58 PM - INFO - ---------------set list item response action---------------
+09/30/2021 18:08:05 PM - INFO - finish initial
+09/30/2021 18:12:03 PM - INFO - ------------------------------
+09/30/2021 18:12:03 PM - INFO - click flavoringitem
+09/30/2021 18:12:03 PM - INFO - search from flavoring...
+09/30/2021 18:12:03 PM - INFO - prepare to show second class classifier
+09/30/2021 18:12:03 PM - INFO - show success
+09/30/2021 18:12:04 PM - INFO - ------------------------------
+09/30/2021 18:12:04 PM - INFO - click bookitem
+09/30/2021 18:12:04 PM - INFO - search from book...
+09/30/2021 18:12:04 PM - INFO - prepare to show second class classifier
+09/30/2021 18:12:04 PM - INFO - show success
+09/30/2021 18:12:05 PM - INFO - ------------------------------
+09/30/2021 18:12:05 PM - INFO - click flavoringitem
+09/30/2021 18:12:05 PM - INFO - search from flavoring...
+09/30/2021 18:12:05 PM - INFO - prepare to show second class classifier
+09/30/2021 18:12:05 PM - INFO - show success
+09/30/2021 18:12:07 PM - INFO - ------------------------------
+09/30/2021 18:12:07 PM - INFO - click clothitem
+09/30/2021 18:12:07 PM - INFO - search from cloth...
+09/30/2021 18:12:07 PM - INFO - prepare to show second class classifier
+09/30/2021 18:12:07 PM - INFO - show success
+09/30/2021 18:12:08 PM - INFO - ------------------------------
+09/30/2021 18:12:08 PM - INFO - click flavoringitem
+09/30/2021 18:12:08 PM - INFO - search from flavoring...
+09/30/2021 18:12:08 PM - INFO - prepare to show second class classifier
+09/30/2021 18:12:08 PM - INFO - show success
+09/30/2021 18:12:09 PM - INFO - ------------------------------
+09/30/2021 18:12:09 PM - INFO - click bookitem
+09/30/2021 18:12:09 PM - INFO - search from book...
+09/30/2021 18:12:09 PM - INFO - prepare to show second class classifier
+09/30/2021 18:12:09 PM - INFO - show success

@@ -49,7 +49,7 @@ class AppWindow(QMainWindow, Ui_MainWindow):
 
         self.browser = QWebEngineView()
         # 加载外部的web界面
-        self.browser.load(QUrl('file:///E:/workplace/pycharmWork/IoTPractice/IoTPractice/code/embedweb/ma.html'))
+        self.browser.load(QUrl('file:///E:/workplace/pycharmWork/IoTPractice/IoTPractice/code/web/index.html'))
         # self.setCentralWidget(self.browser)
         self.grid = QGridLayout(self.groupBox_2)
         self.grid.addWidget(self.browser)

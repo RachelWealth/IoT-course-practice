@@ -128,11 +128,12 @@ class managerSQL():
         """
         sql = 'select * from ' + table_name + ' where deleted=0'
         cur = self.cursor.execute(sql)
+        des = cur.description
         id_value = []
         for row in cur:
             a = list(row)
             id_value.append(a)
-        return id_value
+        return id_value,des
 
     def executeQuery2(self, table_name, key, value):
         """
@@ -148,15 +149,13 @@ class managerSQL():
         for row in cur:
             a = list(row)
             id_value.append(a)
-        return id_value
+        return id_value,cur
 
-    def executeQuery3(self, table_name, key, value):
-        sql = 'select * from ' + table_name + ' where ' + key + ' = ? and deleted=0'  # exception where deleted=1
-        cur = self.cursor.execute(sql, (value,))
+    def tupleTOdic(self, cur, des):
         id_value = []
         for row in cur:
             value = {}
-            for idx, col in enumerate(cur.description):
+            for idx, col in enumerate(des):
                 value[col[0]] = list(row)[idx]
             id_value.append(value)
         return id_value
@@ -244,12 +243,13 @@ if __name__ == '__main__':
     print(b)
     print(c)
     """
-    d = db.executeQuery1('cloth')
+    d,des = db.executeQuery1('cloth')
     print(d)
-    print('----------------------------------')
+    dd = db.tupleTOdic(d,des)
+    print('cloth dic----------------------------------\n\n\n\n')
+    print(dd)
+    print('----------------------------------\n\n\n\n')
     b = db.executeQuery2('book', 'author', 'liucixin')
-    print('dic----------------------------------')
-    b = db.executeQuery3('book', 'author', '安托万·德·圣埃克苏佩里')
     print(b)
     # db.executeUpdate('book', 2, 'publisher', '222')
     # db.executeQuery2('book',2)安托万·德·圣埃克苏佩里
