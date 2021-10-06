@@ -1,3 +1,4 @@
+import json
 import sqlite3
 import datetime
 
@@ -166,7 +167,7 @@ class managerSQL():
         for row in cur:
             a = list(row)
             id_value.append(a)
-        return id_value,des
+        return id_value, des
 
     def executeQuery2(self, table_name, key, value):
         """
@@ -179,10 +180,11 @@ class managerSQL():
         sql = 'select * from ' + table_name + ' where ' + key + ' = ? and deleted=0'  # exception where deleted=1
         cur = self.cursor.execute(sql, (value,))
         id_value = []
+        des = cur.description
         for row in cur:
             a = list(row)
             id_value.append(a)
-        return id_value,cur
+        return id_value, des
 
     def tupleTOdic(self, cur, des):
         id_value = []
@@ -282,9 +284,9 @@ if __name__ == '__main__':
     print(b)
     print(c)
     """
-    d,des = db.executeQuery1('cloth')
+    d, des = db.executeQuery1('cloth')
     print(d)
-    dd = db.tupleTOdic(d,des)
+    dd = db.tupleTOdic(d, des)
     print('cloth dic----------------------------------\n\n\n\n')
     print(dd)
     print('----------------------------------\n\n\n\n')

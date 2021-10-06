@@ -1,14 +1,15 @@
-from managerUI import Ui_MainWindow
+import json
+from IoTPractice.code.managerUI import Ui_MainWindow
 from PyQt5 import QtWidgets, QtCore
 from PyQt5.QtWidgets import *
-import threading
 from PyQt5.QtCore import QTimer, QUrl
-from managerSQL import managerSQL
+from IoTPractice.code.managerSQL import managerSQL
 import logging
-from Serial import Serial
-from WarningQDialog import WarningQDialog
-from classifier import classifier
+from IoTPractice.code.Serial import Serial
+from IoTPractice.code.WarningQDialog import WarningQDialog
+from IoTPractice.code.classifier import classifier
 from PyQt5.QtWebEngineWidgets import *
+from sendDataHelper import sendDataHelper
 
 LOG_FORMAT = "%(asctime)s - %(levelname)s - %(message)s"
 DATE_FORMAT = "%m/%d/%Y %H:%M:%S %p"
@@ -16,11 +17,13 @@ logging.basicConfig(filename='my.log', level=logging.DEBUG, format=LOG_FORMAT, d
 
 sqlDic = {2: 'cloth', 3: 'flavoring', 4: 'book'}
 
-global TABLE_MAX_COL
+global TABLE_MAX_COL, datas
 TABLE_MAX_COL = 6
+datas = 0
 
 
 class AppWindow(QMainWindow, Ui_MainWindow):
+
     def __init__(self, parent=None):
         super(AppWindow, self).__init__(parent)
         self.setupUi(self)
@@ -28,8 +31,8 @@ class AppWindow(QMainWindow, Ui_MainWindow):
         self.queryTableName = ''  # the name of table we need to query
         self.sqlHelper = managerSQL()
         self.classHelper = classifier()
-        self.firstClass = ''
-        self.secondClass = ''
+        self.firstClass = 'cloth'
+        self.secondClass = 'color'
         self.thirdClass = ''
 
         print('---------------set timeer---------------')
@@ -45,14 +48,16 @@ class AppWindow(QMainWindow, Ui_MainWindow):
         # second class list clicked response
         self.listWidget_2.itemClicked.connect(self.__secondClassClick__)
         # third class list clicked response
-        self.tableWidget.itemClicked.connect(self.__thirdClassClick__)
+        self.tableWidget.setEnabled(True)
+        self.tableWidget.clicked.connect(self.__thirdClassClick__)
 
         self.browser = QWebEngineView()
-        # 加载外部的web界面
-        self.browser.load(QUrl('file:///E:/workplace/pycharmWork/IoTPractice/IoTPractice/code/web/index.html'))
-        # self.setCentralWidget(self.browser)
+        # self.browser.load(QUrl('file:///E:/workplace/pycharmWork/IoTPractice/IoTPractice/code/web/templates/welcom.html'))
+        self.browser.load(
+            QUrl(r'http://localhost:5000/welcom'))
         self.grid = QGridLayout(self.groupBox_2)
         self.grid.addWidget(self.browser)
+        self.fileHelper = sendDataHelper()
 
         print("finish initial")
         logging.info("finish initial")
@@ -66,6 +71,18 @@ class AppWindow(QMainWindow, Ui_MainWindow):
         print('click ' + self.firstClass + ' item')
         self.__searchHelper__(self.firstClass)
         self.__subClassDisplay__(num)
+        if self.firstClass == 'cloth':
+            self.rightClass = list(self.classHelper.homeCloth.get(0))
+            self.secondClass = self.classHelper.clothEN[0]
+        elif self.firstClass == 'flavoring':
+            self.rightClass = list(self.classHelper.homeFlavoring.get(0))
+            self.secondClass = self.classHelper.flavoringEN[0]
+        elif self.firstClass == 'book':
+            self.rightClass = list(self.classHelper.homeBook.get(0))
+            self.secondClass = self.classHelper.bookEN[0]
+        self.__rightThirdClassShow__()
+        self.objSet, self.des = self.sqlHelper.executeQuery1(self.firstClass)
+        self.__objFieldShow__()
 
     def __searchHelper__(self, tableName):
         """
@@ -76,16 +93,22 @@ class AppWindow(QMainWindow, Ui_MainWindow):
         logging.info("search from " + tableName + '...')
         print("search from " + tableName + '...')
         self.queryTableName = tableName
-        self.sqlHelper.executeQuery1(tableName)
+        self.objSet, self.des = self.sqlHelper.executeQuery1(tableName)
 
     def __subClassDisplay__(self, num):
         """
         this function to dispaly the second class list of every type of object
-        :param onum: value:cloth-0, flavoring-1, book-2 and so on
+        :param num: value:cloth-0, flavoring-1, book-2 and so on
         :return:
         """
         logging.info('prepare to show second class classifier')
         print('prepare to show second class classifier')
+        self.listWidget_2.setStyleSheet("background-color: rgb(55,55,55);\n"
+                                        "font: 10pt \"仿宋\" white;\n"
+                                        "border-radius:10px;\n"
+                                        "padding:5px;\n"
+                                        "border:none;")
+
         self.currentObjectNum = num
         self.myList = list(self.classHelper.home.get(self.currentObjectNum))
         self.listWidget_2.clear()
@@ -100,35 +123,48 @@ class AppWindow(QMainWindow, Ui_MainWindow):
         click feature area to get more detailed classifier
         :return:
         """
-        if self.currentObject == 'cloth':
-            self.rightClass = list(self.classHelper.homeCloth.get(self.myList[qModelIndex.row()]))
-        elif self.currentObject == 'flavoring':
-            self.rightClass = list(self.classHelper.homeFlavoring.get(self.myList[qModelIndex.row()]))
-        elif self.currentObject == 'book':
-            self.rightClass = list(self.classHelper.homeBook.get(self.myList[qModelIndex.row()]))
+        logging.info('------------------------------')
+        num = self.listWidget_2.selectedIndexes()[0].row()
+        print('__secondClassClick__' + str(num))
+        if self.firstClass == 'cloth':
+            self.rightClass = list(self.classHelper.homeCloth.get(num))
+            self.secondClass = self.classHelper.clothEN[num]
+        elif self.firstClass == 'flavoring':
+            self.rightClass = list(self.classHelper.homeFlavoring.get(num))
+            self.secondClass = self.classHelper.flavoringEN[num]
+        elif self.firstClass == 'book':
+            self.rightClass = list(self.classHelper.homeBook.get(num))
+            self.secondClass = self.classHelper.bookEN[num]
+        logging.info('click ' + self.firstClass + 'item')
+        print('click ' + self.firstClass + ' item')
         self.__rightThirdClassShow__()
+
 
     def __rightThirdClassShow__(self):
         """
         display of third class classifier
         :return:
         """
-        self.tableWidget.clear()
-        i = 0
+        self.tableWidget.clearContents()
         col = 0
         row = 0
         for itemName in self.rightClass:
+            if self.firstClass == 'cloth' and self.secondClass == 'color':
+                itemName = itemName + '色'
             if col < TABLE_MAX_COL:
-                item = self.tableWidget.item(col, row)
+                item = QTableWidgetItem(self.tableWidget.item(row, col))
                 _translate = QtCore.QCoreApplication.translate
                 item.setText(_translate("MainWindow", itemName))
+                self.tableWidget.setItem(row, col, item)
                 col += 1
             elif col == TABLE_MAX_COL and row < 1:
                 col = 0
                 row += 1
-                item = self.tableWidget.item(col, row)
+                item = QTableWidgetItem(self.tableWidget.item(row, col))
                 _translate = QtCore.QCoreApplication.translate
                 item.setText(_translate("MainWindow", itemName))
+                self.tableWidget.setItem(row, col, item)
+                col += 1
             elif col == TABLE_MAX_COL and row == 1:
                 item = QtWidgets.QTableWidgetItem(itemName)
                 self.tableWidget.setItem(row, col, item)
@@ -136,7 +172,10 @@ class AppWindow(QMainWindow, Ui_MainWindow):
     def __thirdClassClick__(self, qTableIndex):
         self.thirdClass = self.tableWidget.item(qTableIndex.row(), qTableIndex.column()).text()
         logging.info('third class click:' + self.thirdClass)
-        self.objSet = self.sqlHelper.executeQuery2(self.firstClass, self.secondClass, self.thirdClass)
+        print('third class click:' + self.thirdClass)
+        if self.secondClass == 'color':
+            self.thirdClass = self.thirdClass[0]
+        self.objSet, self.des = self.sqlHelper.executeQuery2(self.firstClass, self.secondClass, self.thirdClass)
         self.__objFieldShow__()
 
     def __objFieldShow__(self):
@@ -144,15 +183,21 @@ class AppWindow(QMainWindow, Ui_MainWindow):
         this function used to switch the display content
         :return:
         """
+        logging.info("load dynamic web")
+        print("load dynamic web")
+        if len(self.objSet) == 0:
+            self.browser.load(QUrl(r'http://localhost:5000/'))
+        else:
+            self.objList = self.sqlHelper.tupleTOdic(self.objSet, self.des)
+            self.objJson = json.dumps(self.objList, ensure_ascii=False)
+            # self.objJson = self.objJson[1:len(self.objJson) - 1]
+            print(self.objJson)
+            self.fileHelper.writeToFile(self.objJson)
+            self.browser.load(QUrl(r'http://localhost:5000/index'))
+        self.grid.addWidget(self.browser)
 
-    def __subSearchHelper__(self, tableName, subClass, reSubClass):
-        """
-
-        :param tableName: the same with type name
-        :param subClass: the detailed class of the object
-        :param reSubClass: the class of subClass
-        :return:
-        """
+        logging.info("load successfully")
+        print("load successfully")
 
     def __voiceManager__(self):
         """

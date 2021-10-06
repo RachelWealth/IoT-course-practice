@@ -1,0 +1,507 @@
+10/04/2021 02:21:07 AM - INFO - send data to js: 
+10/04/2021 02:21:07 AM - INFO - [[2, 'cloth', 'Å®', 'ÂÌ', 'Çï', 'Veromoda', '2021-09-28 17:28:58', '2021-09-28 17:28:58', 0], [12, 'cloth', 'Å®', 'ÂÌ', '´º', 'LEDIN', '2021-09-28 17:28:58', '2021-09-28 17:28:58', 0], [20, 'cloth', 'ÄÐ', 'ÂÌ', '´º', 'SEMIR', '2021-09-28 17:28:58', '2021-09-28 17:28:58', 0], [29, 'cloth', 'ÄÐ', 'ÂÌ', 'ÏÄ', 'Teek', '2021-09-28 17:28:58', '2021-09-28 17:28:58', 0]]
+10/04/2021 02:23:46 AM - INFO - send data to js: 
+10/04/2021 02:23:46 AM - INFO - [[1, "cloth", "\u5973", "\u7ea2", "\u79cb", "Veromoda", "2021-09-28 17:28:58", "2021-09-28 17:28:58", 0], [11, "cloth", "\u5973", "\u7ea2", "\u51ac", "OLNY", "2021-09-28 17:28:58", "2021-09-28 17:28:58", 0], [19, "cloth", "\u7537", "\u7ea2", "\u79cb", "SEMIR", "2021-09-28 17:28:58", "2021-09-28 17:28:58", 0], [28, "cloth", "\u7537", "\u7ea2", "\u6625", "\u7279\u6b65", "2021-09-28 17:28:58", "2021-09-28 17:28:58", 0]]
+10/04/2021 02:23:46 AM - INFO - send data to js: [[1, "cloth", "\u5973", "\u7ea2", "\u79cb", "Veromoda", "2021-09-28 17:28:58", "2021-09-28 17:28:58", 0], [11, "cloth", "\u5973", "\u7ea2", "\u51ac", "OLNY", "2021-09-28 17:28:58", "2021-09-28 17:28:58", 0], [19, "cloth", "\u7537", "\u7ea2", "\u79cb", "SEMIR", "2021-09-28 17:28:58", "2021-09-28 17:28:58", 0], [28, "cloth", "\u7537", "\u7ea2", "\u6625", "\u7279\u6b65", "2021-09-28 17:28:58", "2021-09-28 17:28:58", 0]]
+10/04/2021 02:23:46 AM - INFO -  * Restarting with stat
+10/04/2021 02:23:46 AM - INFO - send data to js: 
+10/04/2021 02:23:46 AM - INFO - [[1, "cloth", "\u5973", "\u7ea2", "\u79cb", "Veromoda", "2021-09-28 17:28:58", "2021-09-28 17:28:58", 0], [11, "cloth", "\u5973", "\u7ea2", "\u51ac", "OLNY", "2021-09-28 17:28:58", "2021-09-28 17:28:58", 0], [19, "cloth", "\u7537", "\u7ea2", "\u79cb", "SEMIR", "2021-09-28 17:28:58", "2021-09-28 17:28:58", 0], [28, "cloth", "\u7537", "\u7ea2", "\u6625", "\u7279\u6b65", "2021-09-28 17:28:58", "2021-09-28 17:28:58", 0]]
+10/04/2021 02:23:46 AM - INFO - send data to js: [[1, "cloth", "\u5973", "\u7ea2", "\u79cb", "Veromoda", "2021-09-28 17:28:58", "2021-09-28 17:28:58", 0], [11, "cloth", "\u5973", "\u7ea2", "\u51ac", "OLNY", "2021-09-28 17:28:58", "2021-09-28 17:28:58", 0], [19, "cloth", "\u7537", "\u7ea2", "\u79cb", "SEMIR", "2021-09-28 17:28:58", "2021-09-28 17:28:58", 0], [28, "cloth", "\u7537", "\u7ea2", "\u6625", "\u7279\u6b65", "2021-09-28 17:28:58", "2021-09-28 17:28:58", 0]]
+10/04/2021 02:23:46 AM - WARNING -  * Debugger is active!
+10/04/2021 02:23:47 AM - INFO -  * Debugger PIN: 123-930-440
+10/04/2021 02:23:47 AM - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+10/04/2021 02:23:54 AM - INFO - send data to js: 
+10/04/2021 02:23:55 AM - INFO - [[1, "cloth", "\u5973", "\u7ea2", "\u79cb", "Veromoda", "2021-09-28 17:28:58", "2021-09-28 17:28:58", 0], [11, "cloth", "\u5973", "\u7ea2", "\u51ac", "OLNY", "2021-09-28 17:28:58", "2021-09-28 17:28:58", 0], [19, "cloth", "\u7537", "\u7ea2", "\u79cb", "SEMIR", "2021-09-28 17:28:58", "2021-09-28 17:28:58", 0], [28, "cloth", "\u7537", "\u7ea2", "\u6625", "\u7279\u6b65", "2021-09-28 17:28:58", "2021-09-28 17:28:58", 0]]
+10/04/2021 02:23:57 AM - INFO - send data to js: [[1, "cloth", "\u5973", "\u7ea2", "\u79cb", "Veromoda", "2021-09-28 17:28:58", "2021-09-28 17:28:58", 0], [11, "cloth", "\u5973", "\u7ea2", "\u51ac", "OLNY", "2021-09-28 17:28:58", "2021-09-28 17:28:58", 0], [19, "cloth", "\u7537", "\u7ea2", "\u79cb", "SEMIR", "2021-09-28 17:28:58", "2021-09-28 17:28:58", 0], [28, "cloth", "\u7537", "\u7ea2", "\u6625", "\u7279\u6b65", "2021-09-28 17:28:58", "2021-09-28 17:28:58", 0]]
+10/04/2021 02:24:05 AM - INFO -  * Restarting with stat
+10/04/2021 02:24:09 AM - INFO - send data to js: 
+10/04/2021 02:24:11 AM - INFO - [[1, "cloth", "\u5973", "\u7ea2", "\u79cb", "Veromoda", "2021-09-28 17:28:58", "2021-09-28 17:28:58", 0], [11, "cloth", "\u5973", "\u7ea2", "\u51ac", "OLNY", "2021-09-28 17:28:58", "2021-09-28 17:28:58", 0], [19, "cloth", "\u7537", "\u7ea2", "\u79cb", "SEMIR", "2021-09-28 17:28:58", "2021-09-28 17:28:58", 0], [28, "cloth", "\u7537", "\u7ea2", "\u6625", "\u7279\u6b65", "2021-09-28 17:28:58", "2021-09-28 17:28:58", 0]]
+10/04/2021 02:24:12 AM - INFO - send data to js: [[1, "cloth", "\u5973", "\u7ea2", "\u79cb", "Veromoda", "2021-09-28 17:28:58", "2021-09-28 17:28:58", 0], [11, "cloth", "\u5973", "\u7ea2", "\u51ac", "OLNY", "2021-09-28 17:28:58", "2021-09-28 17:28:58", 0], [19, "cloth", "\u7537", "\u7ea2", "\u79cb", "SEMIR", "2021-09-28 17:28:58", "2021-09-28 17:28:58", 0], [28, "cloth", "\u7537", "\u7ea2", "\u6625", "\u7279\u6b65", "2021-09-28 17:28:58", "2021-09-28 17:28:58", 0]]
+10/04/2021 02:24:16 AM - WARNING -  * Debugger is active!
+10/04/2021 02:24:16 AM - INFO -  * Debugger PIN: 123-930-440
+10/04/2021 02:24:17 AM - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+10/04/2021 02:24:53 AM - INFO -  * Restarting with stat
+10/04/2021 02:24:53 AM - WARNING -  * Debugger is active!
+10/04/2021 02:24:53 AM - INFO -  * Debugger PIN: 123-930-440
+10/04/2021 02:24:54 AM - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+10/04/2021 02:25:10 AM - INFO -  * Restarting with stat
+10/04/2021 02:25:10 AM - WARNING -  * Debugger is active!
+10/04/2021 02:25:10 AM - INFO -  * Debugger PIN: 123-930-440
+10/04/2021 02:25:11 AM - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+10/04/2021 02:26:04 AM - INFO - 127.0.0.1 - - [04/Oct/2021 02:26:04] "[35m[1mGET / HTTP/1.1[0m" 500 -
+10/04/2021 02:26:04 AM - INFO - 127.0.0.1 - - [04/Oct/2021 02:26:04] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+10/04/2021 02:26:04 AM - INFO - 127.0.0.1 - - [04/Oct/2021 02:26:04] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+10/04/2021 02:26:05 AM - INFO - 127.0.0.1 - - [04/Oct/2021 02:26:05] "GET /?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+10/04/2021 02:26:05 AM - INFO - 127.0.0.1 - - [04/Oct/2021 02:26:05] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+10/04/2021 02:26:05 AM - INFO - 127.0.0.1 - - [04/Oct/2021 02:26:05] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+10/04/2021 02:26:45 AM - INFO -  * Detected change in 'E:\\workplace\\pycharmWork\\IoTPractice\\IoTPractice\\code\\web\\renderHTML.py', reloading
+10/04/2021 02:26:45 AM - INFO -  * Restarting with stat
+10/04/2021 02:26:46 AM - WARNING -  * Debugger is active!
+10/04/2021 02:26:46 AM - INFO -  * Debugger PIN: 123-930-440
+10/04/2021 02:26:46 AM - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+10/04/2021 02:26:48 AM - INFO -  * Restarting with stat
+10/04/2021 02:26:49 AM - WARNING -  * Debugger is active!
+10/04/2021 02:26:49 AM - INFO -  * Debugger PIN: 123-930-440
+10/04/2021 02:26:49 AM - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+10/04/2021 02:26:54 AM - INFO - 127.0.0.1 - - [04/Oct/2021 02:26:54] "[35m[1mGET / HTTP/1.1[0m" 500 -
+10/04/2021 02:26:54 AM - INFO - 127.0.0.1 - - [04/Oct/2021 02:26:54] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+10/04/2021 02:26:54 AM - INFO - 127.0.0.1 - - [04/Oct/2021 02:26:54] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+10/04/2021 02:26:54 AM - INFO - 127.0.0.1 - - [04/Oct/2021 02:26:54] "GET /?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+10/04/2021 02:26:54 AM - INFO - 127.0.0.1 - - [04/Oct/2021 02:26:54] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+10/04/2021 02:26:55 AM - INFO - 127.0.0.1 - - [04/Oct/2021 02:26:55] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+10/04/2021 02:27:30 AM - INFO -  * Detected change in 'E:\\workplace\\pycharmWork\\IoTPractice\\IoTPractice\\code\\web\\renderHTML.py', reloading
+10/04/2021 02:27:30 AM - INFO -  * Restarting with stat
+10/04/2021 02:27:30 AM - WARNING -  * Debugger is active!
+10/04/2021 02:27:30 AM - INFO -  * Debugger PIN: 123-930-440
+10/04/2021 02:27:30 AM - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+10/04/2021 02:27:37 AM - INFO -  * Detected change in 'E:\\workplace\\pycharmWork\\IoTPractice\\IoTPractice\\code\\web\\renderHTML.py', reloading
+10/04/2021 02:27:37 AM - INFO -  * Restarting with stat
+10/04/2021 02:27:38 AM - WARNING -  * Debugger is active!
+10/04/2021 02:27:38 AM - INFO -  * Debugger PIN: 123-930-440
+10/04/2021 02:27:38 AM - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+10/04/2021 02:27:39 AM - INFO -  * Detected change in 'E:\\workplace\\pycharmWork\\IoTPractice\\IoTPractice\\code\\web\\renderHTML.py', reloading
+10/04/2021 02:27:39 AM - INFO -  * Restarting with stat
+10/04/2021 02:27:40 AM - WARNING -  * Debugger is active!
+10/04/2021 02:27:40 AM - INFO -  * Debugger PIN: 123-930-440
+10/04/2021 02:27:40 AM - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+10/04/2021 02:27:47 AM - INFO -  * Restarting with stat
+10/04/2021 02:27:49 AM - WARNING -  * Debugger is active!
+10/04/2021 02:27:49 AM - INFO -  * Debugger PIN: 123-930-440
+10/04/2021 02:27:49 AM - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+10/04/2021 02:27:51 AM - INFO - 127.0.0.1 - - [04/Oct/2021 02:27:51] "[35m[1mGET / HTTP/1.1[0m" 500 -
+10/04/2021 02:27:51 AM - INFO - 127.0.0.1 - - [04/Oct/2021 02:27:51] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+10/04/2021 02:27:51 AM - INFO - 127.0.0.1 - - [04/Oct/2021 02:27:51] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+10/04/2021 02:27:52 AM - INFO - 127.0.0.1 - - [04/Oct/2021 02:27:52] "GET /?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+10/04/2021 02:27:52 AM - INFO - 127.0.0.1 - - [04/Oct/2021 02:27:52] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+10/04/2021 02:27:52 AM - INFO - 127.0.0.1 - - [04/Oct/2021 02:27:52] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+10/04/2021 02:28:27 AM - INFO - send data to js: 
+10/04/2021 02:28:27 AM - INFO - [[1, "cloth", "\u5973", "\u7ea2", "\u79cb", "Veromoda", "2021-09-28 17:28:58", "2021-09-28 17:28:58", 0], [11, "cloth", "\u5973", "\u7ea2", "\u51ac", "OLNY", "2021-09-28 17:28:58", "2021-09-28 17:28:58", 0], [19, "cloth", "\u7537", "\u7ea2", "\u79cb", "SEMIR", "2021-09-28 17:28:58", "2021-09-28 17:28:58", 0], [28, "cloth", "\u7537", "\u7ea2", "\u6625", "\u7279\u6b65", "2021-09-28 17:28:58", "2021-09-28 17:28:58", 0]]
+10/04/2021 02:28:27 AM - INFO - send data to js: [[1, "cloth", "\u5973", "\u7ea2", "\u79cb", "Veromoda", "2021-09-28 17:28:58", "2021-09-28 17:28:58", 0], [11, "cloth", "\u5973", "\u7ea2", "\u51ac", "OLNY", "2021-09-28 17:28:58", "2021-09-28 17:28:58", 0], [19, "cloth", "\u7537", "\u7ea2", "\u79cb", "SEMIR", "2021-09-28 17:28:58", "2021-09-28 17:28:58", 0], [28, "cloth", "\u7537", "\u7ea2", "\u6625", "\u7279\u6b65", "2021-09-28 17:28:58", "2021-09-28 17:28:58", 0]]
+10/04/2021 02:28:40 AM - INFO - send data to js: 
+10/04/2021 02:28:40 AM - INFO - [[1, "cloth", "\u5973", "\u7ea2", "\u79cb", "Veromoda", "2021-09-28 17:28:58", "2021-09-28 17:28:58", 0], [11, "cloth", "\u5973", "\u7ea2", "\u51ac", "OLNY", "2021-09-28 17:28:58", "2021-09-28 17:28:58", 0], [19, "cloth", "\u7537", "\u7ea2", "\u79cb", "SEMIR", "2021-09-28 17:28:58", "2021-09-28 17:28:58", 0], [28, "cloth", "\u7537", "\u7ea2", "\u6625", "\u7279\u6b65", "2021-09-28 17:28:58", "2021-09-28 17:28:58", 0]]
+10/04/2021 02:28:40 AM - INFO - send data to js: [[1, "cloth", "\u5973", "\u7ea2", "\u79cb", "Veromoda", "2021-09-28 17:28:58", "2021-09-28 17:28:58", 0], [11, "cloth", "\u5973", "\u7ea2", "\u51ac", "OLNY", "2021-09-28 17:28:58", "2021-09-28 17:28:58", 0], [19, "cloth", "\u7537", "\u7ea2", "\u79cb", "SEMIR", "2021-09-28 17:28:58", "2021-09-28 17:28:58", 0], [28, "cloth", "\u7537", "\u7ea2", "\u6625", "\u7279\u6b65", "2021-09-28 17:28:58", "2021-09-28 17:28:58", 0]]
+10/04/2021 02:28:40 AM - INFO -  * Restarting with stat
+10/04/2021 02:28:41 AM - INFO - send data to js: 
+10/04/2021 02:28:41 AM - INFO - [[1, "cloth", "\u5973", "\u7ea2", "\u79cb", "Veromoda", "2021-09-28 17:28:58", "2021-09-28 17:28:58", 0], [11, "cloth", "\u5973", "\u7ea2", "\u51ac", "OLNY", "2021-09-28 17:28:58", "2021-09-28 17:28:58", 0], [19, "cloth", "\u7537", "\u7ea2", "\u79cb", "SEMIR", "2021-09-28 17:28:58", "2021-09-28 17:28:58", 0], [28, "cloth", "\u7537", "\u7ea2", "\u6625", "\u7279\u6b65", "2021-09-28 17:28:58", "2021-09-28 17:28:58", 0]]
+10/04/2021 02:28:41 AM - INFO - send data to js: [[1, "cloth", "\u5973", "\u7ea2", "\u79cb", "Veromoda", "2021-09-28 17:28:58", "2021-09-28 17:28:58", 0], [11, "cloth", "\u5973", "\u7ea2", "\u51ac", "OLNY", "2021-09-28 17:28:58", "2021-09-28 17:28:58", 0], [19, "cloth", "\u7537", "\u7ea2", "\u79cb", "SEMIR", "2021-09-28 17:28:58", "2021-09-28 17:28:58", 0], [28, "cloth", "\u7537", "\u7ea2", "\u6625", "\u7279\u6b65", "2021-09-28 17:28:58", "2021-09-28 17:28:58", 0]]
+10/04/2021 02:28:41 AM - WARNING -  * Debugger is active!
+10/04/2021 02:28:41 AM - INFO -  * Debugger PIN: 123-930-440
+10/04/2021 02:28:41 AM - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+10/04/2021 02:28:53 AM - INFO - 127.0.0.1 - - [04/Oct/2021 02:28:53] "[35m[1mGET / HTTP/1.1[0m" 500 -
+10/04/2021 02:28:53 AM - INFO - 127.0.0.1 - - [04/Oct/2021 02:28:53] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+10/04/2021 02:28:53 AM - INFO - 127.0.0.1 - - [04/Oct/2021 02:28:53] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+10/04/2021 02:28:54 AM - INFO - 127.0.0.1 - - [04/Oct/2021 02:28:54] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+10/04/2021 02:28:54 AM - INFO - 127.0.0.1 - - [04/Oct/2021 02:28:54] "GET /?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+10/04/2021 02:28:54 AM - INFO - 127.0.0.1 - - [04/Oct/2021 02:28:54] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+10/04/2021 02:29:06 AM - INFO -  * Detected change in 'E:\\workplace\\pycharmWork\\IoTPractice\\IoTPractice\\code\\web\\renderHTML.py', reloading
+10/04/2021 02:29:06 AM - INFO -  * Restarting with stat
+10/04/2021 02:29:07 AM - WARNING -  * Debugger is active!
+10/04/2021 02:29:07 AM - INFO -  * Debugger PIN: 123-930-440
+10/04/2021 02:29:07 AM - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+10/04/2021 02:35:01 AM - INFO -  * Restarting with stat
+10/04/2021 02:35:02 AM - WARNING -  * Debugger is active!
+10/04/2021 02:35:02 AM - INFO -  * Debugger PIN: 123-930-440
+10/04/2021 02:35:02 AM - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+10/04/2021 02:35:15 AM - INFO - 127.0.0.1 - - [04/Oct/2021 02:35:15] "[35m[1mGET / HTTP/1.1[0m" 500 -
+10/04/2021 02:35:15 AM - INFO - 127.0.0.1 - - [04/Oct/2021 02:35:15] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+10/04/2021 02:35:15 AM - INFO - 127.0.0.1 - - [04/Oct/2021 02:35:15] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+10/04/2021 02:35:15 AM - INFO - 127.0.0.1 - - [04/Oct/2021 02:35:15] "GET /?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+10/04/2021 02:35:16 AM - INFO - 127.0.0.1 - - [04/Oct/2021 02:35:16] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+10/04/2021 02:35:24 AM - INFO -  * Detected change in 'E:\\workplace\\pycharmWork\\IoTPractice\\IoTPractice\\code\\web\\renderHTML.py', reloading
+10/04/2021 02:35:24 AM - INFO -  * Restarting with stat
+10/04/2021 02:35:24 AM - WARNING -  * Debugger is active!
+10/04/2021 02:35:24 AM - INFO -  * Debugger PIN: 123-930-440
+10/04/2021 02:35:24 AM - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+10/04/2021 02:35:57 AM - INFO -  * Restarting with stat
+10/04/2021 02:35:58 AM - WARNING -  * Debugger is active!
+10/04/2021 02:35:58 AM - INFO -  * Debugger PIN: 123-930-440
+10/04/2021 02:35:58 AM - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+10/04/2021 02:36:03 AM - INFO - send data to js: 
+10/04/2021 02:36:03 AM - INFO - [[1, 'cloth', 'Å®', 'ºì', 'Çï', 'Veromoda', '2021-09-28 17:28:58', '2021-09-28 17:28:58', 0], [11, 'cloth', 'Å®', 'ºì', '¶¬', 'OLNY', '2021-09-28 17:28:58', '2021-09-28 17:28:58', 0], [19, 'cloth', 'ÄÐ', 'ºì', 'Çï', 'SEMIR', '2021-09-28 17:28:58', '2021-09-28 17:28:58', 0], [28, 'cloth', 'ÄÐ', 'ºì', '´º', 'ÌØ²½', '2021-09-28 17:28:58', '2021-09-28 17:28:58', 0]]
+10/04/2021 02:36:03 AM - INFO - 127.0.0.1 - - [04/Oct/2021 02:36:03] "[35m[1mGET / HTTP/1.1[0m" 500 -
+10/04/2021 02:36:03 AM - INFO - 127.0.0.1 - - [04/Oct/2021 02:36:03] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+10/04/2021 02:36:03 AM - INFO - 127.0.0.1 - - [04/Oct/2021 02:36:03] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+10/04/2021 02:36:03 AM - INFO - 127.0.0.1 - - [04/Oct/2021 02:36:03] "GET /?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+10/04/2021 02:36:03 AM - INFO - 127.0.0.1 - - [04/Oct/2021 02:36:03] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+10/04/2021 02:36:03 AM - INFO - 127.0.0.1 - - [04/Oct/2021 02:36:03] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+10/04/2021 02:36:47 AM - INFO -  * Restarting with stat
+10/04/2021 02:36:48 AM - WARNING -  * Debugger is active!
+10/04/2021 02:36:48 AM - INFO -  * Debugger PIN: 123-930-440
+10/04/2021 02:36:48 AM - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+10/04/2021 02:36:53 AM - INFO - send data to js: 
+10/04/2021 02:36:53 AM - INFO - [[1, 'cloth', 'Å®', 'ºì', 'Çï', 'Veromoda', '2021-09-28 17:28:58', '2021-09-28 17:28:58', 0], [11, 'cloth', 'Å®', 'ºì', '¶¬', 'OLNY', '2021-09-28 17:28:58', '2021-09-28 17:28:58', 0], [19, 'cloth', 'ÄÐ', 'ºì', 'Çï', 'SEMIR', '2021-09-28 17:28:58', '2021-09-28 17:28:58', 0], [28, 'cloth', 'ÄÐ', 'ºì', '´º', 'ÌØ²½', '2021-09-28 17:28:58', '2021-09-28 17:28:58', 0]]
+10/04/2021 02:36:53 AM - INFO - 127.0.0.1 - - [04/Oct/2021 02:36:53] "GET / HTTP/1.1" 200 -
+10/04/2021 02:36:53 AM - INFO - 127.0.0.1 - - [04/Oct/2021 02:36:53] "GET /static/css/reset.css HTTP/1.1" 200 -
+10/04/2021 02:36:53 AM - INFO - 127.0.0.1 - - [04/Oct/2021 02:36:53] "GET /static/css/index.css HTTP/1.1" 200 -
+10/04/2021 02:36:54 AM - INFO - 127.0.0.1 - - [04/Oct/2021 02:36:54] "GET /static/js/index.js HTTP/1.1" 200 -
+10/04/2021 02:36:54 AM - INFO - 127.0.0.1 - - [04/Oct/2021 02:36:54] "[33mGET /undefined HTTP/1.1[0m" 404 -
+10/04/2021 02:37:41 AM - INFO -  * Restarting with stat
+10/04/2021 02:37:42 AM - WARNING -  * Debugger is active!
+10/04/2021 02:37:42 AM - INFO -  * Debugger PIN: 123-930-440
+10/04/2021 02:37:42 AM - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+10/04/2021 02:39:17 AM - INFO -  * Restarting with stat
+10/04/2021 02:39:18 AM - WARNING -  * Debugger is active!
+10/04/2021 02:39:18 AM - INFO -  * Debugger PIN: 123-930-440
+10/04/2021 02:39:18 AM - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+10/04/2021 02:41:24 AM - INFO -  * Detected change in 'E:\\workplace\\pycharmWork\\IoTPractice\\IoTPractice\\code\\web\\renderHTML.py', reloading
+10/04/2021 02:41:24 AM - INFO -  * Restarting with stat
+10/04/2021 02:41:25 AM - WARNING -  * Debugger is active!
+10/04/2021 02:41:25 AM - INFO -  * Debugger PIN: 123-930-440
+10/04/2021 02:41:25 AM - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+10/04/2021 02:41:38 AM - INFO -  * Restarting with stat
+10/04/2021 02:41:38 AM - WARNING -  * Debugger is active!
+10/04/2021 02:41:38 AM - INFO -  * Debugger PIN: 123-930-440
+10/04/2021 02:41:39 AM - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+10/04/2021 02:41:43 AM - INFO -  * Detected change in 'E:\\workplace\\pycharmWork\\IoTPractice\\IoTPractice\\code\\web\\renderHTML.py', reloading
+10/04/2021 02:41:43 AM - INFO -  * Restarting with stat
+10/04/2021 02:41:44 AM - WARNING -  * Debugger is active!
+10/04/2021 02:41:44 AM - INFO -  * Debugger PIN: 123-930-440
+10/04/2021 02:41:44 AM - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+10/04/2021 02:42:18 AM - INFO -  * Detected change in 'E:\\workplace\\pycharmWork\\IoTPractice\\IoTPractice\\code\\web\\renderHTML.py', reloading
+10/04/2021 02:42:18 AM - INFO -  * Restarting with stat
+10/04/2021 02:42:18 AM - WARNING -  * Debugger is active!
+10/04/2021 02:42:18 AM - INFO -  * Debugger PIN: 123-930-440
+10/04/2021 02:42:19 AM - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+10/04/2021 02:43:59 AM - INFO -  * Detected change in 'E:\\workplace\\pycharmWork\\IoTPractice\\IoTPractice\\code\\web\\renderHTML.py', reloading
+10/04/2021 02:43:59 AM - INFO -  * Restarting with stat
+10/04/2021 02:44:00 AM - WARNING -  * Debugger is active!
+10/04/2021 02:44:00 AM - INFO -  * Debugger PIN: 123-930-440
+10/04/2021 02:44:00 AM - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+10/04/2021 02:44:05 AM - INFO -  * Restarting with stat
+10/04/2021 02:44:06 AM - WARNING -  * Debugger is active!
+10/04/2021 02:44:06 AM - INFO -  * Debugger PIN: 123-930-440
+10/04/2021 02:44:06 AM - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+10/04/2021 02:44:18 AM - INFO -  * Detected change in 'E:\\workplace\\pycharmWork\\IoTPractice\\IoTPractice\\code\\web\\renderHTML.py', reloading
+10/04/2021 02:44:18 AM - INFO -  * Restarting with stat
+10/04/2021 02:44:19 AM - WARNING -  * Debugger is active!
+10/04/2021 02:44:19 AM - INFO -  * Debugger PIN: 123-930-440
+10/04/2021 02:44:19 AM - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+10/04/2021 02:45:47 AM - INFO -  * Detected change in 'E:\\workplace\\pycharmWork\\IoTPractice\\IoTPractice\\code\\web\\renderHTML.py', reloading
+10/04/2021 02:45:47 AM - INFO -  * Restarting with stat
+10/04/2021 02:45:48 AM - WARNING -  * Debugger is active!
+10/04/2021 02:45:48 AM - INFO -  * Debugger PIN: 123-930-440
+10/04/2021 02:45:48 AM - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+10/04/2021 02:45:52 AM - INFO -  * Restarting with stat
+10/04/2021 02:45:53 AM - WARNING -  * Debugger is active!
+10/04/2021 02:45:53 AM - INFO -  * Debugger PIN: 123-930-440
+10/04/2021 02:45:53 AM - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+10/04/2021 02:46:03 AM - INFO - 127.0.0.1 - - [04/Oct/2021 02:46:03] "GET / HTTP/1.1" 200 -
+10/04/2021 02:46:03 AM - INFO - 127.0.0.1 - - [04/Oct/2021 02:46:03] "GET /static/img/empty.png HTTP/1.1" 200 -
+10/04/2021 02:46:03 AM - INFO - 127.0.0.1 - - [04/Oct/2021 02:46:03] "[36mGET /static/css/reset.css HTTP/1.1[0m" 304 -
+10/04/2021 02:46:13 AM - INFO -  * Detected change in 'E:\\workplace\\pycharmWork\\IoTPractice\\IoTPractice\\code\\web\\renderHTML.py', reloading
+10/04/2021 02:46:13 AM - INFO -  * Restarting with stat
+10/04/2021 02:46:37 AM - INFO -  * Restarting with stat
+10/04/2021 02:46:37 AM - WARNING -  * Debugger is active!
+10/04/2021 02:46:37 AM - INFO -  * Debugger PIN: 123-930-440
+10/04/2021 02:46:37 AM - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+10/04/2021 02:46:41 AM - INFO - 127.0.0.1 - - [04/Oct/2021 02:46:41] "GET /index HTTP/1.1" 200 -
+10/04/2021 02:46:41 AM - INFO - 127.0.0.1 - - [04/Oct/2021 02:46:41] "[36mGET /static/css/reset.css HTTP/1.1[0m" 304 -
+10/04/2021 02:46:41 AM - INFO - 127.0.0.1 - - [04/Oct/2021 02:46:41] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+10/04/2021 02:46:41 AM - INFO - 127.0.0.1 - - [04/Oct/2021 02:46:41] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+10/04/2021 02:46:41 AM - INFO - 127.0.0.1 - - [04/Oct/2021 02:46:41] "[33mGET /undefined HTTP/1.1[0m" 404 -
+10/04/2021 02:49:13 AM - INFO - 127.0.0.1 - - [04/Oct/2021 02:49:13] "GET /index HTTP/1.1" 200 -
+10/04/2021 02:49:13 AM - INFO - 127.0.0.1 - - [04/Oct/2021 02:49:13] "[36mGET /static/css/reset.css HTTP/1.1[0m" 304 -
+10/04/2021 02:49:13 AM - INFO - 127.0.0.1 - - [04/Oct/2021 02:49:13] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+10/04/2021 02:49:13 AM - INFO - 127.0.0.1 - - [04/Oct/2021 02:49:13] "GET /static/js/index.js HTTP/1.1" 200 -
+10/04/2021 02:49:14 AM - INFO - 127.0.0.1 - - [04/Oct/2021 02:49:14] "[33mGET /undefined HTTP/1.1[0m" 404 -
+10/04/2021 02:49:16 AM - INFO - 127.0.0.1 - - [04/Oct/2021 02:49:16] "[36mGET /static/css/reset.css HTTP/1.1[0m" 304 -
+10/04/2021 02:49:16 AM - INFO - 127.0.0.1 - - [04/Oct/2021 02:49:16] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+10/04/2021 02:49:25 AM - INFO - 127.0.0.1 - - [04/Oct/2021 02:49:25] "GET /index HTTP/1.1" 200 -
+10/04/2021 02:49:25 AM - INFO - 127.0.0.1 - - [04/Oct/2021 02:49:25] "[36mGET /static/css/reset.css HTTP/1.1[0m" 304 -
+10/04/2021 02:49:26 AM - INFO - 127.0.0.1 - - [04/Oct/2021 02:49:26] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+10/04/2021 02:49:26 AM - INFO - 127.0.0.1 - - [04/Oct/2021 02:49:26] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+10/04/2021 02:49:26 AM - INFO - 127.0.0.1 - - [04/Oct/2021 02:49:26] "[33mGET /undefined HTTP/1.1[0m" 404 -
+10/04/2021 02:49:36 AM - INFO - 127.0.0.1 - - [04/Oct/2021 02:49:36] "[36mGET /static/css/reset.css HTTP/1.1[0m" 304 -
+10/04/2021 02:49:36 AM - INFO - 127.0.0.1 - - [04/Oct/2021 02:49:36] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+10/04/2021 02:50:03 AM - INFO - 127.0.0.1 - - [04/Oct/2021 02:50:03] "GET /index HTTP/1.1" 200 -
+10/04/2021 02:50:03 AM - INFO - 127.0.0.1 - - [04/Oct/2021 02:50:03] "[36mGET /static/css/reset.css HTTP/1.1[0m" 304 -
+10/04/2021 02:50:03 AM - INFO - 127.0.0.1 - - [04/Oct/2021 02:50:03] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+10/04/2021 02:50:03 AM - INFO - 127.0.0.1 - - [04/Oct/2021 02:50:03] "GET /static/js/index.js HTTP/1.1" 200 -
+10/04/2021 02:50:04 AM - INFO - 127.0.0.1 - - [04/Oct/2021 02:50:04] "[33mGET /undefined HTTP/1.1[0m" 404 -
+10/04/2021 02:51:36 AM - INFO - 127.0.0.1 - - [04/Oct/2021 02:51:36] "GET /index HTTP/1.1" 200 -
+10/04/2021 02:51:36 AM - INFO - 127.0.0.1 - - [04/Oct/2021 02:51:36] "[36mGET /static/css/reset.css HTTP/1.1[0m" 304 -
+10/04/2021 02:51:36 AM - INFO - 127.0.0.1 - - [04/Oct/2021 02:51:36] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+10/04/2021 02:51:36 AM - INFO - 127.0.0.1 - - [04/Oct/2021 02:51:36] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+10/04/2021 02:51:37 AM - INFO - 127.0.0.1 - - [04/Oct/2021 02:51:37] "[33mGET /undefined HTTP/1.1[0m" 404 -
+10/04/2021 02:52:31 AM - INFO - 127.0.0.1 - - [04/Oct/2021 02:52:31] "GET /index HTTP/1.1" 200 -
+10/04/2021 02:52:32 AM - INFO - 127.0.0.1 - - [04/Oct/2021 02:52:32] "[36mGET /static/css/reset.css HTTP/1.1[0m" 304 -
+10/04/2021 02:52:32 AM - INFO - 127.0.0.1 - - [04/Oct/2021 02:52:32] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+10/04/2021 02:52:32 AM - INFO - 127.0.0.1 - - [04/Oct/2021 02:52:32] "GET /static/js/index.js HTTP/1.1" 200 -
+10/04/2021 02:53:45 AM - INFO - 127.0.0.1 - - [04/Oct/2021 02:53:45] "GET /index HTTP/1.1" 200 -
+10/04/2021 02:53:45 AM - INFO - 127.0.0.1 - - [04/Oct/2021 02:53:45] "[36mGET /static/css/reset.css HTTP/1.1[0m" 304 -
+10/04/2021 02:53:45 AM - INFO - 127.0.0.1 - - [04/Oct/2021 02:53:45] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+10/04/2021 02:53:45 AM - INFO - 127.0.0.1 - - [04/Oct/2021 02:53:45] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+10/04/2021 03:00:15 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:00:15] "GET / HTTP/1.1" 200 -
+10/04/2021 03:00:15 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:00:15] "[36mGET /static/css/reset.css HTTP/1.1[0m" 304 -
+10/04/2021 03:00:15 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:00:15] "[36mGET /static/img/empty.png HTTP/1.1[0m" 304 -
+10/04/2021 03:00:23 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:00:23] "GET /index HTTP/1.1" 200 -
+10/04/2021 03:00:23 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:00:23] "[36mGET /static/css/reset.css HTTP/1.1[0m" 304 -
+10/04/2021 03:00:23 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:00:23] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+10/04/2021 03:00:23 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:00:23] "GET /static/js/index.js HTTP/1.1" 200 -
+10/04/2021 03:00:24 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:00:24] "[33mGET /undefined HTTP/1.1[0m" 404 -
+10/04/2021 03:00:28 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:00:28] "[36mGET /static/css/reset.css HTTP/1.1[0m" 304 -
+10/04/2021 03:00:28 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:00:28] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+10/04/2021 03:01:09 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:01:09] "GET /index HTTP/1.1" 200 -
+10/04/2021 03:01:09 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:01:09] "[36mGET /static/css/reset.css HTTP/1.1[0m" 304 -
+10/04/2021 03:01:10 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:01:10] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+10/04/2021 03:01:10 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:01:10] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+10/04/2021 03:09:16 AM - INFO -  * Restarting with stat
+10/04/2021 03:09:17 AM - WARNING -  * Debugger is active!
+10/04/2021 03:09:17 AM - INFO -  * Debugger PIN: 123-930-440
+10/04/2021 03:09:17 AM - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+10/04/2021 03:20:19 AM - INFO -  * Restarting with stat
+10/04/2021 03:20:19 AM - WARNING -  * Debugger is active!
+10/04/2021 03:20:19 AM - INFO -  * Debugger PIN: 123-930-440
+10/04/2021 03:20:20 AM - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+10/04/2021 03:24:38 AM - INFO -  * Restarting with stat
+10/04/2021 03:24:38 AM - WARNING -  * Debugger is active!
+10/04/2021 03:24:38 AM - INFO -  * Debugger PIN: 123-930-440
+10/04/2021 03:24:38 AM - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+10/04/2021 03:29:56 AM - INFO -  * Restarting with stat
+10/04/2021 03:29:56 AM - WARNING -  * Debugger is active!
+10/04/2021 03:29:56 AM - INFO -  * Debugger PIN: 123-930-440
+10/04/2021 03:29:57 AM - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+10/04/2021 03:31:22 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:31:22] "GET / HTTP/1.1" 200 -
+10/04/2021 03:31:23 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:31:23] "GET /static/img/empty.png HTTP/1.1" 200 -
+10/04/2021 03:31:23 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:31:23] "GET /static/css/reset.css HTTP/1.1" 200 -
+10/04/2021 03:31:23 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:31:23] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+10/04/2021 03:31:45 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:31:45] "GET / HTTP/1.1" 200 -
+10/04/2021 03:31:45 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:31:45] "[36mGET /static/css/reset.css HTTP/1.1[0m" 304 -
+10/04/2021 03:31:45 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:31:45] "[36mGET /static/img/empty.png HTTP/1.1[0m" 304 -
+10/04/2021 03:31:47 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:31:47] "GET / HTTP/1.1" 200 -
+10/04/2021 03:31:47 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:31:47] "[36mGET /static/css/reset.css HTTP/1.1[0m" 304 -
+10/04/2021 03:31:47 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:31:47] "[36mGET /static/img/empty.png HTTP/1.1[0m" 304 -
+10/04/2021 03:32:17 AM - INFO -  * Restarting with stat
+10/04/2021 03:32:18 AM - WARNING -  * Debugger is active!
+10/04/2021 03:32:18 AM - INFO -  * Debugger PIN: 123-930-440
+10/04/2021 03:32:18 AM - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+10/04/2021 03:32:40 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:32:40] "GET / HTTP/1.1" 200 -
+10/04/2021 03:32:40 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:32:40] "[36mGET /static/css/reset.css HTTP/1.1[0m" 304 -
+10/04/2021 03:32:40 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:32:40] "[36mGET /static/img/empty.png HTTP/1.1[0m" 304 -
+10/04/2021 03:32:45 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:32:45] "GET /index HTTP/1.1" 200 -
+10/04/2021 03:32:45 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:32:45] "[36mGET /static/css/reset.css HTTP/1.1[0m" 304 -
+10/04/2021 03:32:45 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:32:45] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+10/04/2021 03:32:45 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:32:45] "GET /static/js/index.js HTTP/1.1" 200 -
+10/04/2021 03:32:46 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:32:46] "[36mGET /static/css/reset.css HTTP/1.1[0m" 304 -
+10/04/2021 03:33:03 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:33:03] "[36mGET /static/css/reset.css HTTP/1.1[0m" 304 -
+10/04/2021 03:33:03 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:33:03] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+10/04/2021 03:34:09 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:34:09] "GET / HTTP/1.1" 200 -
+10/04/2021 03:34:09 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:34:09] "[36mGET /static/css/reset.css HTTP/1.1[0m" 304 -
+10/04/2021 03:34:10 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:34:10] "[36mGET /static/img/empty.png HTTP/1.1[0m" 304 -
+10/04/2021 03:34:14 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:34:14] "GET /index HTTP/1.1" 200 -
+10/04/2021 03:34:14 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:34:14] "[36mGET /static/css/reset.css HTTP/1.1[0m" 304 -
+10/04/2021 03:34:14 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:34:14] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+10/04/2021 03:34:14 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:34:14] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+10/04/2021 03:34:22 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:34:22] "GET /index HTTP/1.1" 200 -
+10/04/2021 03:34:22 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:34:22] "[36mGET /static/css/reset.css HTTP/1.1[0m" 304 -
+10/04/2021 03:34:22 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:34:22] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+10/04/2021 03:34:22 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:34:22] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+10/04/2021 03:34:25 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:34:25] "[36mGET /static/css/reset.css HTTP/1.1[0m" 304 -
+10/04/2021 03:34:25 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:34:25] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+10/04/2021 03:34:41 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:34:41] "GET /index HTTP/1.1" 200 -
+10/04/2021 03:34:41 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:34:41] "[36mGET /static/css/reset.css HTTP/1.1[0m" 304 -
+10/04/2021 03:34:41 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:34:41] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+10/04/2021 03:34:41 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:34:41] "GET /static/js/index.js HTTP/1.1" 200 -
+10/04/2021 03:34:44 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:34:44] "[36mGET /static/css/reset.css HTTP/1.1[0m" 304 -
+10/04/2021 03:34:44 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:34:44] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+10/04/2021 03:34:54 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:34:54] "GET /index HTTP/1.1" 200 -
+10/04/2021 03:34:54 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:34:54] "[36mGET /static/css/reset.css HTTP/1.1[0m" 304 -
+10/04/2021 03:34:54 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:34:54] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+10/04/2021 03:34:54 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:34:54] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+10/04/2021 03:36:13 AM - INFO -  * Restarting with stat
+10/04/2021 03:36:14 AM - WARNING -  * Debugger is active!
+10/04/2021 03:36:14 AM - INFO -  * Debugger PIN: 123-930-440
+10/04/2021 03:36:14 AM - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+10/04/2021 03:36:20 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:36:20] "GET / HTTP/1.1" 200 -
+10/04/2021 03:36:20 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:36:20] "[36mGET /static/css/reset.css HTTP/1.1[0m" 304 -
+10/04/2021 03:36:20 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:36:20] "[36mGET /static/img/empty.png HTTP/1.1[0m" 304 -
+10/04/2021 03:36:26 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:36:26] "[33mGET /idnex HTTP/1.1[0m" 404 -
+10/04/2021 03:36:31 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:36:31] "GET /index HTTP/1.1" 200 -
+10/04/2021 03:36:31 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:36:31] "[36mGET /static/css/reset.css HTTP/1.1[0m" 304 -
+10/04/2021 03:36:31 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:36:31] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+10/04/2021 03:36:31 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:36:31] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+10/04/2021 03:36:35 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:36:35] "[36mGET /static/css/reset.css HTTP/1.1[0m" 304 -
+10/04/2021 03:36:35 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:36:35] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+10/04/2021 03:38:57 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:38:57] "GET /index HTTP/1.1" 200 -
+10/04/2021 03:38:57 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:38:57] "[36mGET /static/css/reset.css HTTP/1.1[0m" 304 -
+10/04/2021 03:38:58 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:38:58] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+10/04/2021 03:38:58 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:38:58] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+10/04/2021 03:39:03 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:39:03] "[36mGET /static/css/reset.css HTTP/1.1[0m" 304 -
+10/04/2021 03:39:03 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:39:03] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+10/04/2021 03:39:26 AM - INFO -  * Restarting with stat
+10/04/2021 03:39:27 AM - WARNING -  * Debugger is active!
+10/04/2021 03:39:27 AM - INFO -  * Debugger PIN: 123-930-440
+10/04/2021 03:39:27 AM - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+10/04/2021 03:39:31 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:39:31] "GET / HTTP/1.1" 200 -
+10/04/2021 03:39:31 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:39:31] "[36mGET /static/css/reset.css HTTP/1.1[0m" 304 -
+10/04/2021 03:39:31 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:39:31] "[36mGET /static/img/empty.png HTTP/1.1[0m" 304 -
+10/04/2021 03:39:34 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:39:34] "GET /index HTTP/1.1" 200 -
+10/04/2021 03:39:34 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:39:34] "[36mGET /static/css/reset.css HTTP/1.1[0m" 304 -
+10/04/2021 03:39:34 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:39:34] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+10/04/2021 03:39:34 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:39:34] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+10/04/2021 03:39:36 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:39:36] "[36mGET /static/css/reset.css HTTP/1.1[0m" 304 -
+10/04/2021 03:39:37 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:39:37] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+10/04/2021 03:39:45 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:39:45] "GET /index HTTP/1.1" 200 -
+10/04/2021 03:39:45 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:39:45] "[36mGET /static/css/reset.css HTTP/1.1[0m" 304 -
+10/04/2021 03:39:45 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:39:45] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+10/04/2021 03:39:45 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:39:45] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+10/04/2021 03:43:08 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:43:08] "GET /index HTTP/1.1" 200 -
+10/04/2021 03:43:08 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:43:08] "[36mGET /static/css/reset.css HTTP/1.1[0m" 304 -
+10/04/2021 03:43:08 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:43:08] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+10/04/2021 03:43:09 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:43:09] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+10/04/2021 03:44:55 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:44:55] "GET /index HTTP/1.1" 200 -
+10/04/2021 03:44:56 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:44:56] "[36mGET /static/css/reset.css HTTP/1.1[0m" 304 -
+10/04/2021 03:44:56 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:44:56] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+10/04/2021 03:44:56 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:44:56] "GET /static/js/index.js HTTP/1.1" 200 -
+10/04/2021 03:44:56 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:44:56] "[33mGET /undefined HTTP/1.1[0m" 404 -
+10/04/2021 03:44:58 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:44:58] "[36mGET /static/css/reset.css HTTP/1.1[0m" 304 -
+10/04/2021 03:44:59 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:44:59] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+10/04/2021 03:45:11 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:45:11] "GET /index HTTP/1.1" 200 -
+10/04/2021 03:45:11 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:45:11] "[36mGET /static/css/reset.css HTTP/1.1[0m" 304 -
+10/04/2021 03:45:11 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:45:11] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+10/04/2021 03:45:11 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:45:11] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+10/04/2021 03:45:12 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:45:12] "[33mGET /undefined HTTP/1.1[0m" 404 -
+10/04/2021 03:45:14 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:45:14] "[36mGET /static/css/reset.css HTTP/1.1[0m" 304 -
+10/04/2021 03:45:14 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:45:14] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+10/04/2021 03:45:17 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:45:17] "GET /index HTTP/1.1" 200 -
+10/04/2021 03:45:17 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:45:17] "[36mGET /static/css/reset.css HTTP/1.1[0m" 304 -
+10/04/2021 03:45:17 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:45:17] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+10/04/2021 03:45:17 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:45:17] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+10/04/2021 03:46:39 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:46:39] "GET /index HTTP/1.1" 200 -
+10/04/2021 03:46:39 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:46:39] "[36mGET /static/css/reset.css HTTP/1.1[0m" 304 -
+10/04/2021 03:46:39 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:46:39] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+10/04/2021 03:46:39 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:46:39] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+10/04/2021 03:46:54 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:46:54] "GET /index HTTP/1.1" 200 -
+10/04/2021 03:46:54 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:46:54] "[36mGET /static/css/reset.css HTTP/1.1[0m" 304 -
+10/04/2021 03:46:54 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:46:54] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+10/04/2021 03:46:55 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:46:55] "GET /static/js/index.js HTTP/1.1" 200 -
+10/04/2021 03:50:05 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:50:05] "GET /index HTTP/1.1" 200 -
+10/04/2021 03:50:05 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:50:05] "[36mGET /static/css/reset.css HTTP/1.1[0m" 304 -
+10/04/2021 03:50:05 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:50:05] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+10/04/2021 03:50:05 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:50:05] "GET /static/js/index.js HTTP/1.1" 200 -
+10/04/2021 03:50:46 AM - INFO - 127.0.0.1 - - [04/Oct/2021 03:50:46] "[33mGET /undefined HTTP/1.1[0m" 404 -
+10/04/2021 03:55:40 AM - INFO -  * Detected change in 'E:\\workplace\\pycharmWork\\IoTPractice\\IoTPractice\\pra\\hello.py', reloading
+10/04/2021 03:55:40 AM - INFO -  * Restarting with stat
+10/04/2021 03:55:40 AM - WARNING -  * Debugger is active!
+10/04/2021 03:55:40 AM - INFO -  * Debugger PIN: 123-930-440
+10/04/2021 03:55:41 AM - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+10/04/2021 03:59:07 AM - INFO -  * Detected change in 'E:\\workplace\\pycharmWork\\IoTPractice\\IoTPractice\\pra\\hello.py', reloading
+10/04/2021 03:59:07 AM - INFO -  * Restarting with stat
+10/04/2021 03:59:07 AM - WARNING -  * Debugger is active!
+10/04/2021 03:59:07 AM - INFO -  * Debugger PIN: 123-930-440
+10/04/2021 03:59:07 AM - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+10/04/2021 04:01:29 AM - INFO -  * Detected change in 'E:\\workplace\\pycharmWork\\IoTPractice\\IoTPractice\\pra\\hello.py', reloading
+10/04/2021 04:01:29 AM - INFO -  * Restarting with stat
+10/04/2021 04:01:29 AM - WARNING -  * Debugger is active!
+10/04/2021 04:01:29 AM - INFO -  * Debugger PIN: 123-930-440
+10/04/2021 04:01:29 AM - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+10/04/2021 04:01:56 AM - INFO -  * Detected change in 'E:\\workplace\\pycharmWork\\IoTPractice\\IoTPractice\\pra\\hello.py', reloading
+10/04/2021 04:01:56 AM - INFO -  * Restarting with stat
+10/04/2021 04:01:57 AM - WARNING -  * Debugger is active!
+10/04/2021 04:01:57 AM - INFO -  * Debugger PIN: 123-930-440
+10/04/2021 04:01:57 AM - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+10/04/2021 04:15:46 AM - INFO -  * Detected change in 'E:\\workplace\\pycharmWork\\IoTPractice\\IoTPractice\\pra\\hello.py', reloading
+10/04/2021 04:15:46 AM - INFO -  * Restarting with stat
+10/04/2021 04:15:46 AM - WARNING -  * Debugger is active!
+10/04/2021 04:15:46 AM - INFO -  * Debugger PIN: 123-930-440
+10/04/2021 04:15:47 AM - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+10/04/2021 04:15:57 AM - INFO -  * Detected change in 'E:\\workplace\\pycharmWork\\IoTPractice\\IoTPractice\\pra\\hello.py', reloading
+10/04/2021 04:15:57 AM - INFO -  * Restarting with stat
+10/04/2021 04:15:58 AM - WARNING -  * Debugger is active!
+10/04/2021 04:15:58 AM - INFO -  * Debugger PIN: 123-930-440
+10/04/2021 04:15:58 AM - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+10/04/2021 04:17:04 AM - INFO -  * Detected change in 'E:\\workplace\\pycharmWork\\IoTPractice\\IoTPractice\\pra\\hello.py', reloading
+10/04/2021 04:17:04 AM - INFO -  * Restarting with stat
+10/04/2021 04:17:05 AM - WARNING -  * Debugger is active!
+10/04/2021 04:17:05 AM - INFO -  * Debugger PIN: 123-930-440
+10/04/2021 04:17:06 AM - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+10/04/2021 04:27:28 AM - INFO -  * Restarting with stat
+10/04/2021 04:27:29 AM - WARNING -  * Debugger is active!
+10/04/2021 04:27:29 AM - INFO -  * Debugger PIN: 123-930-440
+10/04/2021 04:27:29 AM - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+10/04/2021 04:27:47 AM - INFO - 127.0.0.1 - - [04/Oct/2021 04:27:47] "GET / HTTP/1.1" 200 -
+10/04/2021 04:27:47 AM - INFO - 127.0.0.1 - - [04/Oct/2021 04:27:47] "[36mGET /static/css/reset.css HTTP/1.1[0m" 304 -
+10/04/2021 04:27:48 AM - INFO - 127.0.0.1 - - [04/Oct/2021 04:27:48] "[36mGET /static/img/empty.png HTTP/1.1[0m" 304 -
+10/04/2021 04:27:51 AM - INFO - 127.0.0.1 - - [04/Oct/2021 04:27:51] "GET /index HTTP/1.1" 200 -
+10/04/2021 04:27:51 AM - INFO - 127.0.0.1 - - [04/Oct/2021 04:27:51] "[36mGET /static/css/reset.css HTTP/1.1[0m" 304 -
+10/04/2021 04:27:51 AM - INFO - 127.0.0.1 - - [04/Oct/2021 04:27:51] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+10/04/2021 04:27:51 AM - INFO - 127.0.0.1 - - [04/Oct/2021 04:27:51] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+10/04/2021 04:27:51 AM - INFO - 127.0.0.1 - - [04/Oct/2021 04:27:51] "[33mGET /undefined HTTP/1.1[0m" 404 -
+10/04/2021 04:27:54 AM - INFO - 127.0.0.1 - - [04/Oct/2021 04:27:54] "[36mGET /static/css/reset.css HTTP/1.1[0m" 304 -
+10/04/2021 04:27:55 AM - INFO - 127.0.0.1 - - [04/Oct/2021 04:27:55] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+10/04/2021 04:28:35 AM - INFO -  * Detected change in 'E:\\workplace\\pycharmWork\\IoTPractice\\IoTPractice\\pra\\hello.py', reloading
+10/04/2021 04:28:35 AM - INFO -  * Restarting with stat
+10/04/2021 04:28:35 AM - WARNING -  * Debugger is active!
+10/04/2021 04:28:35 AM - INFO -  * Debugger PIN: 123-930-440
+10/04/2021 04:28:35 AM - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+10/04/2021 04:33:32 AM - INFO -  * Restarting with stat
+10/04/2021 04:33:32 AM - WARNING -  * Debugger is active!
+10/04/2021 04:33:32 AM - INFO -  * Debugger PIN: 123-930-440
+10/04/2021 04:33:32 AM - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+10/04/2021 04:33:50 AM - INFO - 127.0.0.1 - - [04/Oct/2021 04:33:50] "GET / HTTP/1.1" 200 -
+10/04/2021 04:33:50 AM - INFO - 127.0.0.1 - - [04/Oct/2021 04:33:50] "[36mGET /static/css/reset.css HTTP/1.1[0m" 304 -
+10/04/2021 04:33:50 AM - INFO - 127.0.0.1 - - [04/Oct/2021 04:33:50] "[36mGET /static/img/empty.png HTTP/1.1[0m" 304 -
+10/04/2021 04:33:54 AM - INFO - 127.0.0.1 - - [04/Oct/2021 04:33:54] "GET /index HTTP/1.1" 200 -
+10/04/2021 04:33:54 AM - INFO - 127.0.0.1 - - [04/Oct/2021 04:33:54] "[36mGET /static/css/reset.css HTTP/1.1[0m" 304 -
+10/04/2021 04:33:54 AM - INFO - 127.0.0.1 - - [04/Oct/2021 04:33:54] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+10/04/2021 04:33:54 AM - INFO - 127.0.0.1 - - [04/Oct/2021 04:33:54] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+10/04/2021 04:33:55 AM - INFO - 127.0.0.1 - - [04/Oct/2021 04:33:55] "[36mGET /static/css/reset.css HTTP/1.1[0m" 304 -
+10/04/2021 04:33:55 AM - INFO - 127.0.0.1 - - [04/Oct/2021 04:33:55] "[33mGET /undefined HTTP/1.1[0m" 404 -
+10/04/2021 04:33:58 AM - INFO - 127.0.0.1 - - [04/Oct/2021 04:33:58] "[36mGET /static/css/reset.css HTTP/1.1[0m" 304 -
+10/04/2021 04:33:59 AM - INFO - 127.0.0.1 - - [04/Oct/2021 04:33:59] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+10/04/2021 04:34:07 AM - INFO - 127.0.0.1 - - [04/Oct/2021 04:34:07] "GET /index HTTP/1.1" 200 -
+10/04/2021 04:34:07 AM - INFO - 127.0.0.1 - - [04/Oct/2021 04:34:07] "[36mGET /static/css/reset.css HTTP/1.1[0m" 304 -
+10/04/2021 04:34:07 AM - INFO - 127.0.0.1 - - [04/Oct/2021 04:34:07] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+10/04/2021 04:34:08 AM - INFO - 127.0.0.1 - - [04/Oct/2021 04:34:08] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+10/04/2021 04:34:12 AM - INFO - 127.0.0.1 - - [04/Oct/2021 04:34:12] "GET /index HTTP/1.1" 200 -
+10/04/2021 04:34:12 AM - INFO - 127.0.0.1 - - [04/Oct/2021 04:34:12] "[36mGET /static/css/reset.css HTTP/1.1[0m" 304 -
+10/04/2021 04:34:12 AM - INFO - 127.0.0.1 - - [04/Oct/2021 04:34:12] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+10/04/2021 04:34:13 AM - INFO - 127.0.0.1 - - [04/Oct/2021 04:34:13] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+10/04/2021 04:34:17 AM - INFO - 127.0.0.1 - - [04/Oct/2021 04:34:17] "GET /index HTTP/1.1" 200 -
+10/04/2021 04:34:17 AM - INFO - 127.0.0.1 - - [04/Oct/2021 04:34:17] "[36mGET /static/css/reset.css HTTP/1.1[0m" 304 -
+10/04/2021 04:34:17 AM - INFO - 127.0.0.1 - - [04/Oct/2021 04:34:17] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+10/04/2021 04:34:17 AM - INFO - 127.0.0.1 - - [04/Oct/2021 04:34:17] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+10/04/2021 04:34:55 AM - INFO -  * Restarting with stat
+10/04/2021 04:34:56 AM - WARNING -  * Debugger is active!
+10/04/2021 04:34:56 AM - INFO -  * Debugger PIN: 123-930-440
+10/04/2021 04:34:56 AM - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+10/04/2021 23:41:43 PM - INFO -  * Restarting with stat
+10/04/2021 23:41:44 PM - WARNING -  * Debugger is active!
+10/04/2021 23:41:44 PM - INFO -  * Debugger PIN: 123-930-440
+10/04/2021 23:41:44 PM - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+10/04/2021 23:41:56 PM - INFO - 127.0.0.1 - - [04/Oct/2021 23:41:56] "GET /welcom HTTP/1.1" 200 -
+10/04/2021 23:41:56 PM - INFO - 127.0.0.1 - - [04/Oct/2021 23:41:56] "[36mGET /static/css/reset.css HTTP/1.1[0m" 304 -
+10/04/2021 23:41:57 PM - INFO - 127.0.0.1 - - [04/Oct/2021 23:41:57] "[36mGET /static/img/welcomg1.png HTTP/1.1[0m" 304 -
+10/04/2021 23:41:57 PM - INFO - 127.0.0.1 - - [04/Oct/2021 23:41:57] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+10/04/2021 23:41:58 PM - INFO - 127.0.0.1 - - [04/Oct/2021 23:41:58] "GET /index HTTP/1.1" 200 -
+10/04/2021 23:41:58 PM - INFO - 127.0.0.1 - - [04/Oct/2021 23:41:58] "[36mGET /static/css/reset.css HTTP/1.1[0m" 304 -
+10/04/2021 23:41:58 PM - INFO - 127.0.0.1 - - [04/Oct/2021 23:41:58] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+10/04/2021 23:41:58 PM - INFO - 127.0.0.1 - - [04/Oct/2021 23:41:58] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+10/04/2021 23:41:58 PM - INFO - 127.0.0.1 - - [04/Oct/2021 23:41:58] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+10/04/2021 23:42:16 PM - INFO - 127.0.0.1 - - [04/Oct/2021 23:42:16] "GET /welcom HTTP/1.1" 200 -
+10/04/2021 23:42:16 PM - INFO - 127.0.0.1 - - [04/Oct/2021 23:42:16] "[36mGET /static/css/reset.css HTTP/1.1[0m" 304 -
+10/04/2021 23:42:16 PM - INFO - 127.0.0.1 - - [04/Oct/2021 23:42:16] "[36mGET /static/img/welcomg1.png HTTP/1.1[0m" 304 -
+10/04/2021 23:42:16 PM - INFO - 127.0.0.1 - - [04/Oct/2021 23:42:16] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+10/04/2021 23:42:27 PM - INFO - 127.0.0.1 - - [04/Oct/2021 23:42:27] "GET /index HTTP/1.1" 200 -
+10/04/2021 23:42:28 PM - INFO - 127.0.0.1 - - [04/Oct/2021 23:42:28] "[36mGET /static/css/reset.css HTTP/1.1[0m" 304 -
+10/04/2021 23:42:28 PM - INFO - 127.0.0.1 - - [04/Oct/2021 23:42:28] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+10/04/2021 23:42:28 PM - INFO - 127.0.0.1 - - [04/Oct/2021 23:42:28] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+10/04/2021 23:42:28 PM - INFO - 127.0.0.1 - - [04/Oct/2021 23:42:28] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+10/04/2021 23:42:39 PM - INFO -  * Restarting with stat
+10/04/2021 23:42:41 PM - WARNING -  * Debugger is active!
+10/04/2021 23:42:41 PM - INFO -  * Debugger PIN: 123-930-440
+10/04/2021 23:42:41 PM - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+10/04/2021 23:42:45 PM - INFO - 127.0.0.1 - - [04/Oct/2021 23:42:45] "GET /welcom HTTP/1.1" 200 -
+10/04/2021 23:42:46 PM - INFO - 127.0.0.1 - - [04/Oct/2021 23:42:46] "[36mGET /static/css/reset.css HTTP/1.1[0m" 304 -
+10/04/2021 23:42:46 PM - INFO - 127.0.0.1 - - [04/Oct/2021 23:42:46] "[36mGET /static/img/welcomg1.png HTTP/1.1[0m" 304 -
+10/04/2021 23:42:46 PM - INFO - 127.0.0.1 - - [04/Oct/2021 23:42:46] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+10/04/2021 23:44:45 PM - INFO -  * Restarting with stat
+10/04/2021 23:44:47 PM - WARNING -  * Debugger is active!
+10/04/2021 23:44:47 PM - INFO -  * Debugger PIN: 123-930-440
+10/04/2021 23:44:47 PM - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+10/04/2021 23:44:53 PM - INFO - 127.0.0.1 - - [04/Oct/2021 23:44:53] "GET /welcom HTTP/1.1" 200 -
+10/04/2021 23:44:53 PM - INFO - 127.0.0.1 - - [04/Oct/2021 23:44:53] "[36mGET /static/css/reset.css HTTP/1.1[0m" 304 -
+10/04/2021 23:44:53 PM - INFO - 127.0.0.1 - - [04/Oct/2021 23:44:53] "[36mGET /static/img/welcomg1.png HTTP/1.1[0m" 304 -
+10/04/2021 23:44:53 PM - INFO - 127.0.0.1 - - [04/Oct/2021 23:44:53] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+10/04/2021 23:51:56 PM - INFO -  * Detected change in 'E:\\workplace\\pycharmWork\\IoTPractice\\IoTPractice\\code\\sendDataHelper.py', reloading
+10/04/2021 23:51:56 PM - INFO -  * Restarting with stat

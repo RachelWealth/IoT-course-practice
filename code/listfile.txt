@@ -1,0 +1,4 @@
+{'id': 1, 'type': 'cloth', 'gender': 'Å®', 'color': 'ºì', 'season': 'Çï', 'brand': 'Veromoda', 'create_time': '2021-09-28 17:28:58', 'updata_time': '2021-09-28 17:28:58', 'deleted': 0}
+{'id': 11, 'type': 'cloth', 'gender': 'Å®', 'color': 'ºì', 'season': '¶¬', 'brand': 'OLNY', 'create_time': '2021-09-28 17:28:58', 'updata_time': '2021-09-28 17:28:58', 'deleted': 0}
+{'id': 19, 'type': 'cloth', 'gender': 'ÄÐ', 'color': 'ºì', 'season': 'Çï', 'brand': 'SEMIR', 'create_time': '2021-09-28 17:28:58', 'updata_time': '2021-09-28 17:28:58', 'deleted': 0}
+{'id': 28, 'type': 'cloth', 'gender': 'ÄÐ', 'color': 'ºì', 'season': '´º', 'brand': 'ÌØ²½', 'create_time': '2021-09-28 17:28:58', 'updata_time': '2021-09-28 17:28:58', 'deleted': 0}

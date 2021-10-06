@@ -1,18 +1,58 @@
-<!DOCTYPE html>
-<html lang="en">
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>book list</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--    <h1>-->
+<!--        图书列表-->
+<!--    </h1>-->
+<!--    <ul>-->
+<!--        <li>标题：《{{book.title}}》</li>-->
+<!--        <li>定价：</li>-->
+<!--        <li>作者：</li>-->
+<!--        <li>出版社：</li>·-->
+<!--    </ul>-->
+<!--</body>-->
+<!--</html>-->
+
+<!DOCTYPE HTML>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>book list</title>
+    <meta charset="utf-8">
+    <title>WebSocket网页端JS示例</title>
+
+    <script type="text/javascript">
+        function WebSocketTest() {
+            // 新建WebSocket连接
+            var ws = new WebSocket("ws://localhost:4200");
+
+            // 连接打开事件，打开连接后发送数据
+            ws.onopen = function () {
+                // 使用send()方法发送数据
+                ws.send("这是测试数据");
+                alert("数据发送中:\n这是测试数据");
+            };
+
+            // 接收数据事件，event的data就是返回数据
+            ws.onmessage = function (evt) {
+                var received_msg = evt.data;
+                alert("数据已接收:\n" + received_msg);
+                // 作为一个好习惯，在接收完数据后就关闭连接，这样可以减少服务器的负担
+                ws.close();
+            };
+
+            // 关闭连接后要做的事
+            ws.onclose = function () {
+                alert("连接已关闭...");
+            };
+        }
+    </script>
 </head>
 <body>
-    <h1>
-        图书列表
-    </h1>
-    <ul>
-        <li>标题：《{{book.title}}》</li>
-        <li>定价：</li>
-        <li>作者：</li>
-        <li>出版社：</li>·
-    </ul>
+<div id="sse">
+    <a href="javascript:WebSocketTest()">运行 WebSocket</a>
+</div>
 </body>
 </html>

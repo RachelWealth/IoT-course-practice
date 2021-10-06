@@ -8,11 +8,12 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 
+
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.setEnabled(True)
-        MainWindow.resize(1060, 721)
+        MainWindow.resize(974, 784)
         font = QtGui.QFont()
         font.setPointSize(10)
         MainWindow.setFont(font)
@@ -27,19 +28,19 @@ class Ui_MainWindow(object):
         self.scrollArea = QtWidgets.QScrollArea(self.centralwidget)
         self.scrollArea.setMaximumSize(QtCore.QSize(140, 16777215))
         self.scrollArea.setStyleSheet("background-color:rgb(1,22,39);\n"
-"color:white;\n"
-"border-top:1px solid white;\n"
-"border-bottom:1px solid white;\n"
-"border-left:1px solid white;\n"
-"border-top-left-radius:10px;\n"
-"border-bottom-left-radius:10px;")
+                                      "color:white;\n"
+                                      "border-top:1px solid white;\n"
+                                      "border-bottom:1px solid white;\n"
+                                      "border-left:1px solid white;\n"
+                                      "border-top-left-radius:10px;\n"
+                                      "border-bottom-left-radius:10px;")
         self.scrollArea.setWidgetResizable(True)
         self.scrollArea.setObjectName("scrollArea")
         self.scrollAreaWidgetContents_2 = QtWidgets.QWidget()
-        self.scrollAreaWidgetContents_2.setGeometry(QtCore.QRect(0, 0, 138, 638))
+        self.scrollAreaWidgetContents_2.setGeometry(QtCore.QRect(0, 0, 138, 707))
         self.scrollAreaWidgetContents_2.setObjectName("scrollAreaWidgetContents_2")
         self.layoutWidget = QtWidgets.QWidget(self.scrollAreaWidgetContents_2)
-        self.layoutWidget.setGeometry(QtCore.QRect(20, 30, 101, 504))
+        self.layoutWidget.setGeometry(QtCore.QRect(20, 30, 110, 655))
         self.layoutWidget.setObjectName("layoutWidget")
         self.verticalLayout = QtWidgets.QVBoxLayout(self.layoutWidget)
         self.verticalLayout.setContentsMargins(0, 0, 0, 0)
@@ -49,13 +50,13 @@ class Ui_MainWindow(object):
         self.horizontalLayout.setObjectName("horizontalLayout")
         self.button_manager = QtWidgets.QPushButton(self.layoutWidget)
         self.button_manager.setStyleSheet("border:none;\n"
-"color:white;")
+                                          "color:white;")
         self.button_manager.setObjectName("button_manager")
         self.horizontalLayout.addWidget(self.button_manager)
         self.button_add = QtWidgets.QPushButton(self.layoutWidget)
         self.button_add.setStyleSheet("border:none;\n"
-"color:white;\n"
-"font: 7pt \"AcadEref\";")
+                                      "color:white;\n"
+                                      "font: 7pt \"AcadEref\";")
         self.button_add.setObjectName("button_add")
         self.horizontalLayout.addWidget(self.button_add)
         self.verticalLayout.addLayout(self.horizontalLayout)
@@ -68,24 +69,32 @@ class Ui_MainWindow(object):
         font.setWeight(75)
         self.listWidget.setFont(font)
         self.listWidget.setStyleSheet(".QListWidget{\n"
-"    background-color: rgb(55,55,55);\n"
-"    border-radius:10px;\n"
-"    padding:5px;\n"
-"    border:none;\n"
-"    height: 200;\n"
-"}\n"
-".QListWidget::Item{\n"
-"    font: 10pt \"仿宋\";\n"
-"    color:white;\n"
-"    font-weight:bold;\n"
-"}")
+                                      "    background-color: rgb(55,55,55);\n"
+                                      "    border-radius:10px;\n"
+                                      "    padding:5px;\n"
+                                      "    border:none;\n"
+                                      "    height: 200;\n"
+                                      "}\n"
+                                      ".QListWidget::Item{\n"
+                                      "    font: 10pt \"仿宋\";\n"
+                                      "    color:white;\n"
+                                      "    font-weight:bold;\n"
+                                      "}")
         self.listWidget.setIconSize(QtCore.QSize(0, 0))
         self.listWidget.setGridSize(QtCore.QSize(0, 30))
         self.listWidget.setObjectName("listWidget")
         item = QtWidgets.QListWidgetItem()
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        item.setFont(font)
+        brush = QtGui.QBrush(QtGui.QColor(255, 255, 255))
+        brush.setStyle(QtCore.Qt.NoBrush)
+        item.setForeground(brush)
         self.listWidget.addItem(item)
         item = QtWidgets.QListWidgetItem()
         font = QtGui.QFont()
+        font.setFamily("AcadEref")
+        font.setPointSize(10)
         font.setBold(True)
         font.setWeight(75)
         item.setFont(font)
@@ -98,6 +107,8 @@ class Ui_MainWindow(object):
         self.listWidget.addItem(item)
         item = QtWidgets.QListWidgetItem()
         font = QtGui.QFont()
+        font.setFamily("AcadEref")
+        font.setPointSize(10)
         font.setBold(True)
         font.setWeight(75)
         item.setFont(font)
@@ -109,19 +120,20 @@ class Ui_MainWindow(object):
         item.setForeground(brush)
         self.listWidget.addItem(item)
         self.verticalLayout.addWidget(self.listWidget)
-        spacerItem = QtWidgets.QSpacerItem(40, 40, QtWidgets.QSizePolicy.MinimumExpanding, QtWidgets.QSizePolicy.Minimum)
+        spacerItem = QtWidgets.QSpacerItem(40, 40, QtWidgets.QSizePolicy.MinimumExpanding,
+                                           QtWidgets.QSizePolicy.Minimum)
         self.verticalLayout.addItem(spacerItem)
         self.horizontalLayout_2 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_2.setObjectName("horizontalLayout_2")
         self.button_manager_2 = QtWidgets.QPushButton(self.layoutWidget)
         self.button_manager_2.setStyleSheet("border:none;\n"
-"color:white;")
+                                            "color:white;")
         self.button_manager_2.setObjectName("button_manager_2")
         self.horizontalLayout_2.addWidget(self.button_manager_2)
         self.button_add_2 = QtWidgets.QPushButton(self.layoutWidget)
         self.button_add_2.setStyleSheet("border:none;\n"
-"color:white;\n"
-"font: 7pt \"AcadEref\";")
+                                        "color:white;\n"
+                                        "font: 7pt \"AcadEref\";")
         self.button_add_2.setObjectName("button_add_2")
         self.horizontalLayout_2.addWidget(self.button_add_2)
         self.verticalLayout.addLayout(self.horizontalLayout_2)
@@ -135,15 +147,16 @@ class Ui_MainWindow(object):
         font.setWeight(50)
         self.listWidget_2.setFont(font)
         self.listWidget_2.setStyleSheet("background-color: rgb(55,55,55);\n"
-"font: 10pt \"仿宋\" white;\n"
-"border-radius:10px;\n"
-"padding:5px;\n"
-"border:none;")
+                                        "font: 10pt \"仿宋\" white;\n"
+                                        "border-radius:10px;\n"
+                                        "padding:5px;\n"
+                                        "border:none;")
         self.listWidget_2.setGridSize(QtCore.QSize(0, 30))
         self.listWidget_2.setObjectName("listWidget_2")
         item = QtWidgets.QListWidgetItem()
         font = QtGui.QFont()
-        font.setFamily("宋体")
+        font.setFamily("AcadEref")
+        font.setPointSize(10)
         font.setBold(True)
         font.setWeight(75)
         item.setFont(font)
@@ -153,6 +166,8 @@ class Ui_MainWindow(object):
         self.listWidget_2.addItem(item)
         item = QtWidgets.QListWidgetItem()
         font = QtGui.QFont()
+        font.setFamily("AcadEref")
+        font.setPointSize(10)
         font.setBold(True)
         font.setWeight(75)
         item.setFont(font)
@@ -162,6 +177,8 @@ class Ui_MainWindow(object):
         self.listWidget_2.addItem(item)
         item = QtWidgets.QListWidgetItem()
         font = QtGui.QFont()
+        font.setFamily("AcadEref")
+        font.setPointSize(10)
         font.setBold(True)
         font.setWeight(75)
         item.setFont(font)
@@ -179,25 +196,28 @@ class Ui_MainWindow(object):
         self.groupBox.setMinimumSize(QtCore.QSize(0, 50))
         self.groupBox.setMaximumSize(QtCore.QSize(16777215, 100))
         self.groupBox.setStyleSheet("background-color:rgb(1,22,39);\n"
-"")
+                                    "")
         self.groupBox.setTitle("")
         self.groupBox.setObjectName("groupBox")
         self.gridLayout = QtWidgets.QGridLayout(self.groupBox)
         self.gridLayout.setObjectName("gridLayout")
         self.tableWidget = QtWidgets.QTableWidget(self.groupBox)
+        self.tableWidget.setEnabled(False)
         font = QtGui.QFont()
         font.setPointSize(10)
         font.setBold(False)
         font.setWeight(50)
         self.tableWidget.setFont(font)
+        self.tableWidget.setContextMenuPolicy(QtCore.Qt.CustomContextMenu)
         self.tableWidget.setToolTip("")
         self.tableWidget.setStyleSheet(".QTableWidget::Item{\n"
-"    color:#6FD3CA;\n"
-"    \n"
-"}\n"
-".QTableWidget{\n"
-"    border:none;\n"
-"}")
+                                       "    color:#6FD3CA;\n"
+                                       "    \n"
+                                       "}\n"
+                                       ".QTableWidget{\n"
+                                       "    border:none;\n"
+                                       "}")
+        self.tableWidget.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers)
         self.tableWidget.setShowGrid(False)
         self.tableWidget.setWordWrap(False)
         self.tableWidget.setCornerButtonEnabled(False)
@@ -221,6 +241,7 @@ class Ui_MainWindow(object):
         item = QtWidgets.QTableWidgetItem()
         self.tableWidget.setHorizontalHeaderItem(5, item)
         item = QtWidgets.QTableWidgetItem()
+        item.setFlags(QtCore.Qt.ItemIsSelectable | QtCore.Qt.ItemIsDragEnabled | QtCore.Qt.ItemIsEnabled)
         self.tableWidget.setItem(0, 0, item)
         item = QtWidgets.QTableWidgetItem()
         self.tableWidget.setItem(0, 1, item)
@@ -250,7 +271,7 @@ class Ui_MainWindow(object):
         self.gridLayout_2.addLayout(self.horizontalLayout_3, 0, 0, 1, 1)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 1060, 29))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 974, 26))
         self.menubar.setObjectName("menubar")
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
@@ -322,4 +343,3 @@ class Ui_MainWindow(object):
         item = self.tableWidget.item(1, 2)
         item.setText(_translate("MainWindow", "灰色"))
         self.tableWidget.setSortingEnabled(__sortingEnabled)
-
