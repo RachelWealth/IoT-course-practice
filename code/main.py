@@ -1,8 +1,6 @@
 import sys
 from PyQt5.QtWidgets import *
-from flask import render_template, Flask
 
-from IoTPractice.code.myFlask import MyFlask
 from application import AppWindow
 objs = ['cloth', 'flovoring', 'book']
 databases = ['cloth', 'flovoring', 'book']

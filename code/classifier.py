@@ -11,10 +11,10 @@ class classifier:
         self.cbrand = ['Veromoda', 'LEDIN', 'OLNY', 'ANTA', 'SEMIR', 'Teek', '特步']
         self.cseason = ['春', '夏', '秋', '冬']
 
-        self.flavoringEN = ['name', 'brand']
+        self.flavoringEN = ['kind', 'brand']
         self.flavoring = ['种类', '品牌']
-        self.fname = ['盐', '味精', '鸡精', '孜然', '辣椒面', '胡椒粉']
-        self.fbrand = ['海天', '王守义']
+        self.fkind = ['食盐', '味精', '酱油']
+        self.fbrand = ['海天', '王守义', '太太乐', '双晶', '中盐', '淮盐', '千禾']
 
         self.bookEN = ['author', 'language', 'publisher']
         self.book = ['作者', '语言', '出版社']

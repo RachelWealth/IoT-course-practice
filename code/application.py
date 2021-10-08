@@ -1,4 +1,6 @@
 import json
+import threading
+
 from IoTPractice.code.managerUI import Ui_MainWindow
 from PyQt5 import QtWidgets, QtCore
 from PyQt5.QtWidgets import *
@@ -35,12 +37,6 @@ class AppWindow(QMainWindow, Ui_MainWindow):
         self.secondClass = 'color'
         self.thirdClass = ''
 
-        print('---------------set timeer---------------')
-        logging.info('---------------set timeer---------------')
-        self._timer = QTimer(self)
-        # self._timer.timeout.connect(self.__voiceManager__)
-        self._timer.start(1000)  # plot after 1s delay
-
         print('---------------set list item response action---------------')
         logging.info('---------------set list item response action---------------')
         # first class list clicked response
@@ -50,6 +46,11 @@ class AppWindow(QMainWindow, Ui_MainWindow):
         # third class list clicked response
         self.tableWidget.setEnabled(True)
         self.tableWidget.clicked.connect(self.__thirdClassClick__)
+
+        # self.button_add.clicked(self.addObject)
+
+        self.actionlianjie.triggered.connect(self.__connectSerial__)
+        # self.action_4.triggered.connect(self.__connectAbout__)
 
         self.browser = QWebEngineView()
         # self.browser.load(QUrl('file:///E:/workplace/pycharmWork/IoTPractice/IoTPractice/code/web/templates/welcom.html'))
@@ -62,6 +63,19 @@ class AppWindow(QMainWindow, Ui_MainWindow):
         print("finish initial")
         logging.info("finish initial")
 
+    def __getRighrtAndSecondClass__(self,firstClass=None):
+        if firstClass is None:
+            firstClass = self.firstClass
+        if firstClass == 'cloth':
+            self.rightClass = list(self.classHelper.homeCloth.get(0))
+            self.secondClass = self.classHelper.clothEN[0]
+        elif firstClass == 'flavoring':
+            self.rightClass = list(self.classHelper.homeFlavoring.get(0))
+            self.secondClass = self.classHelper.flavoringEN[0]
+        elif firstClass == 'book':
+            self.rightClass = list(self.classHelper.homeBook.get(0))
+            self.secondClass = self.classHelper.bookEN[0]
+
     def __firstClassClick__(self):
         logging.info('------------------------------')
         num = self.listWidget.selectedIndexes()[0].row()
@@ -71,15 +85,16 @@ class AppWindow(QMainWindow, Ui_MainWindow):
         print('click ' + self.firstClass + ' item')
         self.__searchHelper__(self.firstClass)
         self.__subClassDisplay__(num)
-        if self.firstClass == 'cloth':
-            self.rightClass = list(self.classHelper.homeCloth.get(0))
-            self.secondClass = self.classHelper.clothEN[0]
-        elif self.firstClass == 'flavoring':
-            self.rightClass = list(self.classHelper.homeFlavoring.get(0))
-            self.secondClass = self.classHelper.flavoringEN[0]
-        elif self.firstClass == 'book':
-            self.rightClass = list(self.classHelper.homeBook.get(0))
-            self.secondClass = self.classHelper.bookEN[0]
+        # if self.firstClass == 'cloth':
+        #     self.rightClass = list(self.classHelper.homeCloth.get(0))
+        #     self.secondClass = self.classHelper.clothEN[0]
+        # elif self.firstClass == 'flavoring':
+        #     self.rightClass = list(self.classHelper.homeFlavoring.get(0))
+        #     self.secondClass = self.classHelper.flavoringEN[0]
+        # elif self.firstClass == 'book':
+        #     self.rightClass = list(self.classHelper.homeBook.get(0))
+        #     self.secondClass = self.classHelper.bookEN[0]
+        self.__getRighrtAndSecondClass__()
         self.__rightThirdClassShow__()
         self.objSet, self.des = self.sqlHelper.executeQuery1(self.firstClass)
         self.__objFieldShow__()
@@ -103,12 +118,6 @@ class AppWindow(QMainWindow, Ui_MainWindow):
         """
         logging.info('prepare to show second class classifier')
         print('prepare to show second class classifier')
-        self.listWidget_2.setStyleSheet("background-color: rgb(55,55,55);\n"
-                                        "font: 10pt \"仿宋\" white;\n"
-                                        "border-radius:10px;\n"
-                                        "padding:5px;\n"
-                                        "border:none;")
-
         self.currentObjectNum = num
         self.myList = list(self.classHelper.home.get(self.currentObjectNum))
         self.listWidget_2.clear()
@@ -138,7 +147,6 @@ class AppWindow(QMainWindow, Ui_MainWindow):
         logging.info('click ' + self.firstClass + 'item')
         print('click ' + self.firstClass + ' item')
         self.__rightThirdClassShow__()
-
 
     def __rightThirdClassShow__(self):
         """
@@ -204,15 +212,49 @@ class AppWindow(QMainWindow, Ui_MainWindow):
         To process the voice command we get from serial
         :return:
         """
-        self.serial = Serial()
-        self.port = self.serial.getSerial()
-        command = self.serial.readSerial()
+        # self.serial = Serial()
+        # self.port = self.serial.getSerial()
+
+        command = self.serialHelper.readSerial()
         if sqlDic.get(command) is not None:
-            self.sqlHelper.executeQuery1(sqlDic[command])
+            self.__searchHelper__(sqlDic[command])
+            num = list(self.classHelper.homeObj.keys())[list(self.classHelper.homeObj.values()).index('1004')]
+            self.__subClassDisplay__(num)
+            self.__getRighrtAndSecondClass__()
+            self.__rightThirdClassShow__()
+            self.objSet, self.des = self.sqlHelper.executeQuery1(self.firstClass)
+            self.__objFieldShow__()
+        elif command == 1:
+            print('小杰')
         elif command == 0:
+
             # add some process to show this action
             pass
         elif command == -1:
-            WarningQDialog("Sorry, I can't recognize your command")
+            # WarningQDialog("对不起，我无法识别你的语音")
+            pass
         else:
             pass
+        print('command=' + str(command))
+
+    def __readSerialDataTimely__(self):
+        self._timer = QTimer(self)
+        self._timer.timeout.connect(self.__voiceManager__)
+        self._timer.start(1000)  # plot after 1s delay
+
+    def __connectSerial__(self):
+        self.serialHelper = Serial()
+        self.managerSerial = self.serialHelper.getSerial()
+        if self.managerSerial == -1:
+            QMessageBox.critical(self, '连接语音模块', '无法连接语音模块！', QMessageBox.Ok)
+            return 0
+        QMessageBox.information(self, '连接语音模块', '语音模块连接成功！', QMessageBox.Ok)
+
+        print('---------------set timeer---------------')
+        logging.info('---------------set timeer---------------')
+        try:
+            threading.Thread(target=self.__readSerialDataTimely__()).start()
+        except:
+            QMessageBox.information(self, '运行语音模块', '语音模块运行失败！', QMessageBox.Ok)
+
+    # def __connectAbout__(self):
