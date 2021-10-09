@@ -261,7 +261,6 @@ class AppWindow(QMainWindow, Ui_MainWindow):
         except:
             QMessageBox.information(self, '运行语音模块', '语音模块运行失败！', QMessageBox.Ok)
 
-    # def __connectAbout__(self):
 
     def __addObject__(self):
         dia = QtWidgets.QDialog()
