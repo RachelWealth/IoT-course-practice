@@ -11,13 +11,13 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
-class add_Dialog(object):
+class Ui_Dialog(object):
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
-        Dialog.resize(400, 319)
+        Dialog.resize(417, 405)
         Dialog.setStyleSheet("background-color:rgb(40, 41, 35);")
         self.buttonBox = QtWidgets.QDialogButtonBox(Dialog)
-        self.buttonBox.setGeometry(QtCore.QRect(30, 270, 341, 32))
+        self.buttonBox.setGeometry(QtCore.QRect(50, 340, 281, 32))
         self.buttonBox.setStyleSheet("color:rgb(255, 255, 255)")
         self.buttonBox.setOrientation(QtCore.Qt.Horizontal)
         self.buttonBox.setStandardButtons(QtWidgets.QDialogButtonBox.Cancel|QtWidgets.QDialogButtonBox.Ok)
@@ -82,6 +82,10 @@ class add_Dialog(object):
         self.label_4.setStyleSheet("font: 75 10pt \"Times New Roman\";\n"
 "color:rgb(255, 255, 255)")
         self.label_4.setObjectName("label_4")
+        self.textEdit = QtWidgets.QTextEdit(Dialog)
+        self.textEdit.setGeometry(QtCore.QRect(70, 280, 261, 31))
+        self.textEdit.setStyleSheet("background-color:rgb(255, 255, 255);")
+        self.textEdit.setObjectName("textEdit")
 
         self.retranslateUi(Dialog)
         self.buttonBox.accepted.connect(Dialog.accept)
@@ -105,9 +109,10 @@ class add_Dialog(object):
         self.comboBox_3.setItemText(4, _translate("Dialog", "SEMIR"))
         self.comboBox_3.setItemText(5, _translate("Dialog", "Teek"))
         self.comboBox_3.setItemText(6, _translate("Dialog", "特步"))
-        self.label_3.setText(_translate("Dialog", "物品"))
+        self.label_3.setText(_translate("Dialog", "品牌"))
         self.comboBox_4.setItemText(0, _translate("Dialog", "春"))
         self.comboBox_4.setItemText(1, _translate("Dialog", "夏"))
         self.comboBox_4.setItemText(2, _translate("Dialog", "秋"))
         self.comboBox_4.setItemText(3, _translate("Dialog", "冬"))
-        self.label_4.setText(_translate("Dialog", "物品"))
+        self.label_4.setText(_translate("Dialog", "季节"))
+        self.textEdit.setPlaceholderText(_translate("Dialog", "请拖入物品图片"))

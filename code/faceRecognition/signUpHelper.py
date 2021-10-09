@@ -29,11 +29,11 @@ class RecordDisturbance(Exception):
     pass
 
 
-class DataRecordUI(QWidget):
+class faceRcgHelper(QWidget):
     receiveLogSignal = pyqtSignal(str)
 
     def __init__(self):
-        super(DataRecordUI, self).__init__()
+        super(faceRcgHelper, self).__init__()
         loadUi('./ui/DataRecord.ui', self)
         self.setWindowIcon(QIcon('./icons/icon.png'))
         self.setFixedSize(1011, 601)
@@ -69,7 +69,7 @@ class DataRecordUI(QWidget):
 
         # 用户信息
         self.isUserInfoReady = False
-        self.userInfo = {'stu_id': '', 'cn_name': '', 'en_name': ''}
+        self.userInfo = {'name': '', 'birthday':'', 'pwd': ''}
         self.addOrUpdateUserInfoButton.clicked.connect(self.addOrUpdateUserInfo)
         self.migrateToDbButton.clicked.connect(self.migrateToDb)
 
@@ -165,12 +165,12 @@ class DataRecordUI(QWidget):
             if self.faceRecordCount < self.minFaceRecordCount:
                 text = '系统当前采集了 <font color=blue>{}</font> 帧图像，采集数据过少会导致较大的识别误差。'.format(self.faceRecordCount)
                 informativeText = '<b>请至少采集 <font color=red>{}</font> 帧图像。</b>'.format(self.minFaceRecordCount)
-                DataRecordUI.callDialog(QMessageBox.Information, text, informativeText, QMessageBox.Ok)
+                faceRcgHelper.callDialog(QMessageBox.Information, text, informativeText, QMessageBox.Ok)
 
             else:
                 text = '系统当前采集了 <font color=blue>{}</font> 帧图像，继续采集可以提高识别准确率。'.format(self.faceRecordCount)
                 informativeText = '<b>你确定结束当前人脸采集吗？</b>'
-                ret = DataRecordUI.callDialog(QMessageBox.Question, text, informativeText,
+                ret = faceRcgHelper.callDialog(QMessageBox.Question, text, informativeText,
                                               QMessageBox.Yes | QMessageBox.No,
                                               QMessageBox.No)
 
@@ -325,13 +325,6 @@ class DataRecordUI(QWidget):
             self.userInfo['cn_name'] = self.userInfoDialog.cnNameLineEdit.text().strip()
             self.userInfo['en_name'] = self.userInfoDialog.enNameLineEdit.text().strip()
 
-            # 信息确认
-            stu_id, cn_name, en_name = self.userInfo.get('stu_id'), self.userInfo.get('cn_name'), self.userInfo.get(
-                'en_name')
-            self.stuIDLineEdit.setText(stu_id)
-            self.cnNameLineEdit.setText(cn_name)
-            self.enNameLineEdit.setText(en_name)
-
             self.isUserInfoReady = True
             if not self.startFaceRecordButton.isEnabled():
                 self.startFaceRecordButton.setEnabled(True)
@@ -353,7 +346,7 @@ class DataRecordUI(QWidget):
                 if cursor.fetchall():
                     text = '数据库已存在学号为 <font color=blue>{}</font> 的用户记录。'.format(stu_id)
                     informativeText = '<b>是否覆盖？</b>'
-                    ret = DataRecordUI.callDialog(QMessageBox.Warning, text, informativeText,
+                    ret = faceRcgHelper.callDialog(QMessageBox.Warning, text, informativeText,
                                                   QMessageBox.Yes | QMessageBox.No)
 
                     if ret == QMessageBox.Yes:
@@ -379,7 +372,7 @@ class DataRecordUI(QWidget):
             else:
                 text = '<font color=blue>{}</font> 已添加/更新到数据库。'.format(stu_id)
                 informativeText = '<b><font color=blue>{}</font> 的人脸数据采集已完成！</b>'.format(cn_name)
-                DataRecordUI.callDialog(QMessageBox.Information, text, informativeText, QMessageBox.Ok)
+                faceRcgHelper.callDialog(QMessageBox.Information, text, informativeText, QMessageBox.Ok)
 
                 # 清空用户信息缓存
                 for key in self.userInfo.keys():
@@ -476,6 +469,6 @@ class UserInfoDialog(QDialog):
 if __name__ == '__main__':
     logging.config.fileConfig('./config/logging.cfg')
     app = QApplication(sys.argv)
-    window = DataRecordUI()
+    window = faceRcgHelper()
     window.show()
     sys.exit(app.exec())

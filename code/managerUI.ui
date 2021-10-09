@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1207</width>
-    <height>893</height>
+    <width>1203</width>
+    <height>846</height>
    </rect>
   </property>
   <property name="font">
@@ -62,7 +62,7 @@ border-bottom-left-radius:10px;</string>
              <x>0</x>
              <y>0</y>
              <width>138</width>
-             <height>816</height>
+             <height>769</height>
             </rect>
            </property>
            <widget class="QWidget" name="layoutWidget">
@@ -70,7 +70,7 @@ border-bottom-left-radius:10px;</string>
              <rect>
               <x>20</x>
               <y>30</y>
-              <width>101</width>
+              <width>122</width>
               <height>655</height>
              </rect>
             </property>
@@ -92,12 +92,7 @@ color:white;</string>
                 </widget>
                </item>
                <item>
-                <widget class="QPushButton" name="buttonAddObject">
-                 <property name="styleSheet">
-                  <string notr="true">border:none;
-color:white;
-font: 7pt &quot;AcadEref&quot;;</string>
-                 </property>
+                <widget class="QPushButton" name="buttonAddObj">
                  <property name="text">
                   <string>添加</string>
                  </property>
@@ -256,18 +251,6 @@ color:white;</string>
                  </property>
                  <property name="text">
                   <string>管理</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QPushButton" name="button_add_2">
-                 <property name="styleSheet">
-                  <string notr="true">border:none;
-color:white;
-font: 7pt &quot;AcadEref&quot;;</string>
-                 </property>
-                 <property name="text">
-                  <string/>
                  </property>
                 </widget>
                </item>
@@ -629,17 +612,18 @@ color:white;
          <string/>
         </property>
        </widget>
-       <widget class="QLabel" name="labelAddMeber">
+       <widget class="QPushButton" name="buttonAddMb">
         <property name="geometry">
          <rect>
-          <x>110</x>
-          <y>50</y>
-          <width>51</width>
-          <height>16</height>
+          <x>90</x>
+          <y>680</y>
+          <width>71</width>
+          <height>41</height>
          </rect>
         </property>
         <property name="styleSheet">
-         <string notr="true">color:white;</string>
+         <string notr="true">color:rgb(255, 255, 255);
+font: 10pt &quot;宋体&quot;;</string>
         </property>
         <property name="text">
          <string>添加</string>
@@ -656,7 +640,7 @@ color:white;
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1207</width>
+     <width>1203</width>
      <height>26</height>
     </rect>
    </property>
