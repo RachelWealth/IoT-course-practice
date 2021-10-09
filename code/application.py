@@ -272,7 +272,7 @@ class AppWindow(QMainWindow, Ui_MainWindow):
         else:               # click CANCEL
             pass
 
-    def __addMember__(self):
+    # def __addMember__(self):
 
 
 
