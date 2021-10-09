@@ -1,6 +1,8 @@
 import json
+import sys
 import threading
 
+from IoTPractice.code.add import add_Dialog
 from IoTPractice.code.managerUI import Ui_MainWindow
 from PyQt5 import QtWidgets, QtCore
 from PyQt5.QtWidgets import *
@@ -47,6 +49,8 @@ class AppWindow(QMainWindow, Ui_MainWindow):
         self.tableWidget.setEnabled(True)
         self.tableWidget.clicked.connect(self.__thirdClassClick__)
 
+        self.buttonAddObject.clicked.connect(self.__addObject__)
+        # self.buttonAddObject.clicked.connect(add_Dialog.show)
         # self.button_add.clicked(self.addObject)
 
         self.actionlianjie.triggered.connect(self.__connectSerial__)
@@ -258,3 +262,18 @@ class AppWindow(QMainWindow, Ui_MainWindow):
             QMessageBox.information(self, '运行语音模块', '语音模块运行失败！', QMessageBox.Ok)
 
     # def __connectAbout__(self):
+
+    def __addObject__(self):
+        dia = QtWidgets.QDialog()
+        addWin = add_Dialog()
+        addWin.setupUi(dia)
+        if dia.exec():      # click OK
+            print(1)
+        else:               # click CANCEL
+            pass
+
+    def __addMember__(self):
+
+
+
+

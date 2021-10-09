@@ -92,7 +92,7 @@ color:white;</string>
                 </widget>
                </item>
                <item>
-                <widget class="QPushButton" name="button_add">
+                <widget class="QPushButton" name="buttonAddObject">
                  <property name="styleSheet">
                   <string notr="true">border:none;
 color:white;
