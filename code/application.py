@@ -6,9 +6,9 @@ import threading
 import cv2
 from PyQt5.QtGui import QIcon, QImage, QPixmap
 
-from IoTPractice.code.add import Ui_Dialog as add_Dialog
+from IoTPractice.code.ui.add import Ui_Dialog as add_Dialog
 from IoTPractice.code.faceRecognition.signUpHelper import faceRcgHelper, RecordDisturbance
-from IoTPractice.code.managerUI import Ui_MainWindow
+from IoTPractice.code.ui.managerUI import Ui_MainWindow
 from PyQt5 import QtWidgets, QtCore
 from PyQt5.QtWidgets import *
 from PyQt5.QtCore import QTimer, QUrl
@@ -20,7 +20,8 @@ from IoTPractice.code.classifier import classifier
 from PyQt5.QtWebEngineWidgets import *
 from sendDataHelper import sendDataHelper
 from shutil import copyfile
-from signUp import Ui_Dialog as faceRcg
+from ui.signUp import Ui_Dialog as faceRcg
+from ui.login import Ui_Dialog as loginWin
 
 LOG_FORMAT = "%(asctime)s - %(levelname)s - %(message)s"
 DATE_FORMAT = "%m/%d/%Y %H:%M:%S %p"
@@ -45,38 +46,51 @@ class AppWindow(QMainWindow, Ui_MainWindow):
         self.firstClass = 'cloth'
         self.secondClass = 'color'
         self.thirdClass = ''
+        self.isAccountLogIn = False
+        self.currntAccount = '王梅'
 
         print('---------------set list item response action---------------')
-        logging.info('---------------set list item response action---------------')
+        logging.info('set list item response action')
+
         # first class list clicked response
         self.listWidget.itemClicked.connect(self.__firstClassClick__)
+
         # second class list clicked response
         self.listWidget_2.itemClicked.connect(self.__secondClassClick__)
+
         # third class list clicked response
         self.tableWidget.setEnabled(True)
+
+        # third class click
         self.tableWidget.clicked.connect(self.__thirdClassClick__)
+
+        # new menber sign in
         self.buttonAddMb.clicked.connect(self.__addMember__)
 
+        # login
+        self.buttonLogIn.clicked.connect(self.__logIn__)
+
+        # add object
         self.buttonAddObj.clicked.connect(self.__addObject__)
-        # self.buttonAddObject.clicked.connect(add_Dialog.show)
-        # self.button_add.clicked(self.addObject)
 
+        # connect with serial
         self.actionlianjie.triggered.connect(self.__connectSerial__)
-        # self.action_4.triggered.connect(self.__connectAbout__)
 
-        self.database = './FaceBase.db'
-        self.datasets = './faceData'
+        self.datasets = '../faceData'
 
+        # web page display
         self.browser = QWebEngineView()
-        # self.browser.load(QUrl('file:///E:/workplace/pycharmWork/IoTPractice/IoTPractice/code/web/templates/welcom.html'))
-        self.browser.load(
-            QUrl(r'http://localhost:5000/welcom'))
+        logging.info('load welcom page...')
+        print('load welcom page...')
+        self.browser.load(QUrl(r'http://localhost:5000/welcom'))
+        logging.info('load welcom page success')
+        print('load welcom page success')
         self.grid = QGridLayout(self.groupBox_2)
         self.grid.addWidget(self.browser)
         self.fileHelper = sendDataHelper()
 
-        print("finish initial")
-        logging.info("finish initial")
+        print("finish application initial")
+        logging.info("finish application initial")
 
     def __getRighrtAndSecondClass__(self, firstClass=None):
         if firstClass is None:
@@ -201,6 +215,27 @@ class AppWindow(QMainWindow, Ui_MainWindow):
         self.objSet, self.des = self.sqlHelper.executeQuery2(self.firstClass, self.secondClass, self.thirdClass)
         self.__objFieldShow__()
 
+    def __logIn__(self):
+        dia = QtWidgets.QDialog()
+        self.loginHelper = loginWin()
+        self.loginHelper.setupUi(dia)
+        if dia.exec():
+            if self.loginHelper.tabWidget.currentIndex() == 0:  # login by password
+                name = self.loginHelper.lineEdit.text().strip()
+                pwd = self.loninHelper.lineEdit_2().strip()
+                [result, ] = self.sqlHelper.executeQuery4('user', name=name, key='password', value=pwd)
+                if result is []:
+                    WarningQDialog('密码或用户名错误，请检查账户名是否存在，密码是否正确')
+                else:
+                    self.currntAccount = name
+                    self.buttonLogIn.setText(self.currntAccount)
+                    self.labelID.setText('ID号：' + result[0][0])
+                    self.browser.load(QUrl(r'http://localhost:5000/welcom'))
+            else:  # login by face recognition
+                print('人脸识别登录')
+        else:
+            pass
+
     def __objFieldShow__(self):
         """
         this function used to switch the display content
@@ -216,6 +251,7 @@ class AppWindow(QMainWindow, Ui_MainWindow):
             # self.objJson = self.objJson[1:len(self.objJson) - 1]
             print(self.objJson)
             self.fileHelper.writeToFile(self.objJson)
+            # TODO reverse order
             self.browser.load(QUrl(r'http://localhost:5000/index'))
         self.grid.addWidget(self.browser)
 
@@ -281,12 +317,12 @@ class AppWindow(QMainWindow, Ui_MainWindow):
 
             self.addWin.label_2.setText('颜色')
             self.addWin.label_3.setText('物品')
-            self.addWin.label_4.setVisible(False)
+            self.addWin.label_4.setVisible(True)
             self.addWin.label_4.setText('季节')
 
             self.addWin.comboBox_2.addItems(self.classHelper.ccolor)
             self.addWin.comboBox_3.addItems(self.classHelper.cbrand)
-            self.addWin.comboBox_4.setVisible(False)
+            self.addWin.comboBox_4.setVisible(True)
             self.addWin.comboBox_4.addItems(self.classHelper.cseason)
         elif n == 1:
             self.addWin.comboBox_2.clear()
@@ -306,12 +342,12 @@ class AppWindow(QMainWindow, Ui_MainWindow):
 
             self.addWin.label_2.setText('作者')
             self.addWin.label_3.setText('语言')
-            self.addWin.label_4.setVisible(False)
+            self.addWin.label_4.setVisible(True)
             self.addWin.label_4.setText('出版社')
 
             self.addWin.comboBox_2.addItems(self.classHelper.bauthor)
             self.addWin.comboBox_3.addItems(self.classHelper.blanguage)
-            self.addWin.comboBox_4.setVisible(False)
+            self.addWin.comboBox_4.setVisible(True)
             self.addWin.comboBox_4.addItems(self.classHelper.bpublisher)
 
     def __insertPicToFile__(self, n, id, src):
@@ -320,45 +356,63 @@ class AppWindow(QMainWindow, Ui_MainWindow):
             n) + id + '.jpg'
         logging.info('dst:' + dst)
         copyfile(src, dst)
+        self.isAddObjectSuc =True
         logging.info('Add picture success')
 
     def __drapToEdit__(self):
-        if 0 == self.textEdit.toPlainText().find('file:///'):
-            self.textEdit.setText(self.textEdit.toPlainText().replace('file:///', ''))
+        if 0 == self.addWin.textEdit.toPlainText().find('file:///'):
+            self.addWin.textEdit.setText(self.addWin.textEdit.toPlainText().replace('file:///', ''))
+
+    def __recordInfoToSql__(self, n, src, user, gender, color=None, brand=None, kind=None, language=None, author=None,
+                            publisher=None, season=None):
+        id = 0
+        if n == 0:
+            id = self.sqlHelper.executeInsertcloth(user=user, gender=gender, color=color, brand=brand, season=season)
+        elif n == 1:
+            id = self.sqlHelper.executeInsertFlavoring(user=user, kind=kind, brand=brand)
+        elif n == 2:
+            id = self.sqlHelper.executeInsertBook(user=user, author=author, language=language, publisher=publisher)
+        threading.Thread(target=self.__insertPicToFile__(n, id, src)).start()
 
     def __getAddContent__(self):
-        self.addWin.textEdit.textChanged.connect(self.editchange)
-        src = self.addWin.textEdit.toPlainText()
-        if ~os.path.exists(src):
+        self.isAddObjectSuc = False
+        self.src = self.addWin.textEdit.toPlainText()
+
+        if not os.path.exists(self.src):
             QMessageBox.warning(self, '提交失败', '提交失败，请确认图片路径是否正确', QMessageBox.Cancel)
             return 0
         n = self.addWin.comboBox.currentIndex()
         # TODO change name to the name of account login currently
-        user = '王梅'
-        id = 0
+        color, brand, season, kind, author, language, publisher = [None, None, None, None, None, None, None]
         if n == 0:
             color = self.addWin.comboBox_2.currentText()
             brand = self.addWin.comboBox_3.currentText()
             season = self.addWin.comboBox_4.currentText()
-            id = self.sqlHelper.executeInsertcloth(user=user, gender='女', color=color, brand=brand, season=season)
         elif n == 1:
             kind = self.addWin.comboBox_2.currentText()
             brand = self.addWin.comboBox_3.currentText()
-            id = self.sqlHelper.executeInsertFlavoring(user=user, kind=kind, brand=brand)
         elif n == 2:
             author = self.addWin.comboBox_2.currentText()
             language = self.addWin.comboBox_3.currentText()
             publisher = self.addWin.comboBox_4.currentText()
-            id = self.sqlHelper.executeInsertBook(user=user, author=author, language=language, publisher=publisher)
-        threading.Thread(target=self.__insertPicToFile__(n, id, src)).start()
+        #threading.Thread(target=self.__recordInfoToSql__(n=n, user=self.currntAccount, gender='女', color=color, brand=brand, season=season,kind=kind, language=language, publisher=publisher, author=author)).start()
+        self.__recordInfoToSql__(n=n, user=self.currntAccount, src=self.src.replace('/', '\\\\'), gender='女', color=color, brand=brand, season=season,
+                                 kind=kind, language=language, publisher=publisher, author=author)
 
     def __addObject__(self):
         dia = QtWidgets.QDialog()
         self.addWin = add_Dialog()
         self.addWin.setupUi(dia)
         self.addWin.comboBox.currentIndexChanged.connect(self.__changeAddWin__)
+        self.addWin.textEdit.textChanged.connect(self.__drapToEdit__)
+
         if dia.exec():  # click OK
-            self.__getAddContent__()
+            if self.currntAccount == '':
+                WarningQDialog('请登陆后再进行相关操作')
+            else:
+                self.__getAddContent__()
+                if self.isAddObjectSuc:
+                    QMessageBox.information(self,'提示','物品添加成功',QMessageBox.Yes)
         else:  # click CANCEL
             pass
 
@@ -390,12 +444,11 @@ class AppWindow(QMainWindow, Ui_MainWindow):
         elif self.addHelper.lineEdit_2.hasAcceptableInput() != self.userInfoDialog.lineEdit_3.hasAcceptableInput():
             QMessageBox.warning(self, '提交失败', '注册失败，请确认两次输入的密码', QMessageBox.Yes)
         else:
-            self.userInfo = {'name': '', 'pwd': ''}
-            self.userInfo['name'] = self.addHelper.lineEdit_2.text().strip()
-            self.userInfo['pwd'] = self.uaddHelper.lineEdit_2.text().strip()
+            self.userInfo = {'name': self.addHelper.lineEdit_2.text().strip(),
+                             'pwd': self.uaddHelper.lineEdit_2.text().strip()}
 
             self.user_id = self.sqlHelper.executeInsertUser(name=self.userInfo['name'], username=self.userInfo['name'],
-                                             password=self.userInfo['pwd'])
+                                                            password=self.userInfo['pwd'])
             logging.info('成功录入用户信息：' + self.userInfo['name'])
             print('成功录入用户信息：' + self.userInfo['name'])
 
@@ -555,6 +608,7 @@ class AppWindow(QMainWindow, Ui_MainWindow):
         self.addHelper = faceRcg()
         self.addHelper.setupUi(dia)
         self.externCm = False
+        self.minfaceRecordNum = 100
         self.addHelper.checkBox.stateChanged.connect(lambda: self.__useExternalCamera__(self.useExternalCameraCheckBox))
         self.ifSignUp = False
         self.addHelper.pushButton_2.clicked.connect(self.__startFaceRecord__)

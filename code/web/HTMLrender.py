@@ -23,8 +23,6 @@ def loadWelcomWeb():
 @app.route('/index')
 def loadWeb():
 
-    print(datas1)
-
     datas = fileHelper.readFromFile()
     # objSet_json = json.dumps(datas)
     # print(objSet_json)
