@@ -353,7 +353,7 @@ class AppWindow(QMainWindow, Ui_MainWindow):
     def __insertPicToFile__(self, n, id, src):
         logging.info('add file: \nsrc-' + src)
         dst = 'E:\\workplace\\pycharmWork\\IoTPractice\\IoTPractice\\code\\web\\static\\img' + self.classHelper.homeObj.get(
-            n) + id + '.jpg'
+            n) + str(id) + '.jpg'
         logging.info('dst:' + dst)
         copyfile(src, dst)
         self.isAddObjectSuc =True
@@ -372,7 +372,7 @@ class AppWindow(QMainWindow, Ui_MainWindow):
             id = self.sqlHelper.executeInsertFlavoring(user=user, kind=kind, brand=brand)
         elif n == 2:
             id = self.sqlHelper.executeInsertBook(user=user, author=author, language=language, publisher=publisher)
-        threading.Thread(target=self.__insertPicToFile__(n, id, src)).start()
+        self.__insertPicToFile__(n, id, src)
 
     def __getAddContent__(self):
         self.isAddObjectSuc = False

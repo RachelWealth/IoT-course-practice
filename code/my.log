@@ -4896,3 +4896,28 @@
 10/10/2021 15:01:04 PM - INFO - load welcom page...
 10/10/2021 15:01:04 PM - INFO - load welcom page success
 10/10/2021 15:01:04 PM - INFO - finish application initial
+10/11/2021 11:42:22 AM - INFO - set list item response action
+10/11/2021 11:42:22 AM - INFO - load welcom page...
+10/11/2021 11:42:32 AM - INFO - load welcom page success
+10/11/2021 11:42:32 AM - INFO - finish application initial
+10/11/2021 12:46:38 PM - INFO - set list item response action
+10/11/2021 12:46:38 PM - INFO - load welcom page...
+10/11/2021 12:46:40 PM - INFO - load welcom page success
+10/11/2021 12:46:40 PM - INFO - finish application initial
+10/11/2021 12:48:17 PM - INFO - add file: 
+src-E:\\workplace\\pycharmWork\\IoTPractice\\IoTPractice\\img\\Snipaste_2021-10-11_11-50-47.jpg
+10/11/2021 12:49:23 PM - INFO - set list item response action
+10/11/2021 12:49:23 PM - INFO - load welcom page...
+10/11/2021 12:49:23 PM - INFO - load welcom page success
+10/11/2021 12:49:23 PM - INFO - finish application initial
+10/11/2021 12:49:41 PM - INFO - add file: 
+src-E:\\workplace\\pycharmWork\\IoTPractice\\IoTPractice\\img\\Snipaste_2021-10-11_11-50-47.jpg
+10/11/2021 12:49:50 PM - INFO - dst:E:\workplace\pycharmWork\IoTPractice\IoTPractice\code\web\static\imgcloth37.jpg
+10/11/2021 12:49:53 PM - INFO - Add picture success
+10/11/2021 12:50:26 PM - INFO - ------------------------------
+10/11/2021 12:50:26 PM - INFO - click clothitem
+10/11/2021 12:50:26 PM - INFO - search from cloth...
+10/11/2021 12:50:31 PM - INFO - prepare to show second class classifier
+10/11/2021 12:50:31 PM - INFO - show success
+10/11/2021 12:50:31 PM - INFO - load dynamic web
+10/11/2021 12:50:31 PM - INFO - load successfully
