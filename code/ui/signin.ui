@@ -26,10 +26,10 @@
     <enum>Qt::Horizontal</enum>
    </property>
    <property name="standardButtons">
-    <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+    <set>QDialogButtonBox::Ok</set>
    </property>
   </widget>
-  <widget class="QCheckBox" name="checkBox">
+  <widget class="QCheckBox" name="useExternalCameraCheckBox">
    <property name="geometry">
     <rect>
      <x>30</x>
@@ -42,7 +42,7 @@
     <string>使用外接摄像头</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_2">
+  <widget class="QPushButton" name="beginRecordFace">
    <property name="enabled">
     <bool>false</bool>
    </property>
@@ -99,7 +99,7 @@
      <string>姓名：</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="nameInput">
+   <widget class="QLineEdit" name="inputName">
     <property name="geometry">
      <rect>
       <x>90</x>
@@ -135,7 +135,7 @@
      <string>确认密码：</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_2">
+   <widget class="QLineEdit" name="inputConfirmPwd">
     <property name="geometry">
      <rect>
       <x>90</x>
@@ -148,7 +148,7 @@
      <enum>QLineEdit::PasswordEchoOnEdit</enum>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_3">
+   <widget class="QLineEdit" name="inputPwd">
     <property name="geometry">
      <rect>
       <x>90</x>
@@ -201,7 +201,7 @@
     </property>
    </widget>
   </widget>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QPushButton" name="buttonSignIn">
    <property name="geometry">
     <rect>
      <x>750</x>
@@ -237,7 +237,7 @@
     <string>已录入人脸数据：</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_4">
+  <widget class="QPushButton" name="recordFace">
    <property name="enabled">
     <bool>false</bool>
    </property>

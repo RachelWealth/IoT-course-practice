@@ -8,4 +8,4 @@ class WarningQDialog(QMessageBox):
         self.initUI(self.message)
 
     def initUI(self, message):
-        self.warningdialog = QMessageBox.warning(self, "ERROR", self.message, QMessageBox.Abort)
+        self.warningdialog = QMessageBox.warning(self, "ERROR", self.message, QMessageBox.Ok)

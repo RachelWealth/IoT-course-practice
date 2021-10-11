@@ -1,13 +1,13 @@
 import json
 import os
-import sys
+import shutil
 import threading
 
 import cv2
 from PyQt5.QtGui import QIcon, QImage, QPixmap
 
 from IoTPractice.code.ui.add import Ui_Dialog as add_Dialog
-from IoTPractice.code.faceRecognition.signUpHelper import faceRcgHelper, RecordDisturbance
+from IoTPractice.code.faceRecognition.signUpHelper import RecordDisturbance
 from IoTPractice.code.ui.managerUI import Ui_MainWindow
 from PyQt5 import QtWidgets, QtCore
 from PyQt5.QtWidgets import *
@@ -19,8 +19,7 @@ from IoTPractice.code.WarningQDialog import WarningQDialog
 from IoTPractice.code.classifier import classifier
 from PyQt5.QtWebEngineWidgets import *
 from sendDataHelper import sendDataHelper
-from shutil import copyfile
-from ui.signUp import Ui_Dialog as faceRcg
+from ui.signin import Ui_Dialog as faceRcg
 from ui.login import Ui_Dialog as loginWin
 
 LOG_FORMAT = "%(asctime)s - %(levelname)s - %(message)s"
@@ -29,7 +28,7 @@ logging.basicConfig(filename='my.log', level=logging.DEBUG, format=LOG_FORMAT, d
 
 sqlDic = {2: 'cloth', 3: 'flavoring', 4: 'book'}
 
-global TABLE_MAX_COL, datas
+global TABLE_MAX_COL, datas, id
 TABLE_MAX_COL = 6
 datas = 0
 
@@ -76,7 +75,7 @@ class AppWindow(QMainWindow, Ui_MainWindow):
         # connect with serial
         self.actionlianjie.triggered.connect(self.__connectSerial__)
 
-        self.datasets = '../faceData'
+        self.datasets = 'faceData'
 
         # web page display
         self.browser = QWebEngineView()
@@ -219,12 +218,13 @@ class AppWindow(QMainWindow, Ui_MainWindow):
         dia = QtWidgets.QDialog()
         self.loginHelper = loginWin()
         self.loginHelper.setupUi(dia)
+
         if dia.exec():
             if self.loginHelper.tabWidget.currentIndex() == 0:  # login by password
-                name = self.loginHelper.lineEdit.text().strip()
-                pwd = self.loninHelper.lineEdit_2().strip()
-                [result, ] = self.sqlHelper.executeQuery4('user', name=name, key='password', value=pwd)
-                if result is []:
+                name = self.loginHelper.inputUserName.text().strip()
+                pwd = self.loginHelper.inputPwd.text().strip()
+                [result, _] = self.sqlHelper.executeQuery4(table_name='user', name=name, key='password', value=pwd)
+                if len(result) == 0:
                     WarningQDialog('密码或用户名错误，请检查账户名是否存在，密码是否正确')
                 else:
                     self.currntAccount = name
@@ -352,11 +352,11 @@ class AppWindow(QMainWindow, Ui_MainWindow):
 
     def __insertPicToFile__(self, n, id, src):
         logging.info('add file: \nsrc-' + src)
-        dst = 'E:\\workplace\\pycharmWork\\IoTPractice\\IoTPractice\\code\\web\\static\\img' + self.classHelper.homeObj.get(
-            n) + str(id) + '.jpg'
+        dst = 'E:\\workplace\\pycharmWork\\IoTPractice\\IoTPractice\\code\\web\\static\\img\\' + self.classHelper.homeObj.get(
+            n) + '\\' + str(id) + '.jpg'
         logging.info('dst:' + dst)
-        copyfile(src, dst)
-        self.isAddObjectSuc =True
+        shutil.copy(src, dst)
+        self.isAddObjectSuc = True
         logging.info('Add picture success')
 
     def __drapToEdit__(self):
@@ -395,8 +395,9 @@ class AppWindow(QMainWindow, Ui_MainWindow):
             author = self.addWin.comboBox_2.currentText()
             language = self.addWin.comboBox_3.currentText()
             publisher = self.addWin.comboBox_4.currentText()
-        #threading.Thread(target=self.__recordInfoToSql__(n=n, user=self.currntAccount, gender='女', color=color, brand=brand, season=season,kind=kind, language=language, publisher=publisher, author=author)).start()
-        self.__recordInfoToSql__(n=n, user=self.currntAccount, src=self.src.replace('/', '\\\\'), gender='女', color=color, brand=brand, season=season,
+        # threading.Thread(target=self.__recordInfoToSql__(n=n, user=self.currntAccount, gender='女', color=color, brand=brand, season=season,kind=kind, language=language, publisher=publisher, author=author)).start()
+        self.__recordInfoToSql__(n=n, user=self.currntAccount, src=self.src.replace('/', '\\\\'), gender='女',
+                                 color=color, brand=brand, season=season,
                                  kind=kind, language=language, publisher=publisher, author=author)
 
     def __addObject__(self):
@@ -412,48 +413,53 @@ class AppWindow(QMainWindow, Ui_MainWindow):
             else:
                 self.__getAddContent__()
                 if self.isAddObjectSuc:
-                    QMessageBox.information(self,'提示','物品添加成功',QMessageBox.Yes)
+                    QMessageBox.information(self, '提示', '物品添加成功', QMessageBox.Yes)
         else:  # click CANCEL
             pass
 
     def __alreadySignUp__(self):
         n = self.addHelper.radioButton.isChecked()
         if n:
-
             self.addHelper.label_6.setEnabled(False)
             self.addHelper.label_7.setEnabled(False)
 
-            self.addHelper.lineEdit_2.setEnabled(False)
-            self.addHelper.lineEdit_3.setEnabled(False)
+            self.addHelper.inputPwd.setEnabled(False)
+            self.addHelper.inputConfirmPwd.setEnabled(False)
 
-            self.addHelper.pushButton.setEnabled(False)
-            self.addHelper.pushButton_2.setEnabled(True)
+            self.addHelper.buttonSignIn.setEnabled(False)
+            self.addHelper.beginRecordFace.setEnabled(True)
+            self.isAlreadySignin = True
         else:
 
             self.addHelper.label_6.setEnabled(True)
             self.addHelper.label_7.setEnabled(True)
 
-            self.addHelper.lineEdit_2.setEnabled(True)
-            self.addHelper.lineEdit_3.setEnabled(True)
+            self.addHelper.inputPwd.setEnabled(True)
+            self.addHelper.inputConfirmPwd.setEnabled(True)
+            self.isAlreadySignin = False
 
     def __signUp__(self):
-        if not (self.addHelper.nameInput.hasAcceptableInput() and
-                self.addHelper.lineEdit_2.hasAcceptableInput() and
-                self.userInfoDialog.lineEdit_3.hasAcceptableInput()):
+        if not (self.addHelper.inputName.hasAcceptableInput() and
+                self.addHelper.inputPwd.hasAcceptableInput() and
+                self.addHelper.inputConfirmPwd.hasAcceptableInput()):
             QMessageBox.warning(self, '提交失败', '注册失败，请确认信息已输入完整', QMessageBox.Yes)
-        elif self.addHelper.lineEdit_2.hasAcceptableInput() != self.userInfoDialog.lineEdit_3.hasAcceptableInput():
+        elif self.addHelper.inputPwd.hasAcceptableInput() != self.addHelper.inputConfirmPwd.hasAcceptableInput():
             QMessageBox.warning(self, '提交失败', '注册失败，请确认两次输入的密码', QMessageBox.Yes)
         else:
-            self.userInfo = {'name': self.addHelper.lineEdit_2.text().strip(),
-                             'pwd': self.uaddHelper.lineEdit_2.text().strip()}
-
-            self.user_id = self.sqlHelper.executeInsertUser(name=self.userInfo['name'], username=self.userInfo['name'],
-                                                            password=self.userInfo['pwd'])
+            self.userInfo = {'name': self.addHelper.inputName.text().strip(),
+                             'pwd': self.addHelper.inputPwd.text().strip()}
+            # TODO do it in threading
+            [result, _] = self.sqlHelper.executeQuery2(table_name='user', key='name', value=self.userInfo.get('name'))
+            if len(result) != 0:
+                WarningQDialog('用户已存在')
+                return 0
+            threading.Thread(target=self.sqlHelper.executeInsertUser(name=self.userInfo.get('name'), password=self.userInfo.get('pwd'))).start()
             logging.info('成功录入用户信息：' + self.userInfo['name'])
             print('成功录入用户信息：' + self.userInfo['name'])
+            QMessageBox.information(self,'注册','注册成功！',QMessageBox.Yes)
 
-            self.addHelper.pushButton_2.setEnabled(True)
-            self.addHelper.pushButton_2.clicked.connect()
+            self.addHelper.beginRecordFace.setEnabled(True)
+            self.addHelper.beginRecordFace.clicked.connect(self.__startFaceRecord__)
 
     def __faceRecord__(self):
         if not self.isFaceRecordEnabled:
@@ -466,30 +472,30 @@ class AppWindow(QMainWindow, Ui_MainWindow):
         gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
         faces = self.faceCascade.detectMultiScale(gray, 1.3, 5, minSize=(90, 90))
 
-        name = self.userInfo.get('name')
+        self.newId = self.sqlHelper.reUserId
 
         for (x, y, w, h) in faces:
             if self.isFaceRecordEnabled:
                 try:
-                    if not os.path.exists('{}/stu_{}'.format(self.datasets, self.user_id)):
-                        os.makedirs('{}/stu_{}'.format(self.datasets, self.user_id))
+                    if not os.path.exists('{}/stu_{}'.format(self.datasets, self.newId)):
+                        os.makedirs('{}/stu_{}'.format(self.datasets, self.newId))
                     if len(faces) > 1:
                         raise RecordDisturbance
 
-                    cv2.imwrite('{}/stu_{}/img.{}.jpg'.format(self.datasets, self.user_id, self.faceRecordNum + 1),
+                    cv2.imwrite('{}/stu_{}/img.{}.jpg'.format(self.datasets, self.newId, self.faceRecordNum + 1),
                                 gray[y - 20:y + h + 20, x - 20:x + w + 20])
                 except RecordDisturbance:
                     self.isFaceRecordEnabled = False
                     logging.error('检测到多张人脸或环境干扰')
                     self.logQueue.put('Warning：检测到多张人脸或环境干扰，请解决问题后继续')
-                    self.enableFaceRecordButton.setIcon(QIcon('./icons/warning.png'))
+                    self.addHelper.recordFace.setIcon(QIcon('./icons/warning.png'))
                     continue
                 except Exception as e:
                     logging.error('写入人脸图像文件到计算机过程中发生异常')
-                    self.enableFaceRecordButton.setIcon(QIcon('./icons/error.png'))
+                    self.addHelper.recordFace.setIcon(QIcon('./icons/error.png'))
                     self.logQueue.put('Error：无法保存人脸图像，采集当前捕获帧失败')
                 else:
-                    self.enableFaceRecordButton.setIcon(QIcon('./icons/success.png'))
+                    self.addHelper.recordFace.setIcon(QIcon('./icons/success.png'))
                     self.faceRecordNum = self.faceRecordNum + 1
                     self.isFaceRecordEnabled = False
                     self.addHelper.lcdNumber.display(self.faceRecordNum)
@@ -500,13 +506,9 @@ class AppWindow(QMainWindow, Ui_MainWindow):
         ret, frame = self.cap.read()
         # self.image = cv2.flip(self.image, 1)
         if ret:
-            self.displayImage(frame)
-
-            if self.isFaceDetectEnabled:
-                detected_frame = self.detectFace(frame)
-                self.displayImage(detected_frame)
-            else:
-                self.displayImage(frame)
+            self.__showFacePic__(frame)
+            detected_frame = self.__detectFace__(frame)
+            self.__showFacePic__(detected_frame)
 
     def __showFacePic__(self, pic):
         # BGR -> RGB
@@ -524,30 +526,35 @@ class AppWindow(QMainWindow, Ui_MainWindow):
         self.addHelper.label_3.setScaledContents(True)
 
     def __startFaceRecord__(self):
-        name = self.addHelper.nameInput.text()
+        name = self.addHelper.inputName.text()
         if name == '':
             self.isUserInfoReady = False
             QMessageBox.warning(self, '提示', '开启失败，请输入用户姓名', QMessageBox.Yes)
             return 0
-        if not self.sqlHelper.executeQuery2('user', 'name', name):
+        [result, _] = self.sqlHelper.executeQuery2('user', 'name', name)
+
+        if len(result) == 0:
             self.isUserInfoReady = False
             QMessageBox.warning(self, '提示', '开启失败，系统中无该用户信息', QMessageBox.Yes)
             return 0
-        if self.addHelper.pushButton_2.text() == '开始采集人脸数据':
+        if result[0][3] == 1:
+            WarningQDialog('您已有人脸信息')
+            return 0
+        if self.addHelper.beginRecordFace.text() == '开始录入人脸数据':
             # begin detect face at regular time
             self.timer = QTimer(self)
             self.timer.timeout.connect(self.__updateFrame__)
             self.addHelper.radioButton.setEnabled(False)
-            self.addHelper.pushButton.setEnabled(False)
-            if not self.addHelper.pushButton_4.isEnabled():
-                self.addHelper.pushButton_4.setEnabled(True)
-            self.addHelper.pushButton_4.setIcon(QIcon())
-            self.addHelper.pushButton_4.setIcon(QIcon('./icons/success.png'))
-            self.startFaceRecordButton.setText('结束当前人脸采集')
+            self.addHelper.buttonSignIn.setEnabled(False)
+            if not self.addHelper.recordFace.isEnabled():
+                self.addHelper.recordFace.setEnabled(True)
+            self.addHelper.recordFace.setIcon(QIcon())
+            self.addHelper.recordFace.setIcon(QIcon('./icons/success.png'))
+            self.addHelper.beginRecordFace.setText('结束当前人脸采集')
+            self.__startWebcam__(True)
         else:
             if self.faceRecordNum < self.minfaceRecordNum:
-                QMessageBox.warning(self, '提示', '请至少采集 100 帧图像。', QMessageBox.Yes)
-
+                WarningQDialog('请至少采集 100 帧图像。')
             else:
                 ret = QMessageBox.warning(self, '提示',
                                           '系统当前采集了{}帧图像，继续采集可以提高识别准确率。\n你确定结束当前人脸采集吗？'.format(self.faceRecordNum),
@@ -557,16 +564,17 @@ class AppWindow(QMainWindow, Ui_MainWindow):
                     self.isFaceDataReady = True
                     if self.isFaceRecordEnabled:
                         self.isFaceRecordEnabled = False
-                    self.addHelper.pushButton_4.setEnabled(False)
-                    self.addHelper.pushButton_2.setText('开始采集人脸数据')
-                    self.addHelper.pushButton_2.setEnabled(False)
-                    self.addHelper.pushButton_2.setIcon(QIcon())
+                    self.addHelper.recordFace.setEnabled(False)
+                    self.addHelper.beginRecordFace.setText('开始采集人脸数据')
+                    self.addHelper.beginRecordFace.setEnabled(False)
+                    self.addHelper.beginRecordFace.setIcon(QIcon())
                     self.migrateToDbButton.setEnabled(True)
                 else:
                     self.addHelper.radioButton.setEnabled(True)
-                    self.addHelper.pushButton.setEnabled(True)
+                    self.addHelper.buttonSignIn.setEnabled(True)
+                    self.__startWebcam__(False)
 
-    def startWebcam(self, status):
+    def __startWebcam__(self, status):
         """
         open the camera
         """
@@ -585,7 +593,7 @@ class AppWindow(QMainWindow, Ui_MainWindow):
                 QMessageBox.warning(self, '提示', '初始化摄像头失败')
                 self.cap.release()
             else:
-                self.enableFaceDetectButton.setEnabled(True)
+
                 self.timer.start(5)
         else:
             if self.cap.isOpened():
@@ -602,20 +610,42 @@ class AppWindow(QMainWindow, Ui_MainWindow):
         else:
             self.isExternalCameraUsed = False
 
+    def __deleteFile__(self):
+        [result, _] = self.sqlHelper.executeQuery2(table_name='user', key='name', value=self.addHelper.inputName.text())
+        if len(result) == 0:
+            pass
+        elif os.path.exists('{}/stu_{}'.format(self.datasets, result[0][0])):
+            shutil.rmtree('{}/stu_{}'.format(self.datasets, self.newId))
+
     def __addMember__(self):
         print('click add member')
         dia = QtWidgets.QDialog()
         self.addHelper = faceRcg()
         self.addHelper.setupUi(dia)
+
+        self.cap = cv2.VideoCapture()
+        self.faceCascade = cv2.CascadeClassifier('./haarcascades/haarcascade_frontalface_default.xml')
+
+        self.isFaceRecordEnabled = False
+        self.isExternalCameraUsed = False
         self.externCm = False
+        self.faceRecordNum = 0
         self.minfaceRecordNum = 100
-        self.addHelper.checkBox.stateChanged.connect(lambda: self.__useExternalCamera__(self.useExternalCameraCheckBox))
+        self.newId = -1
+
+        self.isAlreadySignin = False
+        self.addHelper.useExternalCameraCheckBox.stateChanged.connect(
+            lambda: self.__useExternalCamera__(self.addHelper.useExternalCameraCheckBox))
         self.ifSignUp = False
-        self.addHelper.pushButton_2.clicked.connect(self.__startFaceRecord__)
+        self.addHelper.beginRecordFace.clicked.connect(self.__startFaceRecord__)
         self.addHelper.radioButton.clicked.connect(self.__alreadySignUp__)
-        self.addHelper.pushButton.clicked.connect(self.__signUp__)
-        self.addHelper.pushButton_4.clicked.connect(self.__faceRecord__)
+        self.addHelper.buttonSignIn.clicked.connect(self.__signUp__)
+        self.addHelper.recordFace.clicked.connect(self.__faceRecord__)
         if dia.exec():  # click OK and begin to train and save
-            self.__recordFace__()
-        else:
-            pass
+            self.__trainData__()
+        # else:
+        #     self.__startWebcam__(False)
+        #     if self.addHelper.inputName == '':
+        #         pass
+        #     else:
+        #         threading.Thread(target=self.__deleteFile__()).start()

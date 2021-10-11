@@ -13,6 +13,10 @@ class managerSQL():
         """
         self.con = sqlite3.connect(r"../config/IoT.db")
         self.cursor = self.con.cursor()
+        self.reBookId = 0
+        self.reClothId = 0
+        self.reFlaId = 0
+        self.reUserId = 0
 
     def createTable(self):
         """
@@ -54,7 +58,7 @@ class managerSQL():
                 """create table user (id integer primary key autoincrement,
                 name varchar,
                 gender varchar,
-                username varchar,
+                face_status varchar,
                 password varchar,
                 create_time,
                 updata_time,
@@ -95,6 +99,7 @@ class managerSQL():
             self.con.commit()
         except Exception as e:
             self.con.rollback()
+        self.reId = self.cursor.lastrowid
         return self.cursor.lastrowid
 
     def executeInsertBook(self, user, author, language, publisher):
@@ -112,9 +117,10 @@ class managerSQL():
             self.con.commit()
         except Exception as e:
             self.con.rollback()
+        self.reId = self.cursor.lastrowid
         return self.cursor.lastrowid
 
-    def executeInsertUser(self, name, gender, username, password):
+    def executeInsertUser(self, name, password, face_status=0,gender=None):
         """
             数据库中user表的插入操作
             @:param id: 唯一标识
@@ -125,11 +131,12 @@ class managerSQL():
         """
         sql = 'insert into user(name,gender,username,password,create_time,updata_time,deleted) values(?,?,?,?,?,?,?)'
         try:
-            self.cursor.execute(sql, (name, gender, username, password, now_time, now_time, 0))
+            self.cursor.execute(sql, (name, gender, face_status, password, now_time, now_time, 0))
             self.con.commit()
         except Exception as e:
             self.con.rollback()
-        return self.cursor.lastrowid
+        self.reId = self.cursor.lastrowid
+        # return self.cursor.lastrowid
 
     def executeUpdate(self, table_name, id, key, value):
         """
@@ -216,7 +223,7 @@ class managerSQL():
             @:param value: 更新后的值
             @:return id_value：查询结果的id数组
         """
-        sql = 'select * from ' + table_name + ' where user = ? and ' + key + ' = ? and deleted=0'  # exception where deleted=1
+        sql = 'select * from ' + table_name + ' where name = ? and ' + key + ' = ? and deleted=0'  # exception where deleted=1
         cur = self.cursor.execute(sql, (name, value))
         id_value = []
         des = cur.description
