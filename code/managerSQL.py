@@ -83,6 +83,7 @@ class managerSQL():
             self.con.commit()
         except Exception as e:
             self.con.rollback()
+        self.reClothId = self.cursor.lastrowid
         return self.cursor.lastrowid
 
     def executeInsertFlavoring(self, user, kind, brand):
@@ -99,7 +100,7 @@ class managerSQL():
             self.con.commit()
         except Exception as e:
             self.con.rollback()
-        self.reId = self.cursor.lastrowid
+        self.reFlaId = self.cursor.lastrowid
         return self.cursor.lastrowid
 
     def executeInsertBook(self, user, author, language, publisher):
@@ -117,7 +118,7 @@ class managerSQL():
             self.con.commit()
         except Exception as e:
             self.con.rollback()
-        self.reId = self.cursor.lastrowid
+        self.reBookId = self.cursor.lastrowid
         return self.cursor.lastrowid
 
     def executeInsertUser(self, name, password, face_status=0,gender=None):
@@ -135,7 +136,7 @@ class managerSQL():
             self.con.commit()
         except Exception as e:
             self.con.rollback()
-        self.reId = self.cursor.lastrowid
+        self.reUserId = self.cursor.lastrowid
         # return self.cursor.lastrowid
 
     def executeUpdate(self, table_name, id, key, value):
@@ -179,6 +180,8 @@ class managerSQL():
         for row in cur:
             a = list(row)
             id_value.append(a)
+        if table_name == 'user':
+            self.reUserId = id_value[0][0]
         return id_value, des
 
     def executeQuery2(self, table_name, key, value):
@@ -196,6 +199,8 @@ class managerSQL():
         for row in cur:
             a = list(row)
             id_value.append(a)
+        if table_name == 'user':
+            self.reUserId = id_value[0][0]
         return id_value, des
 
     def executeQuery3(self, table_name, name):
@@ -212,6 +217,8 @@ class managerSQL():
         for row in cur:
             a = list(row)
             id_value.append(a)
+        if table_name == 'user':
+            self.reUserId = id_value[0][0]
         return id_value, des
 
     def executeQuery4(self, table_name, name, key, value):
@@ -230,6 +237,8 @@ class managerSQL():
         for row in cur:
             a = list(row)
             id_value.append(a)
+        if table_name == 'user':
+            self.reUserId = id_value[0][0]
         return id_value, des
 
     def tupleTOdic(self, cur, des):

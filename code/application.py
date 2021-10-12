@@ -6,6 +6,7 @@ import threading
 import cv2
 from PyQt5.QtGui import QIcon, QImage, QPixmap
 
+from IoTPractice.code.trainData import trainData
 from IoTPractice.code.ui.add import Ui_Dialog as add_Dialog
 from IoTPractice.code.faceRecognition.signUpHelper import RecordDisturbance
 from IoTPractice.code.ui.managerUI import Ui_MainWindow
@@ -617,6 +618,10 @@ class AppWindow(QMainWindow, Ui_MainWindow):
         elif os.path.exists('{}/stu_{}'.format(self.datasets, result[0][0])):
             shutil.rmtree('{}/stu_{}'.format(self.datasets, self.newId))
 
+    def __trainFaceData__(self):
+        QMessageBox.warning(self, '提示', '系统正在进行人脸数据训练，请勿关闭窗口', QMessageBox.Yes)
+        trainData.trainFaceData()
+
     def __addMember__(self):
         print('click add member')
         dia = QtWidgets.QDialog()
@@ -633,6 +638,7 @@ class AppWindow(QMainWindow, Ui_MainWindow):
         self.minfaceRecordNum = 100
         self.newId = -1
 
+        # TODO add delete member function
         self.isAlreadySignin = False
         self.addHelper.useExternalCameraCheckBox.stateChanged.connect(
             lambda: self.__useExternalCamera__(self.addHelper.useExternalCameraCheckBox))
@@ -642,10 +648,11 @@ class AppWindow(QMainWindow, Ui_MainWindow):
         self.addHelper.buttonSignIn.clicked.connect(self.__signUp__)
         self.addHelper.recordFace.clicked.connect(self.__faceRecord__)
         if dia.exec():  # click OK and begin to train and save
-            self.__trainData__()
-        # else:
-        #     self.__startWebcam__(False)
-        #     if self.addHelper.inputName == '':
-        #         pass
-        #     else:
-        #         threading.Thread(target=self.__deleteFile__()).start()
+            self.__trainFaceData__()
+        else:
+            self.timer.timeout.disconnect(self.__updateFrame__)
+            self.cap.release()
+            if self.addHelper.inputName == '':
+                pass
+            else:
+                threading.Thread(target=self.__deleteFile__()).start()

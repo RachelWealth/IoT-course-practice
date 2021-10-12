@@ -5,3 +5,6 @@ class OperationCancel(Exception):
 class RecordDisturbance(Exception):
     pass
 
+
+class RecordNotFound(Exception):
+    pass
