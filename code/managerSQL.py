@@ -1,7 +1,5 @@
-import json
 import sqlite3
 import datetime
-import pandas as pd
 
 now_time = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 
@@ -121,7 +119,7 @@ class managerSQL():
         self.reBookId = self.cursor.lastrowid
         return self.cursor.lastrowid
 
-    def executeInsertUser(self, name, password, face_status=0,gender=None):
+    def executeInsertUser(self, name, password, face_status=0, gender=None):
         """
             数据库中user表的插入操作
             @:param id: 唯一标识
@@ -167,14 +165,28 @@ class managerSQL():
         except Exception as e:
             self.con.rollback()
 
-    def executeQuery1(self, table_name):
+    def executeQuery(self, table_name, name=None, key=None, value=None):
         """
             数据库的无条件查询
             @:param table_name: 需要进行查询操作的表名
             @:return id_value：查询结果的id数组
         """
-        sql = 'select * from ' + table_name + ' where deleted=0'
-        cur = self.cursor.execute(sql)
+        cur = ''
+        if (key is None) and (value is None):
+            if name is not None:
+                sql = 'select * from ' + table_name + ' where name = ? and deleted=0'  # exception where deleted=1
+                cur = self.cursor.execute(sql, (name,))
+
+            else:
+                sql = 'select * from ' + table_name + ' where deleted=0'
+                cur = self.cursor.execute(sql)
+        else:
+            if name is not None:
+                sql = 'select * from ' + table_name + ' where name = ? and ' + key + ' = ? and deleted=0'  # exception where deleted=1
+                cur = self.cursor.execute(sql, (name, value))
+            else:
+                sql = 'select * from ' + table_name + ' where ' + key + ' = ? and deleted=0'  # exception where deleted=1
+                cur = self.cursor.execute(sql, (value,))
         des = cur.description
         id_value = []
         for row in cur:
@@ -184,62 +196,65 @@ class managerSQL():
             self.reUserId = id_value[0][0]
         return id_value, des
 
-    def executeQuery2(self, table_name, key, value):
-        """
-            数据库的查询
-            @:param table_name: 需要进行查询操作的表名
-            @:param key: 需要查询的字段名
-            @:param value: 查询的值
-            @:return id_value：查询结果的id数组
-        """
-        sql = 'select * from ' + table_name + ' where ' + key + ' = ? and deleted=0'  # exception where deleted=1
-        cur = self.cursor.execute(sql, (value,))
-        id_value = []
-        des = cur.description
-        for row in cur:
-            a = list(row)
-            id_value.append(a)
-        if table_name == 'user':
-            self.reUserId = id_value[0][0]
-        return id_value, des
+    # def executeQuery2(self, table_name, key, value, name=None):
+    #     """
+    #         数据库的查询
+    #         @:param table_name: 需要进行查询操作的表名
+    #         @:param key: 需要查询的字段名
+    #         @:param value: 查询的值
+    #         @:return id_value：查询结果的id数组
+    #     """
+    #     if name is not None:
+    #         sql = 'select * from ' + table_name + ' where name = ? and ' + key + ' = ? and deleted=0'  # exception where deleted=1
+    #     else:
+    #         sql = 'select * from ' + table_name + ' where ' + key + ' = ? and deleted=0'  # exception where deleted=1
+    #     cur = self.cursor.execute(sql, (value,))
+    #     id_value = []
+    #     des = cur.description
+    #     for row in cur:
+    #         a = list(row)
+    #         id_value.append(a)
+    #     if table_name == 'user':
+    #         self.reUserId = id_value[0][0]
+    #     return id_value, des
 
-    def executeQuery3(self, table_name, name):
-        """
-            对数据库根据名字进行查询
-            @:param table_name: 需要进行查询操作的表名
-            @:param name: 查询的名字
-            @:return id_value：查询结果的id数组
-        """
-        sql = 'select * from ' + table_name + ' where name = ? and deleted=0'  # exception where deleted=1
-        cur = self.cursor.execute(sql, (name,))
-        id_value = []
-        des = cur.description
-        for row in cur:
-            a = list(row)
-            id_value.append(a)
-        if table_name == 'user':
-            self.reUserId = id_value[0][0]
-        return id_value, des
-
-    def executeQuery4(self, table_name, name, key, value):
-        """
-            在executeQuery2基础上增加名字的数据库的查询
-            @:param table_name: 需要进行查询操作的表名
-            @:param name: 查询的名字
-            @:param key: 需要修改的字段名
-            @:param value: 更新后的值
-            @:return id_value：查询结果的id数组
-        """
-        sql = 'select * from ' + table_name + ' where name = ? and ' + key + ' = ? and deleted=0'  # exception where deleted=1
-        cur = self.cursor.execute(sql, (name, value))
-        id_value = []
-        des = cur.description
-        for row in cur:
-            a = list(row)
-            id_value.append(a)
-        if table_name == 'user':
-            self.reUserId = id_value[0][0]
-        return id_value, des
+    # def executeQuery3(self, table_name, name):
+    #     """
+    #         对数据库根据名字进行查询
+    #         @:param table_name: 需要进行查询操作的表名
+    #         @:param name: 查询的名字
+    #         @:return id_value：查询结果的id数组
+    #     """
+    #     sql = 'select * from ' + table_name + ' where name = ? and deleted=0'  # exception where deleted=1
+    #     cur = self.cursor.execute(sql, (name,))
+    #     id_value = []
+    #     des = cur.description
+    #     for row in cur:
+    #         a = list(row)
+    #         id_value.append(a)
+    #     if table_name == 'user':
+    #         self.reUserId = id_value[0][0]
+    #     return id_value, des
+    #
+    # def executeQuery4(self, table_name, name, key, value):
+    #     """
+    #         在executeQuery2基础上增加名字的数据库的查询
+    #         @:param table_name: 需要进行查询操作的表名
+    #         @:param name: 查询的名字
+    #         @:param key: 需要修改的字段名
+    #         @:param value: 更新后的值
+    #         @:return id_value：查询结果的id数组
+    #     """
+    #     sql = 'select * from ' + table_name + ' where name = ? and ' + key + ' = ? and deleted=0'  # exception where deleted=1
+    #     cur = self.cursor.execute(sql, (name, value))
+    #     id_value = []
+    #     des = cur.description
+    #     for row in cur:
+    #         a = list(row)
+    #         id_value.append(a)
+    #     if table_name == 'user':
+    #         self.reUserId = id_value[0][0]
+    #     return id_value, des
 
     def tupleTOdic(self, cur, des):
         id_value = []
@@ -334,8 +349,8 @@ if __name__ == '__main__':
     a = db.executeQuery1('book')
     b = db.executeQuery1('cloth')
     c = db.executeQuery1('flavoring')
-    #d = db.executeQuery1('user')
-    e=db.executeQuery4('cloth','张三','color','蓝')
+    # d = db.executeQuery1('user')
+    e = db.executeQuery4('cloth', '张三', 'color', '蓝')
     print(a)
     print(b)
     print(c)

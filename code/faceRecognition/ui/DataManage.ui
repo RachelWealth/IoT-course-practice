@@ -112,7 +112,7 @@
        <rect>
         <x>10</x>
         <y>40</y>
-        <width>91</width>
+        <width>121</width>
         <height>41</height>
        </rect>
       </property>
@@ -274,7 +274,7 @@
         <x>10</x>
         <y>20</y>
         <width>281</width>
-        <height>76</height>
+        <height>81</height>
        </rect>
       </property>
       <layout class="QHBoxLayout" name="infoHorizontalLayout">
