@@ -28,19 +28,19 @@ class Ui_MainWindow(object):
         self.groupBox_4.setStyleSheet("background-color:rgb(1,22,39);")
         self.groupBox_4.setTitle("")
         self.groupBox_4.setObjectName("groupBox_4")
-        self.widget = QtWidgets.QWidget(self.groupBox_4)
-        self.widget.setGeometry(QtCore.QRect(10, 10, 91, 41))
-        self.widget.setObjectName("widget")
-        self.horizontalLayout = QtWidgets.QHBoxLayout(self.widget)
+        self.layoutWidget = QtWidgets.QWidget(self.groupBox_4)
+        self.layoutWidget.setGeometry(QtCore.QRect(10, 10, 91, 41))
+        self.layoutWidget.setObjectName("layoutWidget")
+        self.horizontalLayout = QtWidgets.QHBoxLayout(self.layoutWidget)
         self.horizontalLayout.setSizeConstraint(QtWidgets.QLayout.SetNoConstraint)
         self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout.setObjectName("horizontalLayout")
-        self.button_manager = QtWidgets.QPushButton(self.widget)
+        self.button_manager = QtWidgets.QPushButton(self.layoutWidget)
         self.button_manager.setStyleSheet("border:none;\n"
 "color:white;")
         self.button_manager.setObjectName("button_manager")
         self.horizontalLayout.addWidget(self.button_manager)
-        self.buttonAddObj = QtWidgets.QPushButton(self.widget)
+        self.buttonAddObj = QtWidgets.QPushButton(self.layoutWidget)
         self.buttonAddObj.setStyleSheet("border:none;\n"
 "color:white;")
         self.buttonAddObj.setObjectName("buttonAddObj")
@@ -119,7 +119,8 @@ class Ui_MainWindow(object):
 "font: 10pt \"仿宋\" white;\n"
 "border-radius:10px;\n"
 "padding:5px;\n"
-"border:none;")
+"border:none;\n"
+"color:white;")
         self.listWidget_2.setGridSize(QtCore.QSize(0, 30))
         self.listWidget_2.setObjectName("listWidget_2")
         item = QtWidgets.QListWidgetItem()
@@ -172,26 +173,14 @@ class Ui_MainWindow(object):
         self.groupBox_2 = QtWidgets.QGroupBox(self.centralwidget)
         self.groupBox_2.setGeometry(QtCore.QRect(140, 130, 821, 621))
         self.groupBox_2.setObjectName("groupBox_2")
-        self.buttonAddObj_3 = QtWidgets.QPushButton(self.centralwidget)
-        self.buttonAddObj_3.setGeometry(QtCore.QRect(140, 100, 91, 21))
-        self.buttonAddObj_3.setStyleSheet("border:none;\n"
-"color:white;")
-        self.buttonAddObj_3.setObjectName("buttonAddObj_3")
         self.groupBox_3 = QtWidgets.QGroupBox(self.centralwidget)
         self.groupBox_3.setGeometry(QtCore.QRect(980, 10, 200, 751))
         self.groupBox_3.setMaximumSize(QtCore.QSize(200, 16777215))
         self.groupBox_3.setStyleSheet("background-color:rgb(1,22,39);")
         self.groupBox_3.setTitle("")
         self.groupBox_3.setObjectName("groupBox_3")
-        self.labelBirthday = QtWidgets.QLabel(self.groupBox_3)
-        self.labelBirthday.setGeometry(QtCore.QRect(20, 90, 51, 41))
-        self.labelBirthday.setStyleSheet("font: 10pt \"宋体\";\n"
-"color:white;\n"
-"")
-        self.labelBirthday.setText("")
-        self.labelBirthday.setObjectName("labelBirthday")
         self.labelID = QtWidgets.QLabel(self.groupBox_3)
-        self.labelID.setGeometry(QtCore.QRect(20, 140, 51, 41))
+        self.labelID.setGeometry(QtCore.QRect(20, 80, 141, 41))
         self.labelID.setStyleSheet("font: 10pt \"宋体\";\n"
 "color:white;\n"
 "")
@@ -206,7 +195,7 @@ class Ui_MainWindow(object):
         self.buttonLogIn = QtWidgets.QPushButton(self.groupBox_3)
         self.buttonLogIn.setGeometry(QtCore.QRect(10, 20, 171, 51))
         self.buttonLogIn.setLayoutDirection(QtCore.Qt.LeftToRight)
-        self.buttonLogIn.setAutoFillBackground(True)
+        self.buttonLogIn.setAutoFillBackground(False)
         self.buttonLogIn.setStyleSheet("color:white;\n"
 "font: 14pt \"宋体\";\n"
 "border:none;")
@@ -332,7 +321,6 @@ class Ui_MainWindow(object):
         self.listWidget_2.setSortingEnabled(__sortingEnabled)
         self.button_manager_2.setText(_translate("MainWindow", "管理"))
         self.groupBox_2.setTitle(_translate("MainWindow", "我的"))
-        self.buttonAddObj_3.setText(_translate("MainWindow", "添加"))
         self.buttonAddMb.setText(_translate("MainWindow", "添加"))
         self.buttonLogIn.setText(_translate("MainWindow", "登录"))
         item = self.tableWidget.verticalHeaderItem(0)

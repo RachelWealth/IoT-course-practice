@@ -192,7 +192,7 @@ class managerSQL():
         for row in cur:
             a = list(row)
             id_value.append(a)
-        if table_name == 'user':
+        if len(id_value) != 0 and table_name == 'user':
             self.reUserId = id_value[0][0]
         return id_value, des
 
@@ -346,15 +346,15 @@ if __name__ == '__main__':
     db.executeInsertBook('李四', '东野圭吾', '中文', '南海出版社')
     db.executeInsertBook('王梅', '东野圭吾', '中文', '南海出版社')
 """
-    a = db.executeQuery1('book')
-    b = db.executeQuery1('cloth')
-    c = db.executeQuery1('flavoring')
-    # d = db.executeQuery1('user')
-    e = db.executeQuery4('cloth', '张三', 'color', '蓝')
-    print(a)
-    print(b)
-    print(c)
-    print(e)
+    # a = db.executeQuery1('book')
+    # b = db.executeQuery1('cloth')
+    # c = db.executeQuery1('flavoring')
+    # # d = db.executeQuery1('user')
+    # e = db.executeQuery4('cloth', '张三', 'color', '蓝')
+    # print(a)
+    # print(b)
+    # print(c)
+    # print(e)
     """
     d, des = db.executeQuery1('cloth')
     print(d)
@@ -369,4 +369,6 @@ if __name__ == '__main__':
     # db.executeDelete('book', 1)
     # c = db.executeQuery1('book')
     """
+    a = db.executeQuery(table_name='user', key='name', value='刘芸')
+
     db.close()

@@ -14,9 +14,9 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Dialog(object):
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
-        Dialog.resize(521, 334)
+        Dialog.resize(521, 448)
         self.tabWidget = QtWidgets.QTabWidget(Dialog)
-        self.tabWidget.setGeometry(QtCore.QRect(0, 0, 511, 321))
+        self.tabWidget.setGeometry(QtCore.QRect(0, 0, 511, 431))
         self.tabWidget.setObjectName("tabWidget")
         self.tab = QtWidgets.QWidget()
         self.tab.setObjectName("tab")
@@ -44,11 +44,11 @@ class Ui_Dialog(object):
         self.tab_2 = QtWidgets.QWidget()
         self.tab_2.setObjectName("tab_2")
         self.label_3 = QtWidgets.QLabel(self.tab_2)
-        self.label_3.setGeometry(QtCore.QRect(10, 0, 491, 281))
+        self.label_3.setGeometry(QtCore.QRect(10, 0, 491, 341))
         self.label_3.setAlignment(QtCore.Qt.AlignCenter)
         self.label_3.setObjectName("label_3")
         self.checkBoxUseExterCam = QtWidgets.QCheckBox(self.tab_2)
-        self.checkBoxUseExterCam.setGeometry(QtCore.QRect(10, 250, 131, 40))
+        self.checkBoxUseExterCam.setGeometry(QtCore.QRect(10, 360, 131, 40))
         self.checkBoxUseExterCam.setObjectName("checkBoxUseExterCam")
         self.tabWidget.addTab(self.tab_2, "")
 

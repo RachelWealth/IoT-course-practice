@@ -2,6 +2,7 @@ import json
 import os
 import shutil
 import threading
+import dlib
 
 import cv2
 from PyQt5.QtGui import QIcon, QImage, QPixmap
@@ -24,6 +25,7 @@ from PyQt5.QtWebEngineWidgets import *
 from sendDataHelper import sendDataHelper
 from ui.signin import Ui_Dialog as faceRcg
 from ui.login import Ui_Dialog as loginWin
+import queue
 
 LOG_FORMAT = "%(asctime)s - %(levelname)s - %(message)s"
 DATE_FORMAT = "%m/%d/%Y %H:%M:%S %p"
@@ -37,13 +39,13 @@ datas = 0
 
 
 class AppWindow(QMainWindow, Ui_MainWindow):
-
+    sqlHelper = managerSQL()
     def __init__(self, parent=None):
         super(AppWindow, self).__init__(parent)
         self.setupUi(self)
         self.result = []
         self.queryTableName = ''  # the name of table we need to query
-        self.sqlHelper = managerSQL()
+        
         self.classHelper = classifier()
         self.firstClass = 'cloth'
         self.secondClass = 'color'
@@ -127,7 +129,7 @@ class AppWindow(QMainWindow, Ui_MainWindow):
         #     self.secondClass = self.classHelper.bookEN[0]
         self.__getRighrtAndSecondClass__()
         self.__rightThirdClassShow__()
-        self.objSet, self.des = self.sqlHelper.executeQuery(self.firstClass)
+        self.objSet, self.des = sqlHelper.executeQuery(self.firstClass)
         self.__objFieldShow__()
 
     def __searchHelper__(self, tableName):
@@ -139,7 +141,7 @@ class AppWindow(QMainWindow, Ui_MainWindow):
         logging.info("search from " + tableName + '...')
         print("search from " + tableName + '...')
         self.queryTableName = tableName
-        self.objSet, self.des = self.sqlHelper.executeQuery(tableName)
+        self.objSet, self.des = sqlHelper.executeQuery(tableName)
 
     def __subClassDisplay__(self, num):
         """
@@ -215,10 +217,10 @@ class AppWindow(QMainWindow, Ui_MainWindow):
         print('third class click:' + self.thirdClass)
         if self.secondClass == 'color':
             self.thirdClass = self.thirdClass[0]
-        self.objSet, self.des = self.sqlHelper.executeQuery(self.firstClass, self.secondClass, self.thirdClass)
+        self.objSet, self.des = sqlHelper.executeQuery(self.firstClass, self.secondClass, self.thirdClass)
         self.__objFieldShow__()
 
-    def __startFaceRcgWebCam__(self):
+    def __startWebCamFaceRcg__(self):
         if not self.cap.isOpened():
             if self.isExternalCameraUsed:
                 camID = 1
@@ -234,14 +236,10 @@ class AppWindow(QMainWindow, Ui_MainWindow):
                 self.cap.release()
                 self.startWebcamButton.setIcon(QIcon('./icons/error.png'))
             else:
-                self.faceProcessingThread.start()
+                self.faceRcgHelper.start()
                 self.timer.start(5)
-                self.panalarmThread.start()
-                self.startWebcamButton.setIcon(QIcon('./icons/success.png'))
-                self.startWebcamButton.setText('关闭摄像头')
-
         else:
-            self.faceProcessingThread.stop()
+            self.faceRcgHelper.stop()
             if self.cap.isOpened():
                 if self.timer.isActive():
                     self.timer.stop()
@@ -250,23 +248,38 @@ class AppWindow(QMainWindow, Ui_MainWindow):
             self.loginHelper.label_3.clear()
             self.loginHelper.label_3.setText('请开启摄像头')
 
+    def __updateFrameRcg__(self):
+        if self.cap.isOpened():
+            # ret, frame = self.cap.read()
+            # if ret:
+            #     self.showImg(frame, self.realTimeCaptureLabel)
+            if not self.captureQueue.empty():
+                captureData = self.captureQueue.get()
+                realTimeFrame = captureData.get('realTimeFrame')
+                self.__showFacePic__(realTimeFrame, 'loginHelper')
+                self.loginName = self.faceRcgHelper.name
+        if self.loginName != '':
+            ret = QMessageBox.information(self, '人脸识别登录', '登录名：' + self.loginName, QMessageBox.Yes)
+            if ret == QMessageBox.Yes:
+                self.dia.close()
+
     def __faceRcgPro__(self):
+        self.isExternalCameraUsed = False
         self.cap = cv2.VideoCapture()
-        self.faceRcgHelper = faceRcgLogin(self.sqlHelper)
-        self.__startWebcam__(True)
-
+        self.captureQueue = queue.Queue()
+        self.faceRcgHelper = faceRcgLogin(self.cap, self.captureQueue)
+        self.loginName = self.faceRcgHelper.name
         self.timer = QTimer(self)
-        self.timer.timeout.connect(self.__updateFrame__)
+        self.timer.timeout.connect(self.__updateFrameRcg__)
 
-        self.faceProcessingThread.enableFaceTracker(self)
-        self.faceProcessingThread.enableFaceRecognizer(self)
+        self.__startWebCamFaceRcg__()
 
     def __loginByTwoMethod__(self):
         if self.loginHelper.tabWidget.currentIndex() == 0:
             pass
         else:
             self.__faceRcgPro__()
-            self.dia.close()
+            # self.dia.close()
 
     def __logIn__(self):
         self.dia = QtWidgets.QDialog()
@@ -284,18 +297,17 @@ class AppWindow(QMainWindow, Ui_MainWindow):
                 # TODO close cap
                 name = self.loginHelper.inputUserName.text().strip()
                 pwd = self.loginHelper.inputPwd.text().strip()
-                [result, _] = self.sqlHelper.executeQuery(table_name='user', name=name, key='password', value=pwd)
+                [result, _] = sqlHelper.executeQuery(table_name='user', name=name, key='password', value=pwd)
                 if len(result) == 0:
                     WarningQDialog('密码或用户名错误，请检查账户名是否存在，密码是否正确')
                 else:
                     self.currntAccount = name
                     self.buttonLogIn.setText(self.currntAccount)
-                    self.labelID.setText('ID号：' + result[0][0])
+                    self.labelID.setText('ID号：' + str(result[0][0]))
                     self.browser.load(QUrl(r'http://localhost:5000/welcom'))
             else:  # login by face recognition
 
                 print('人脸识别登录')
-
         else:
             pass
 
@@ -309,7 +321,7 @@ class AppWindow(QMainWindow, Ui_MainWindow):
         if len(self.objSet) == 0:
             self.browser.load(QUrl(r'http://localhost:5000/'))
         else:
-            self.objList = self.sqlHelper.tupleTOdic(self.objSet, self.des)
+            self.objList = sqlHelper.tupleTOdic(self.objSet, self.des)
             self.objJson = json.dumps(self.objList, ensure_ascii=False)
             # self.objJson = self.objJson[1:len(self.objJson) - 1]
             print(self.objJson)
@@ -336,7 +348,7 @@ class AppWindow(QMainWindow, Ui_MainWindow):
             self.__subClassDisplay__(num)
             self.__getRighrtAndSecondClass__()
             self.__rightThirdClassShow__()
-            self.objSet, self.des = self.sqlHelper.executeQuery(self.firstClass)
+            self.objSet, self.des = sqlHelper.executeQuery(self.firstClass)
             self.__objFieldShow__()
         elif command == 1:
             print('小杰')
@@ -430,11 +442,11 @@ class AppWindow(QMainWindow, Ui_MainWindow):
                             publisher=None, season=None):
         objID = 0
         if n == 0:
-            objID = self.sqlHelper.executeInsertcloth(user=user, gender=gender, color=color, brand=brand, season=season)
+            objID = sqlHelper.executeInsertcloth(user=user, gender=gender, color=color, brand=brand, season=season)
         elif n == 1:
-            objID = self.sqlHelper.executeInsertFlavoring(user=user, kind=kind, brand=brand)
+            objID = sqlHelper.executeInsertFlavoring(user=user, kind=kind, brand=brand)
         elif n == 2:
-            objID = self.sqlHelper.executeInsertBook(user=user, author=author, language=language, publisher=publisher)
+            objID = sqlHelper.executeInsertBook(user=user, author=author, language=language, publisher=publisher)
         self.__insertPicToFile__(n, objID, src)
 
     def __getAddContent__(self):
@@ -512,11 +524,11 @@ class AppWindow(QMainWindow, Ui_MainWindow):
             self.userInfo = {'name': self.addHelper.inputName.text().strip(),
                              'pwd': self.addHelper.inputPwd.text().strip()}
             # TODO do it in threading
-            [result, _] = self.sqlHelper.executeQuery(table_name='user', key='name', value=self.userInfo.get('name'))
+            [result, _] = sqlHelper.executeQuery(table_name='user', key='name', value=self.userInfo.get('name'))
             if len(result) != 0:
                 WarningQDialog('用户已存在')
                 return 0
-            threading.Thread(target=self.sqlHelper.executeInsertUser(name=self.userInfo.get('name'),
+            threading.Thread(target=sqlHelper.executeInsertUser(name=self.userInfo.get('name'),
                                                                      password=self.userInfo.get('pwd'))).start()
             logging.info('成功录入用户信息：' + self.userInfo['name'])
             print('成功录入用户信息：' + self.userInfo['name'])
@@ -536,7 +548,7 @@ class AppWindow(QMainWindow, Ui_MainWindow):
         gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
         faces = self.faceCascade.detectMultiScale(gray, 1.3, 5, minSize=(90, 90))
 
-        self.newId = self.sqlHelper.reUserId
+        self.newId = sqlHelper.reUserId
 
         for (x, y, w, h) in faces:
             if self.isFaceRecordEnabled:
@@ -570,11 +582,13 @@ class AppWindow(QMainWindow, Ui_MainWindow):
         ret, frame = self.cap.read()
         # self.image = cv2.flip(self.image, 1)
         if ret:
-            self.__showFacePic__(frame)
-            detected_frame = self.__detectFace__(frame)
-            self.__showFacePic__(detected_frame)
 
-    def __showFacePic__(self, pic):
+            detected_frame = self.__detectFace__(frame)
+            self.__showFacePic__(detected_frame, 'addHelper')
+        else:
+            self.__showFacePic__(frame, 'addHelper')
+
+    def __showFacePic__(self, pic, helper):
         # BGR -> RGB
         img = cv2.cvtColor(pic, cv2.COLOR_BGR2RGB)
         qformat = QImage.Format_Indexed8
@@ -586,8 +600,12 @@ class AppWindow(QMainWindow, Ui_MainWindow):
                 qformat = QImage.Format_RGB888
 
         outImage = QImage(img, img.shape[1], img.shape[0], img.strides[0], qformat)
-        self.addHelper.label_3.setPixmap(QPixmap.fromImage(outImage))
-        self.addHelper.label_3.setScaledContents(True)
+        if helper == 'addHelper':
+            self.addHelper.label_3.setPixmap(QPixmap.fromImage(outImage))
+            self.addHelper.label_3.setScaledContents(True)
+        else:
+            self.loginHelper.label_3.setPixmap(QPixmap.fromImage(outImage))
+            self.loginHelper.label_3.setScaledContents(True)
 
     def __startFaceRecord__(self):
         name = self.addHelper.inputName.text()
@@ -595,7 +613,7 @@ class AppWindow(QMainWindow, Ui_MainWindow):
             self.isUserInfoReady = False
             QMessageBox.warning(self, '提示', '开启失败，请输入用户姓名', QMessageBox.Yes)
             return 0
-        [result, _] = self.sqlHelper.executeQuery('user', 'name', name)
+        [result, _] = sqlHelper.executeQuery('user', 'name', name)
 
         if len(result) == 0:
             self.isUserInfoReady = False
@@ -676,7 +694,7 @@ class AppWindow(QMainWindow, Ui_MainWindow):
             self.isExternalCameraUsed = False
 
     def __deleteFile__(self):
-        [result, _] = self.sqlHelper.executeQuery(table_name='user', key='name', value=self.addHelper.inputName.text())
+        [result, _] = sqlHelper.executeQuery(table_name='user', key='name', value=self.addHelper.inputName.text())
         if len(result) == 0:
             pass
         elif os.path.exists('{}/mem_{}'.format(self.datasets, result[0][0])):
@@ -684,7 +702,7 @@ class AppWindow(QMainWindow, Ui_MainWindow):
 
     def __trainFaceData__(self):
         QMessageBox.warning(self, '提示', '系统正在进行人脸数据训练，请勿关闭窗口', QMessageBox.Yes)
-        flag = trainData().trainFaceData(sqlHelper=self.sqlHelper, mem_id=self.newId)
+        flag = trainData().trainFaceData(sqlHelper=sqlHelper, mem_id=self.newId)
         return flag
 
     def __addMember__(self):
@@ -731,24 +749,25 @@ class AppWindow(QMainWindow, Ui_MainWindow):
                 threading.Thread(target=self.__deleteFile__()).start()
 
     def closeEvent(self, event):
-        self.sqlHelper.close()
+        sqlHelper.close()
         event.accept()
 
 
 class faceRcgLogin(QThread):
     trainingData = './recognizer/trainingData.yml'
-
-    def __init__(self, sqlHelper):
+    sqlHelper = managerSQL()
+    def __init__(self, cap, captureQueue):
         super(faceRcgLogin, self).__init__()
         self.isRunning = True
-        self.sqlHelper = sqlHelper
         self.isFaceTrackerEnabled = True
-        self.isFaceRecognizerEnabled = False
+        self.isFaceRecognizerEnabled = True
         self.isPanalarmEnabled = True
         self.name = ''
         self.isDebugMode = False
         self.confidenceThreshold = 50  # confidence coefficience
         self.autoAlarmThreshold = 65
+        self.cap = cap
+        self.captureQueue = captureQueue
 
         self.isEqualizeHistEnabled = False
 
@@ -776,8 +795,8 @@ class faceRcgLogin(QThread):
         # isDbConnected = False
 
         while self.isRunning:
-            if AppWindow.cap.isOpened():
-                ret, frame = AppWindow.cap.read()
+            if self.cap.isOpened():
+                ret, frame = self.cap.read()
                 gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
                 # 是否执行直方图均衡化
                 # if self.isEqualizeHistEnabled:
@@ -787,7 +806,7 @@ class faceRcgLogin(QThread):
                 # 预加载数据文件
                 if not isTrainingDataLoaded and os.path.isfile(self.trainingData):
                     recognizer = cv2.face.LBPHFaceRecognizer_create()
-                    recognizer.read(AppWindow.trainingData)
+                    recognizer.read(self.trainingData)
                     isTrainingDataLoaded = True
                 # if not isDbConnected and os.path.isfile(AppWindow.database):
                 #     conn = sqlite3.connect(AppWindow.database)
@@ -824,12 +843,9 @@ class faceRcgLogin(QThread):
                             mem_id, confidence = recognizer.predict(gray[_y:_y + _h, _x:_x + _w])
                             logging.debug('mem_id：{}，confidence：{}'.format(mem_id, confidence))
 
-                            if self.isDebugMode:
-                                AppWindow.logQueue.put('Debug -> mem_id：{}，confidence：{}'.format(mem_id, confidence))
-
                             # 从数据库中获取识别人脸的身份信息
                             try:
-                                result = self.sqlHelper.excuteQuery(table_name='user', key='id', value=mem_id)
+                                result = AppWindow.sqlHelper.executeQuery(table_name='user', key='id', value=mem_id)
                                 # cursor.execute("SELECT * FROM users WHERE mem_id=?", (mem_id,))
                                 # result = cursor.fetchall()
 
@@ -849,18 +865,10 @@ class faceRcgLogin(QThread):
                                 isKnown = True
                                 cv2.putText(realTimeFrame, self.name, (_x - 5, _y - 10), cv2.FONT_HERSHEY_SIMPLEX, 1,
                                             (0, 97, 255), 2)
+
                             else:
-                                # 若置信度评分大于置信度阈值，该人脸可能是陌生人
                                 cv2.putText(realTimeFrame, 'unknown', (_x - 5, _y - 10), cv2.FONT_HERSHEY_SIMPLEX, 1,
                                             (0, 0, 255), 2)
-                                # # 若置信度评分超出自动报警阈值，触发报警信号
-                                # if confidence > self.autoAlarmThreshold:
-                                #     # 检测报警系统是否开启
-                                #     if self.isPanalarmEnabled:
-                                #         alarmSignal['timestamp'] = datetime.now().strftime('%Y%m%d%H%M%S')
-                                #         alarmSignal['img'] = realTimeFrame
-                                #         AppWindow.alarmQueue.put(alarmSignal)
-                                #         logging.info('系统发出了报警信号')
 
                         # 帧数自增
                         frameCounter += 1
@@ -928,7 +936,7 @@ class faceRcgLogin(QThread):
 
                 captureData['originFrame'] = frame
                 captureData['realTimeFrame'] = realTimeFrame
-                AppWindow.captureQueue.put(captureData)
+                self.captureQueue.put(captureData)
 
             else:
                 continue
