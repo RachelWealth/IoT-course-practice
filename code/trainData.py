@@ -41,14 +41,14 @@ class trainData:
                 continue
             mem_id = dir_name.replace('mem_', '')
             try:
-                # cursor.execute('SELECT * FROM users WHERE mem_id=?', (mem_id,))
+                # cursor.execute('SELECT * FROM users WHERE face_id=?', (face_id,))
                 ret = sqlHelper.executeQuery(table_name='user', key='id', value=mem_id)
                 if not ret:
                     raise RecordNotFound
-
-                # cursor.execute('UPDATE users SET face_id=? WHERE mem_id=?', (face_id, mem_id,))
+                sqlHelper.executeUpdate(table_name='user', id=ret[0][0], key='face_id', value=face_id)
+                # cursor.execute('UPDATE users SET face_id=? WHERE face_id=?', (face_id, face_id,))
             except RecordNotFound:
-                logging.warning('数据库中找不到id为{}的用户记录，但是有其人脸信息'.format(mem_id))
+                logging.warning('数据库中找不到id为{}的用户记录，但是有其人脸信息'.format(face_id))
                 continue
             subject_dir_path = data_folder_path + '/' + dir_name
             subject_images_names = os.listdir(subject_dir_path)
@@ -65,7 +65,7 @@ class trainData:
 
         return faces, labels
 
-    def trainFaceData(self, sqlHelper, mem_id):
+    def trainFaceData(self, sqlHelper, face_id):
         flag = -1
         logging.info('begin to train face data')
         try:
@@ -77,11 +77,7 @@ class trainData:
             face_recognizer.save('./recognizer/trainingData.yml')
         except traversalError:
             logging.error('遍历人脸库出现异常，训练人脸数据失败')
-            # QMessageBox.critical(self, '提示', '遍历人脸库出现异常，训练失败', QMessageBox.Cancel)
             flag = 1
         else:
-            threading.Thread(
-                target=sqlHelper.executeUpdate(table_name='user', id=mem_id, key='face_status', value=1)).start()
             flag = 0
-            # QMessageBox.info(self, '提示', '人脸数据训练完成', QMessageBox.Yes)
         return flag

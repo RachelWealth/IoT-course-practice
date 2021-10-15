@@ -56,7 +56,7 @@ class managerSQL():
                 """create table user (id integer primary key autoincrement,
                 name varchar,
                 gender varchar,
-                face_status varchar,
+                face_id INTEGER DEFAULT -1,
                 password varchar,
                 create_time,
                 updata_time,
@@ -174,7 +174,7 @@ class managerSQL():
         cur = ''
         if (key is None) and (value is None):
             if name is not None:
-                sql = 'select * from ' + table_name + ' where name = ? and deleted=0'  # exception where deleted=1
+                sql = 'select * from ' + table_name + ' where user = ? and deleted=0'  # exception where deleted=1
                 cur = self.cursor.execute(sql, (name,))
 
             else:
@@ -182,11 +182,12 @@ class managerSQL():
                 cur = self.cursor.execute(sql)
         else:
             if name is not None:
-                sql = 'select * from ' + table_name + ' where name = ? and ' + key + ' = ? and deleted=0'  # exception where deleted=1
+                sql = 'select * from ' + table_name + ' where user = ? and ' + key + ' = ? and deleted=0'  # exception where deleted=1
                 cur = self.cursor.execute(sql, (name, value))
             else:
                 sql = 'select * from ' + table_name + ' where ' + key + ' = ? and deleted=0'  # exception where deleted=1
                 cur = self.cursor.execute(sql, (value,))
+
         des = cur.description
         id_value = []
         for row in cur:
@@ -369,6 +370,6 @@ if __name__ == '__main__':
     # db.executeDelete('book', 1)
     # c = db.executeQuery1('book')
     """
-    a = db.executeQuery(table_name='user', key='name', value='刘芸')
+    a = db.executeQuery(table_name='user', key='face_id', value=face_id)
 
     db.close()
