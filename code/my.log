@@ -32087,3 +32087,42 @@ src-E:\\workplace\\pycharmWork\\IoTPractice\\IoTPractice\\img\\Snipaste_2021-10-
 10/15/2021 18:32:10 PM - INFO - load welcom page...
 10/15/2021 18:32:12 PM - INFO - load welcom page success
 10/15/2021 18:32:12 PM - INFO - finish application initial
+10/16/2021 11:17:09 AM - INFO - set list item response action
+10/16/2021 11:17:09 AM - INFO - load welcom page...
+10/16/2021 11:17:12 AM - INFO - load welcom page success
+10/16/2021 11:17:12 AM - INFO - finish application initial
+10/16/2021 11:21:46 AM - INFO - set list item response action
+10/16/2021 11:21:46 AM - INFO - load welcom page...
+10/16/2021 11:21:46 AM - INFO - load welcom page success
+10/16/2021 11:21:46 AM - INFO - finish application initial
+10/16/2021 11:34:34 AM - INFO - set list item response action
+10/16/2021 11:34:34 AM - INFO - load welcom page...
+10/16/2021 11:34:35 AM - INFO - load welcom page success
+10/16/2021 11:34:35 AM - INFO - finish application initial
+10/16/2021 11:36:21 AM - INFO - set list item response action
+10/16/2021 11:36:21 AM - INFO - load welcom page...
+10/16/2021 11:36:21 AM - INFO - load welcom page success
+10/16/2021 11:36:21 AM - INFO - finish application initial
+10/16/2021 11:38:25 AM - INFO - set list item response action
+10/16/2021 11:38:25 AM - INFO - load welcom page...
+10/16/2021 11:38:25 AM - INFO - load welcom page success
+10/16/2021 11:38:25 AM - INFO - finish application initial
+10/16/2021 11:38:40 AM - DEBUG - face_id£º0£¬confidence£º49.2804281869971
+10/16/2021 11:38:44 AM - INFO - ------------------------------
+10/16/2021 11:38:44 AM - INFO - click clothitem
+10/16/2021 11:38:44 AM - INFO - search from cloth...
+10/16/2021 11:38:44 AM - INFO - prepare to show second class classifier
+10/16/2021 11:38:44 AM - INFO - show success
+10/16/2021 11:38:44 AM - INFO - load dynamic web
+10/16/2021 11:38:44 AM - INFO - load successfully
+10/16/2021 11:38:48 AM - INFO - ------------------------------
+10/16/2021 11:38:48 AM - INFO - click flavoringitem
+10/16/2021 11:38:48 AM - INFO - search from flavoring...
+10/16/2021 11:38:48 AM - INFO - prepare to show second class classifier
+10/16/2021 11:38:48 AM - INFO - show success
+10/16/2021 11:38:48 AM - INFO - load dynamic web
+10/16/2021 11:38:48 AM - INFO - load successfully
+10/16/2021 11:39:15 AM - INFO - set list item response action
+10/16/2021 11:39:15 AM - INFO - load welcom page...
+10/16/2021 11:39:15 AM - INFO - load welcom page success
+10/16/2021 11:39:15 AM - INFO - finish application initial

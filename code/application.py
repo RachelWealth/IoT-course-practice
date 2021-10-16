@@ -3,10 +3,8 @@ import os
 import shutil
 import threading
 import dlib
-
 import cv2
 from PyQt5.QtGui import QIcon, QImage, QPixmap
-
 from IoTPractice.code.exceptions import unexpectedError, traversalError, RecordDisturbance
 from IoTPractice.code.signinWidget import signinWidget
 from IoTPractice.code.trainData import trainData
@@ -26,6 +24,7 @@ from ui.signin import Ui_Dialog as faceRcg
 from ui.login import Ui_Dialog as loginWin
 import queue
 import sqlite3
+from IoTPractice.code.ui.aboutMe import Ui_Dialog as aboutMe
 
 LOG_FORMAT = "%(asctime)s - %(levelname)s - %(message)s"
 DATE_FORMAT = "%m/%d/%Y %H:%M:%S %p"
@@ -81,6 +80,9 @@ class AppWindow(QMainWindow, Ui_MainWindow):
         # connect with serial
         self.actionlianjie.triggered.connect(self.__connectSerial__)
 
+        # connect with serial
+        self.actionabout.triggered.connect(self.__aboutMe__)
+
         self.datasets = 'faceData'
 
         # web page display
@@ -114,7 +116,6 @@ class AppWindow(QMainWindow, Ui_MainWindow):
         if self.currntAccount == '':
             QMessageBox.information(self, '登录提醒', '请登录后查看', QMessageBox.Yes)
             return 0
-        logging.info('------------------------------')
         num = self.listWidget.selectedIndexes()[0].row()
         self.firstClass = self.classHelper.homeObj.get(num)
         self.secondClass = None
@@ -306,10 +307,6 @@ class AppWindow(QMainWindow, Ui_MainWindow):
                 print('111')
 
     def __logIn__(self):
-        # self.dia = QtWidgets.QDialog()
-        # self.loginHelper = loginWin()
-        # self.loginHelper.setupUi(self.dia)
-
         # open login windows and recieve it close signal
         self.loginHelper = signinWidget()
         self.loginHelper.dia.show()
@@ -322,7 +319,6 @@ class AppWindow(QMainWindow, Ui_MainWindow):
         # if self.dia.exec():
         if self.loginHelper.dia.exec():
             if self.loginHelper.tabWidget.currentIndex() == 0:  # login by password
-                # TODO close cap
                 name = self.loginHelper.inputUserName.text().strip()
                 pwd = self.loginHelper.inputPwd.text().strip()
                 [result, _] = sqlHelper.executeQuery(table_name='user', name=name, key='password', value=pwd)
@@ -489,7 +485,6 @@ class AppWindow(QMainWindow, Ui_MainWindow):
             QMessageBox.warning(self, '提交失败', '提交失败，请确认图片路径是否正确', QMessageBox.Cancel)
             return 0
         n = self.addWin.comboBox.currentIndex()
-        # TODO change name to the name of account login currently
         color, brand, season, kind, author, language, publisher = [None, None, None, None, None, None, None]
         if n == 0:
             color = self.addWin.comboBox_2.currentText()
@@ -645,7 +640,7 @@ class AppWindow(QMainWindow, Ui_MainWindow):
             self.isUserInfoReady = False
             QMessageBox.warning(self, '提示', '开启失败，请输入用户姓名', QMessageBox.Yes)
             return 0
-        [result, _] = sqlHelper.executeQuery('user', 'name', name)
+        [result, _] = sqlHelper.executeQuery(table_name='user', key='user', value=name)
 
         if len(result) == 0:
             self.isUserInfoReady = False
@@ -726,7 +721,7 @@ class AppWindow(QMainWindow, Ui_MainWindow):
             self.isExternalCameraUsed = False
 
     def __deleteFile__(self):
-        [result, _] = sqlHelper.executeQuery(table_name='user', key='name', value=self.addHelper.inputName.text())
+        [result, _] = sqlHelper.executeQuery(table_name='user', key='user', value=self.addHelper.inputName.text())
         if len(result) == 0:
             pass
         elif os.path.exists('{}/mem_{}'.format(self.datasets, result[0][0])):
@@ -773,7 +768,7 @@ class AppWindow(QMainWindow, Ui_MainWindow):
             else:
                 QMessageBox.information(self, '提示', '人脸数据训练成功', )
         else:
-            self.timer.timeout.disconnect(self.__updateFrame__)
+            # self.timer.timeout.disconnect(self.__updateFrame__)
             self.cap.release()
             if self.addHelper.inputName == '':
                 pass
@@ -784,6 +779,12 @@ class AppWindow(QMainWindow, Ui_MainWindow):
         sqlHelper.close()
         event.accept()
 
+    def __aboutMe__(self):
+        dia = QtWidgets.QDialog()
+        win = aboutMe()
+        win.setupUi(dia)
+
+        dia.exec()
 
 class faceRcgLogin(QThread):
     trainingData = './recognizer/trainingData.yml'
@@ -967,3 +968,4 @@ class faceRcgLogin(QThread):
         self.isRunning = False
         self.quit()
         self.wait()
+
