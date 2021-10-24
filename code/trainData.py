@@ -62,7 +62,6 @@ class trainData:
                     faces.append(face)
                     labels.append(face_id)
             face_id = face_id + 1
-
         return faces, labels
 
     def trainFaceData(self, sqlHelper, face_id):
@@ -73,8 +72,11 @@ class trainData:
             if not os.path.exists('./recognizer'):
                 os.makedirs('./recognizer')
             faces, labels = self.__prepareTrainingData__(self.datasets, sqlHelper=sqlHelper)
-            face_recognizer.train(faces, np.array(labels))
-            face_recognizer.save('./recognizer/trainingData.yml')
+            if len(faces)==0:
+                flag = 1
+            else:
+                face_recognizer.train(faces, np.array(labels))
+                face_recognizer.save('./recognizer/trainingData.yml')
         except traversalError:
             logging.error('遍历人脸库出现异常，训练人脸数据失败')
             flag = 1

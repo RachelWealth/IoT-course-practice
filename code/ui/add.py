@@ -14,10 +14,10 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Dialog(object):
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
-        Dialog.resize(417, 405)
+        Dialog.resize(417, 452)
         Dialog.setStyleSheet("background-color:rgb(40, 41, 35);")
         self.buttonBox = QtWidgets.QDialogButtonBox(Dialog)
-        self.buttonBox.setGeometry(QtCore.QRect(50, 340, 281, 32))
+        self.buttonBox.setGeometry(QtCore.QRect(40, 390, 281, 32))
         self.buttonBox.setStyleSheet("color:rgb(255, 255, 255)")
         self.buttonBox.setOrientation(QtCore.Qt.Horizontal)
         self.buttonBox.setStandardButtons(QtWidgets.QDialogButtonBox.Cancel|QtWidgets.QDialogButtonBox.Ok)
@@ -91,7 +91,7 @@ class Ui_Dialog(object):
         self.label_4.setObjectName("label_4")
         self.textEdit = QtWidgets.QTextEdit(Dialog)
         self.textEdit.setEnabled(True)
-        self.textEdit.setGeometry(QtCore.QRect(70, 280, 261, 31))
+        self.textEdit.setGeometry(QtCore.QRect(70, 280, 261, 81))
         self.textEdit.setStyleSheet("background-color:rgb(255, 255, 255);")
         self.textEdit.setObjectName("textEdit")
 

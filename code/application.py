@@ -48,7 +48,7 @@ class AppWindow(QMainWindow, Ui_MainWindow):
 
         self.classHelper = classifier()
         self.firstClass = 'cloth'
-        self.secondClass = None
+        self.secondClass = 'color'
         self.thirdClass = None
         self.isAccountLogIn = False
         self.currntAccount = ''
@@ -134,7 +134,8 @@ class AppWindow(QMainWindow, Ui_MainWindow):
         """
         logging.info("search from " + self.firstClass + '...')
         print("search from " + self.firstClass + '...')
-        self.objSet, self.des = sqlHelper.executeQuery(table_name=self.firstClass, name=self.currntAccount,key=self.secondClass,value=None)
+        self.objSet, self.des = sqlHelper.executeQuery(table_name=self.firstClass, name=self.currntAccount,
+                                                       key=self.secondClass, value=None)
 
     def __subClassDisplay__(self, num):
         """
@@ -211,13 +212,17 @@ class AppWindow(QMainWindow, Ui_MainWindow):
         if self.currntAccount == '':
             QMessageBox.information(self, '登录提醒', '请登录后查看', QMessageBox.Yes)
             return 0
-        self.thirdClass = self.tableWidget.item(qTableIndex.row(), qTableIndex.column()).text()
-        logging.info('third class click:' + self.thirdClass)
-        print('third class click:' + self.thirdClass)
-        if self.secondClass == 'color':
-            self.thirdClass = self.thirdClass[0]
-        self.objSet, self.des = sqlHelper.executeQuery(table_name=self.firstClass, name=self.currntAccount,key=self.secondClass, value=self.thirdClass)
-        self.__objFieldShow__()
+        try:
+            self.thirdClass = self.tableWidget.item(qTableIndex.row(), qTableIndex.column()).text()
+            logging.info('third class click:' + self.thirdClass)
+            print('third class click:' + self.thirdClass)
+            if self.secondClass == 'color':
+                self.thirdClass = self.thirdClass[0]
+            self.objSet, self.des = sqlHelper.executeQuery(table_name=self.firstClass, name=self.currntAccount,
+                                                           key=self.secondClass, value=self.thirdClass)
+            self.__objFieldShow__()
+        except:
+            pass
 
     def __startWebCamFaceRcg__(self):
         if not self.cap.isOpened():
@@ -289,7 +294,6 @@ class AppWindow(QMainWindow, Ui_MainWindow):
             pass
         else:
             self.__faceRcgPro__()
-            # self.dia.close()
 
     def __loginWinClose__(self):
         # login windows close event
@@ -333,7 +337,7 @@ class AppWindow(QMainWindow, Ui_MainWindow):
 
     def __loginSuccess__(self, name, memID):
         self.currntAccount = name
-        print('memID=',memID)
+        print('memID=', memID)
         self.buttonLogIn.setText(self.currntAccount)
         self.labelID.setText('ID号：' + str(memID))
         self.browser.load(QUrl(r'http://localhost:5000/welcom'))
@@ -535,7 +539,7 @@ class AppWindow(QMainWindow, Ui_MainWindow):
 
             self.addHelper.label_6.setEnabled(True)
             self.addHelper.label_7.setEnabled(True)
-
+            self.addHelper.buttonSignIn.setEnabled(True)
             self.addHelper.inputPwd.setEnabled(True)
             self.addHelper.inputConfirmPwd.setEnabled(True)
             self.isAlreadySignin = False
@@ -551,7 +555,7 @@ class AppWindow(QMainWindow, Ui_MainWindow):
             self.userInfo = {'name': self.addHelper.inputName.text().strip(),
                              'pwd': self.addHelper.inputPwd.text().strip()}
             # TODO do it in threading
-            [result, _] = sqlHelper.executeQuery(table_name='user', key='name', value=self.userInfo.get('name'))
+            [result, _] = sqlHelper.executeQuery(table_name='user', key='user', value=self.userInfo.get('name'))
             if len(result) != 0:
                 WarningQDialog('用户已存在')
                 return 0
@@ -607,9 +611,7 @@ class AppWindow(QMainWindow, Ui_MainWindow):
 
     def __updateFrame__(self):
         ret, frame = self.cap.read()
-        # self.image = cv2.flip(self.image, 1)
         if ret:
-
             detected_frame = self.__detectFace__(frame)
             self.__showFacePic__(detected_frame, 'addHelper')
         else:
@@ -617,22 +619,25 @@ class AppWindow(QMainWindow, Ui_MainWindow):
 
     def __showFacePic__(self, pic, helper):
         # BGR -> RGB
-        img = cv2.cvtColor(pic, cv2.COLOR_BGR2RGB)
-        qformat = QImage.Format_Indexed8
+        try:
+            img = cv2.cvtColor(pic, cv2.COLOR_BGR2RGB)
+            qformat = QImage.Format_Indexed8
 
-        if len(img.shape) == 3:
-            if img.shape[2] == 4:
-                qformat = QImage.Format_RGBA8888
+            if len(img.shape) == 3:
+                if img.shape[2] == 4:
+                    qformat = QImage.Format_RGBA8888
+                else:
+                    qformat = QImage.Format_RGB888
+
+            outImage = QImage(img, img.shape[1], img.shape[0], img.strides[0], qformat)
+            if helper == 'addHelper':
+                self.addHelper.label_3.setPixmap(QPixmap.fromImage(outImage))
+                self.addHelper.label_3.setScaledContents(True)
             else:
-                qformat = QImage.Format_RGB888
-
-        outImage = QImage(img, img.shape[1], img.shape[0], img.strides[0], qformat)
-        if helper == 'addHelper':
-            self.addHelper.label_3.setPixmap(QPixmap.fromImage(outImage))
-            self.addHelper.label_3.setScaledContents(True)
-        else:
-            self.loginHelper.label_3.setPixmap(QPixmap.fromImage(outImage))
-            self.loginHelper.label_3.setScaledContents(True)
+                self.loginHelper.label_3.setPixmap(QPixmap.fromImage(outImage))
+                self.loginHelper.label_3.setScaledContents(True)
+        except:
+            pass
 
     def __startFaceRecord__(self):
         name = self.addHelper.inputName.text()
@@ -746,8 +751,7 @@ class AppWindow(QMainWindow, Ui_MainWindow):
         self.externCm = False
         self.faceRecordNum = 0
         self.minfaceRecordNum = 100
-        # TODO newid=-1
-        self.newId = 4
+        self.newId = -1
 
         # TODO add delete member function
         self.isAlreadySignin = False
@@ -774,17 +778,23 @@ class AppWindow(QMainWindow, Ui_MainWindow):
                 pass
             else:
                 threading.Thread(target=self.__deleteFile__()).start()
+                if self.cap.isOpened():
+                    if self.timer.isActive():
+                        self.timer.stop()
+                    self.cap.release()
 
     def closeEvent(self, event):
         sqlHelper.close()
         event.accept()
 
+    @staticmethod
     def __aboutMe__(self):
         dia = QtWidgets.QDialog()
         win = aboutMe()
         win.setupUi(dia)
 
         dia.exec()
+
 
 class faceRcgLogin(QThread):
     trainingData = './recognizer/trainingData.yml'
@@ -840,7 +850,6 @@ class faceRcgLogin(QThread):
                 # Reference：https://github.com/gdiepen/face-recognition
                 if self.isFaceTrackerEnabled:
 
-                    # 要删除的人脸跟踪器列表初始化
                     fidsToDelete = []
 
                     for fid in faceTrackers.keys():
@@ -874,7 +883,7 @@ class faceRcgLogin(QThread):
                                     self.name = self.result[0][1]
                                     self.memID = self.result[0][0]
                                     self.flag = True
-                                    print('self.memID=',self.memID)
+                                    print('self.memID=', self.memID)
                                 else:
                                     raise Exception
                             except:
@@ -968,4 +977,3 @@ class faceRcgLogin(QThread):
         self.isRunning = False
         self.quit()
         self.wait()
-

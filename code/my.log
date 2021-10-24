@@ -32126,3 +32126,714 @@ src-E:\\workplace\\pycharmWork\\IoTPractice\\IoTPractice\\img\\Snipaste_2021-10-
 10/16/2021 11:39:15 AM - INFO - load welcom page...
 10/16/2021 11:39:15 AM - INFO - load welcom page success
 10/16/2021 11:39:15 AM - INFO - finish application initial
+10/19/2021 11:21:16 AM - INFO - set list item response action
+10/19/2021 11:21:16 AM - INFO - load welcom page...
+10/19/2021 11:21:22 AM - INFO - load welcom page success
+10/19/2021 11:21:22 AM - INFO - finish application initial
+10/19/2021 11:23:38 AM - INFO - begin to train face data
+10/19/2021 11:24:04 AM - DEBUG - face_id：0，confidence：51.26737659909458
+10/19/2021 11:25:30 AM - INFO - set list item response action
+10/19/2021 11:25:30 AM - INFO - load welcom page...
+10/19/2021 11:25:30 AM - INFO - load welcom page success
+10/19/2021 11:25:30 AM - INFO - finish application initial
+10/19/2021 11:27:56 AM - INFO - set list item response action
+10/19/2021 11:27:56 AM - INFO - load welcom page...
+10/19/2021 11:27:56 AM - INFO - load welcom page success
+10/19/2021 11:27:56 AM - INFO - finish application initial
+10/19/2021 11:33:20 AM - INFO - begin to train face data
+10/19/2021 11:34:04 AM - INFO - set list item response action
+10/19/2021 11:34:04 AM - INFO - load welcom page...
+10/19/2021 11:34:04 AM - INFO - load welcom page success
+10/19/2021 11:34:04 AM - INFO - finish application initial
+10/19/2021 11:35:03 AM - INFO - set list item response action
+10/19/2021 11:35:03 AM - INFO - load welcom page...
+10/19/2021 11:35:03 AM - INFO - load welcom page success
+10/19/2021 11:35:03 AM - INFO - finish application initial
+10/19/2021 11:36:06 AM - INFO - begin to train face data
+10/19/2021 11:39:50 AM - INFO - set list item response action
+10/19/2021 11:39:50 AM - INFO - load welcom page...
+10/19/2021 11:39:50 AM - INFO - load welcom page success
+10/19/2021 11:39:50 AM - INFO - finish application initial
+10/19/2021 11:41:09 AM - INFO - begin to train face data
+10/19/2021 11:41:55 AM - DEBUG - face_id：0，confidence：58.33846474330351
+10/19/2021 11:43:56 AM - DEBUG - face_id：0，confidence：46.676224016714
+10/19/2021 11:44:19 AM - INFO - click clothitem
+10/19/2021 11:44:19 AM - INFO - search from cloth...
+10/19/2021 11:44:19 AM - INFO - prepare to show second class classifier
+10/19/2021 11:44:19 AM - INFO - show success
+10/19/2021 11:44:19 AM - INFO - load dynamic web
+10/19/2021 11:44:20 AM - INFO - load successfully
+10/19/2021 11:54:46 AM - INFO - set list item response action
+10/19/2021 11:54:46 AM - INFO - load welcom page...
+10/19/2021 11:54:46 AM - INFO - load welcom page success
+10/19/2021 11:54:46 AM - INFO - finish application initial
+10/19/2021 11:57:43 AM - DEBUG - face_id：0，confidence：61.107031579291885
+10/19/2021 11:57:56 AM - INFO - add file: 
+src-E:\\workplace\\pycharmWork\\IoTPractice\\IoTPractice\\img\\Snipaste_2021-10-11_11-50-47.jpg
+10/19/2021 11:57:56 AM - INFO - dst:E:\workplace\pycharmWork\IoTPractice\IoTPractice\code\web\static\img\cloth\37.jpg
+10/19/2021 11:57:56 AM - INFO - Add picture success
+10/19/2021 11:59:13 AM - INFO - click clothitem
+10/19/2021 11:59:13 AM - INFO - search from cloth...
+10/19/2021 11:59:13 AM - INFO - prepare to show second class classifier
+10/19/2021 11:59:13 AM - INFO - show success
+10/19/2021 11:59:13 AM - INFO - load dynamic web
+10/19/2021 11:59:13 AM - INFO - load successfully
+10/19/2021 11:59:16 AM - INFO - third class click:蓝色
+10/19/2021 11:59:16 AM - INFO - load dynamic web
+10/19/2021 11:59:16 AM - INFO - load successfully
+10/19/2021 11:59:18 AM - INFO - third class click:黄色
+10/19/2021 11:59:18 AM - INFO - load dynamic web
+10/19/2021 11:59:18 AM - INFO - load successfully
+10/19/2021 11:59:19 AM - INFO - third class click:灰色
+10/19/2021 11:59:19 AM - INFO - load dynamic web
+10/19/2021 11:59:19 AM - INFO - load successfully
+10/19/2021 11:59:21 AM - INFO - third class click:粉色
+10/19/2021 11:59:21 AM - INFO - load dynamic web
+10/19/2021 11:59:21 AM - INFO - load successfully
+10/19/2021 11:59:22 AM - INFO - third class click:橙色
+10/19/2021 11:59:22 AM - INFO - load dynamic web
+10/19/2021 11:59:22 AM - INFO - load successfully
+10/19/2021 12:00:28 PM - INFO - set list item response action
+10/19/2021 12:00:28 PM - INFO - load welcom page...
+10/19/2021 12:00:28 PM - INFO - load welcom page success
+10/19/2021 12:00:28 PM - INFO - finish application initial
+10/21/2021 18:56:20 PM - INFO - set list item response action
+10/21/2021 18:56:20 PM - INFO - load welcom page...
+10/21/2021 18:56:28 PM - INFO - load welcom page success
+10/21/2021 18:56:28 PM - INFO - finish application initial
+10/21/2021 18:57:18 PM - INFO - begin to train face data
+10/21/2021 18:57:44 PM - DEBUG - face_id：0，confidence：59.98281181428755
+10/21/2021 18:58:47 PM - DEBUG - face_id：1，confidence：49.637361411582205
+10/21/2021 18:58:47 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:47 PM - DEBUG - face_id：1，confidence：50.49504144361718
+10/21/2021 18:58:47 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:48 PM - DEBUG - face_id：1，confidence：47.82357654930316
+10/21/2021 18:58:48 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:48 PM - DEBUG - face_id：1，confidence：45.36094176097128
+10/21/2021 18:58:48 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:48 PM - DEBUG - face_id：1，confidence：47.926878805656024
+10/21/2021 18:58:48 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:48 PM - DEBUG - face_id：1，confidence：47.12152132668853
+10/21/2021 18:58:48 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:48 PM - DEBUG - face_id：1，confidence：47.12152132668853
+10/21/2021 18:58:48 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:48 PM - DEBUG - face_id：1，confidence：47.17394303577917
+10/21/2021 18:58:48 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:48 PM - DEBUG - face_id：1，confidence：46.712041888927146
+10/21/2021 18:58:48 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:48 PM - DEBUG - face_id：1，confidence：46.243433693575284
+10/21/2021 18:58:48 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:48 PM - DEBUG - face_id：1，confidence：46.31799467761762
+10/21/2021 18:58:48 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:48 PM - DEBUG - face_id：1，confidence：48.63567525012463
+10/21/2021 18:58:48 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:48 PM - DEBUG - face_id：1，confidence：48.63567525012463
+10/21/2021 18:58:48 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:48 PM - DEBUG - face_id：1，confidence：46.88531878584656
+10/21/2021 18:58:48 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:48 PM - DEBUG - face_id：1，confidence：47.69410505657604
+10/21/2021 18:58:48 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:48 PM - DEBUG - face_id：1，confidence：48.043315184301164
+10/21/2021 18:58:48 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:48 PM - DEBUG - face_id：1，confidence：46.776688427434095
+10/21/2021 18:58:48 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:49 PM - DEBUG - face_id：1，confidence：46.839222550455624
+10/21/2021 18:58:49 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:49 PM - DEBUG - face_id：1，confidence：46.839222550455624
+10/21/2021 18:58:49 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:49 PM - DEBUG - face_id：1，confidence：44.53172121864194
+10/21/2021 18:58:49 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:49 PM - DEBUG - face_id：1，confidence：46.7820964240303
+10/21/2021 18:58:49 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:49 PM - DEBUG - face_id：1，confidence：48.074812391054444
+10/21/2021 18:58:49 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:49 PM - DEBUG - face_id：1，confidence：45.731826047497464
+10/21/2021 18:58:49 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:49 PM - DEBUG - face_id：1，confidence：45.731826047497464
+10/21/2021 18:58:49 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:49 PM - DEBUG - face_id：1，confidence：47.975010448291656
+10/21/2021 18:58:49 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:49 PM - DEBUG - face_id：1，confidence：53.12260714286141
+10/21/2021 18:58:49 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:49 PM - DEBUG - face_id：1，confidence：50.54560564018506
+10/21/2021 18:58:49 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:49 PM - DEBUG - face_id：1，confidence：48.97506498010941
+10/21/2021 18:58:49 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:49 PM - DEBUG - face_id：1，confidence：48.007687267398644
+10/21/2021 18:58:49 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:49 PM - DEBUG - face_id：1，confidence：50.18012947853065
+10/21/2021 18:58:49 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:49 PM - DEBUG - face_id：1，confidence：48.02481259401433
+10/21/2021 18:58:49 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:50 PM - DEBUG - face_id：1，confidence：48.54369386173181
+10/21/2021 18:58:50 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:50 PM - DEBUG - face_id：1，confidence：49.076064543281184
+10/21/2021 18:58:50 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:50 PM - DEBUG - face_id：1，confidence：49.31937562414729
+10/21/2021 18:58:50 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:50 PM - DEBUG - face_id：1，confidence：48.690040121233295
+10/21/2021 18:58:50 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:50 PM - DEBUG - face_id：1，confidence：50.578122204459326
+10/21/2021 18:58:50 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:50 PM - DEBUG - face_id：1，confidence：45.58898140919432
+10/21/2021 18:58:50 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:50 PM - DEBUG - face_id：1，confidence：44.97021320643823
+10/21/2021 18:58:50 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:50 PM - DEBUG - face_id：1，confidence：47.92907783337551
+10/21/2021 18:58:50 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:50 PM - DEBUG - face_id：1，confidence：44.901496154017096
+10/21/2021 18:58:50 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:50 PM - DEBUG - face_id：1，confidence：48.07171986716847
+10/21/2021 18:58:50 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:50 PM - DEBUG - face_id：1，confidence：52.04101354213802
+10/21/2021 18:58:50 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:50 PM - DEBUG - face_id：1，confidence：47.54579941256735
+10/21/2021 18:58:50 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:50 PM - DEBUG - face_id：1，confidence：52.678612097564844
+10/21/2021 18:58:50 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:50 PM - DEBUG - face_id：1，confidence：48.11496795855402
+10/21/2021 18:58:50 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:50 PM - DEBUG - face_id：1，confidence：49.80025601402333
+10/21/2021 18:58:50 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:51 PM - DEBUG - face_id：1，confidence：52.692919441717265
+10/21/2021 18:58:51 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:51 PM - DEBUG - face_id：1，confidence：46.82607199342949
+10/21/2021 18:58:51 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:51 PM - DEBUG - face_id：1，confidence：45.48526034844792
+10/21/2021 18:58:51 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:51 PM - DEBUG - face_id：1，confidence：49.83181824560873
+10/21/2021 18:58:51 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:51 PM - DEBUG - face_id：1，confidence：47.67793156724613
+10/21/2021 18:58:51 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:51 PM - DEBUG - face_id：1，confidence：47.46314411170692
+10/21/2021 18:58:51 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:51 PM - DEBUG - face_id：1，confidence：50.776490978068225
+10/21/2021 18:58:51 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:51 PM - DEBUG - face_id：1，confidence：48.064754281796134
+10/21/2021 18:58:51 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:51 PM - DEBUG - face_id：1，confidence：49.55278353780753
+10/21/2021 18:58:51 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:51 PM - DEBUG - face_id：1，confidence：49.85155367756215
+10/21/2021 18:58:51 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:51 PM - DEBUG - face_id：1，confidence：47.38944622674098
+10/21/2021 18:58:51 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:51 PM - DEBUG - face_id：1，confidence：49.26656634715558
+10/21/2021 18:58:51 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:51 PM - DEBUG - face_id：1，confidence：48.3248653823704
+10/21/2021 18:58:51 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:51 PM - DEBUG - face_id：1，confidence：50.6893085201628
+10/21/2021 18:58:51 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:51 PM - DEBUG - face_id：1，confidence：47.47338847280545
+10/21/2021 18:58:51 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:51 PM - DEBUG - face_id：1，confidence：51.11519569437284
+10/21/2021 18:58:51 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:51 PM - DEBUG - face_id：1，confidence：48.88693138417075
+10/21/2021 18:58:51 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:52 PM - DEBUG - face_id：1，confidence：50.560191162602045
+10/21/2021 18:58:52 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:52 PM - DEBUG - face_id：1，confidence：51.54166377717187
+10/21/2021 18:58:52 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:52 PM - DEBUG - face_id：1，confidence：48.84201965636033
+10/21/2021 18:58:52 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:52 PM - DEBUG - face_id：1，confidence：45.58096871262306
+10/21/2021 18:58:52 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:52 PM - DEBUG - face_id：1，confidence：46.97562847490877
+10/21/2021 18:58:52 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:52 PM - DEBUG - face_id：1，confidence：45.14421282049581
+10/21/2021 18:58:52 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:52 PM - DEBUG - face_id：1，confidence：45.53033678683859
+10/21/2021 18:58:52 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:52 PM - DEBUG - face_id：1，confidence：45.39346970427932
+10/21/2021 18:58:52 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:52 PM - DEBUG - face_id：1，confidence：44.342819640481146
+10/21/2021 18:58:52 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:52 PM - DEBUG - face_id：1，confidence：45.641609935969335
+10/21/2021 18:58:52 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:52 PM - DEBUG - face_id：1，confidence：49.36927336832076
+10/21/2021 18:58:52 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:52 PM - DEBUG - face_id：1，confidence：47.020722826233346
+10/21/2021 18:58:52 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:52 PM - DEBUG - face_id：1，confidence：45.94321240016317
+10/21/2021 18:58:52 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:52 PM - DEBUG - face_id：1，confidence：44.94865314964726
+10/21/2021 18:58:52 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:53 PM - DEBUG - face_id：1，confidence：43.9833255351115
+10/21/2021 18:58:53 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:53 PM - DEBUG - face_id：1，confidence：47.11772746095714
+10/21/2021 18:58:53 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:53 PM - DEBUG - face_id：1，confidence：45.40465263846311
+10/21/2021 18:58:53 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:53 PM - DEBUG - face_id：1，confidence：43.93511667058467
+10/21/2021 18:58:53 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:53 PM - DEBUG - face_id：1，confidence：43.377184055350426
+10/21/2021 18:58:53 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:53 PM - DEBUG - face_id：1，confidence：44.846098817496596
+10/21/2021 18:58:53 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:53 PM - DEBUG - face_id：1，confidence：44.76169631452148
+10/21/2021 18:58:53 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:53 PM - DEBUG - face_id：1，confidence：43.37723326887254
+10/21/2021 18:58:53 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:53 PM - DEBUG - face_id：1，confidence：44.784097538812354
+10/21/2021 18:58:53 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:53 PM - DEBUG - face_id：1，confidence：44.56462482333143
+10/21/2021 18:58:53 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:53 PM - DEBUG - face_id：1，confidence：47.88993568498749
+10/21/2021 18:58:53 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:53 PM - DEBUG - face_id：1，confidence：47.84086166596465
+10/21/2021 18:58:53 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:53 PM - DEBUG - face_id：1，confidence：45.908627142205404
+10/21/2021 18:58:53 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:53 PM - DEBUG - face_id：1，confidence：45.50612893824146
+10/21/2021 18:58:53 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:54 PM - DEBUG - face_id：1，confidence：47.28620349457763
+10/21/2021 18:58:54 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:54 PM - DEBUG - face_id：1，confidence：47.70800559469122
+10/21/2021 18:58:54 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:54 PM - DEBUG - face_id：1，confidence：47.190472417909746
+10/21/2021 18:58:54 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:54 PM - DEBUG - face_id：1，confidence：46.65130255957919
+10/21/2021 18:58:54 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:54 PM - DEBUG - face_id：1，confidence：47.276869938690446
+10/21/2021 18:58:54 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:54 PM - DEBUG - face_id：1，confidence：47.01019894775455
+10/21/2021 18:58:54 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:54 PM - DEBUG - face_id：1，confidence：46.43101080855283
+10/21/2021 18:58:54 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:54 PM - DEBUG - face_id：1，confidence：47.73218403822214
+10/21/2021 18:58:54 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:54 PM - DEBUG - face_id：1，confidence：47.30320668866552
+10/21/2021 18:58:54 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:54 PM - DEBUG - face_id：1，confidence：47.3379080722581
+10/21/2021 18:58:54 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:54 PM - DEBUG - face_id：1，confidence：46.30563806806722
+10/21/2021 18:58:54 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:54 PM - DEBUG - face_id：1，confidence：47.51585622734286
+10/21/2021 18:58:54 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:54 PM - DEBUG - face_id：1，confidence：45.97523216484653
+10/21/2021 18:58:54 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:54 PM - DEBUG - face_id：1，confidence：46.17402680578131
+10/21/2021 18:58:54 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:54 PM - DEBUG - face_id：1，confidence：47.44266533401618
+10/21/2021 18:58:54 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:54 PM - DEBUG - face_id：1，confidence：46.494409651644716
+10/21/2021 18:58:54 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:55 PM - DEBUG - face_id：1，confidence：45.71042731758936
+10/21/2021 18:58:55 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:55 PM - DEBUG - face_id：1，confidence：45.71042731758936
+10/21/2021 18:58:55 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:55 PM - DEBUG - face_id：1，confidence：49.601812074113106
+10/21/2021 18:58:55 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:55 PM - DEBUG - face_id：1，confidence：47.94947049461877
+10/21/2021 18:58:55 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:55 PM - DEBUG - face_id：1，confidence：49.76106594901455
+10/21/2021 18:58:55 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:55 PM - DEBUG - face_id：1，confidence：47.599795969396425
+10/21/2021 18:58:55 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:55 PM - DEBUG - face_id：1，confidence：47.17335638049139
+10/21/2021 18:58:55 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:55 PM - DEBUG - face_id：1，confidence：45.735262314856364
+10/21/2021 18:58:55 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:55 PM - DEBUG - face_id：1，confidence：46.07146814844398
+10/21/2021 18:58:55 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:55 PM - DEBUG - face_id：1，confidence：48.93564146895344
+10/21/2021 18:58:55 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:55 PM - DEBUG - face_id：1，confidence：48.316831043102134
+10/21/2021 18:58:55 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:55 PM - DEBUG - face_id：1，confidence：47.92794883774354
+10/21/2021 18:58:55 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:55 PM - DEBUG - face_id：1，confidence：47.01707416307633
+10/21/2021 18:58:55 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:55 PM - DEBUG - face_id：1，confidence：48.3101968990213
+10/21/2021 18:58:55 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:55 PM - DEBUG - face_id：1，confidence：48.3101968990213
+10/21/2021 18:58:55 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:55 PM - DEBUG - face_id：1，confidence：46.754835226070746
+10/21/2021 18:58:55 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:56 PM - DEBUG - face_id：1，confidence：48.37569928674699
+10/21/2021 18:58:56 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:56 PM - DEBUG - face_id：1，confidence：47.37877020266112
+10/21/2021 18:58:56 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:56 PM - DEBUG - face_id：1，confidence：48.21358591404358
+10/21/2021 18:58:56 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:56 PM - DEBUG - face_id：1，confidence：48.918059419223994
+10/21/2021 18:58:56 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:56 PM - DEBUG - face_id：1，confidence：47.86611129886857
+10/21/2021 18:58:56 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:56 PM - DEBUG - face_id：1，confidence：46.90479472360138
+10/21/2021 18:58:56 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:56 PM - DEBUG - face_id：1，confidence：48.19700479078748
+10/21/2021 18:58:56 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:56 PM - DEBUG - face_id：1，confidence：47.70997010272576
+10/21/2021 18:58:56 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:56 PM - DEBUG - face_id：1，confidence：47.70997010272576
+10/21/2021 18:58:56 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:56 PM - DEBUG - face_id：1，confidence：48.70303110780462
+10/21/2021 18:58:56 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:56 PM - DEBUG - face_id：1，confidence：49.883605602704414
+10/21/2021 18:58:56 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:56 PM - DEBUG - face_id：1，confidence：49.25158412764505
+10/21/2021 18:58:56 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:56 PM - DEBUG - face_id：1，confidence：47.29971940334463
+10/21/2021 18:58:56 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:56 PM - DEBUG - face_id：1，confidence：46.26461160471946
+10/21/2021 18:58:56 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:56 PM - DEBUG - face_id：1，confidence：47.230164153337974
+10/21/2021 18:58:56 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:56 PM - DEBUG - face_id：1，confidence：48.729577298880564
+10/21/2021 18:58:56 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:57 PM - DEBUG - face_id：1，confidence：47.488521551362666
+10/21/2021 18:58:57 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:57 PM - DEBUG - face_id：1，confidence：48.05613135494879
+10/21/2021 18:58:57 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:57 PM - DEBUG - face_id：1，confidence：48.16075239947178
+10/21/2021 18:58:57 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:57 PM - DEBUG - face_id：1，confidence：49.360698361063925
+10/21/2021 18:58:57 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:57 PM - DEBUG - face_id：1，confidence：49.360698361063925
+10/21/2021 18:58:57 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:57 PM - DEBUG - face_id：1，confidence：51.02457202635095
+10/21/2021 18:58:57 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:57 PM - DEBUG - face_id：1，confidence：50.058646045696236
+10/21/2021 18:58:57 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:57 PM - DEBUG - face_id：1，confidence：50.28731613663633
+10/21/2021 18:58:57 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:57 PM - DEBUG - face_id：1，confidence：49.675124600441166
+10/21/2021 18:58:57 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:57 PM - DEBUG - face_id：1，confidence：48.04870417755958
+10/21/2021 18:58:57 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:57 PM - DEBUG - face_id：1，confidence：49.861652124649474
+10/21/2021 18:58:57 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:57 PM - DEBUG - face_id：1，confidence：48.95606768622195
+10/21/2021 18:58:57 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:57 PM - DEBUG - face_id：1，confidence：48.95606768622195
+10/21/2021 18:58:57 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:57 PM - DEBUG - face_id：1，confidence：49.51298324029735
+10/21/2021 18:58:57 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:57 PM - DEBUG - face_id：1，confidence：48.77029284038345
+10/21/2021 18:58:57 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:57 PM - DEBUG - face_id：1，confidence：48.0604890262115
+10/21/2021 18:58:57 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:57 PM - DEBUG - face_id：1，confidence：49.03563873188894
+10/21/2021 18:58:57 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:57 PM - DEBUG - face_id：1，confidence：48.81327518617929
+10/21/2021 18:58:57 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:58 PM - DEBUG - face_id：1，confidence：48.81327518617929
+10/21/2021 18:58:58 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:58 PM - DEBUG - face_id：1，confidence：51.456143469274664
+10/21/2021 18:58:58 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:58 PM - DEBUG - face_id：1，confidence：50.4872524108157
+10/21/2021 18:58:58 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:58 PM - DEBUG - face_id：1，confidence：51.319280394818065
+10/21/2021 18:58:58 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:58 PM - DEBUG - face_id：1，confidence：49.180978256956514
+10/21/2021 18:58:58 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:58 PM - DEBUG - face_id：1，confidence：53.03020065392736
+10/21/2021 18:58:58 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:58 PM - DEBUG - face_id：1，confidence：50.000240970824095
+10/21/2021 18:58:58 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:58 PM - DEBUG - face_id：1，confidence：50.000240970824095
+10/21/2021 18:58:58 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:58 PM - DEBUG - face_id：1，confidence：48.837920416721246
+10/21/2021 18:58:58 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:58 PM - DEBUG - face_id：1，confidence：51.03765944766014
+10/21/2021 18:58:58 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:58 PM - DEBUG - face_id：1，confidence：52.05785626297319
+10/21/2021 18:58:58 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:58 PM - DEBUG - face_id：1，confidence：51.32993348738746
+10/21/2021 18:58:58 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:58 PM - DEBUG - face_id：1，confidence：50.651327660903455
+10/21/2021 18:58:58 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:58 PM - DEBUG - face_id：1，confidence：51.730634344835686
+10/21/2021 18:58:58 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:58 PM - DEBUG - face_id：1，confidence：51.1459156360098
+10/21/2021 18:58:58 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:58 PM - DEBUG - face_id：1，confidence：50.57722638394455
+10/21/2021 18:58:58 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:58 PM - DEBUG - face_id：1，confidence：50.557122374199686
+10/21/2021 18:58:58 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:59 PM - DEBUG - face_id：1，confidence：50.95354332102326
+10/21/2021 18:58:59 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:59 PM - DEBUG - face_id：1，confidence：50.57011715037522
+10/21/2021 18:58:59 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:59 PM - DEBUG - face_id：1，confidence：51.041116163617914
+10/21/2021 18:58:59 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:59 PM - DEBUG - face_id：1，confidence：49.50962160408997
+10/21/2021 18:58:59 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:59 PM - DEBUG - face_id：1，confidence：49.894687689626615
+10/21/2021 18:58:59 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:59 PM - DEBUG - face_id：1，confidence：49.59599036867669
+10/21/2021 18:58:59 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:59 PM - DEBUG - face_id：1，confidence：47.558559381141
+10/21/2021 18:58:59 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:59 PM - DEBUG - face_id：1，confidence：47.79761618625753
+10/21/2021 18:58:59 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:59 PM - DEBUG - face_id：1，confidence：46.847234045917524
+10/21/2021 18:58:59 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:59 PM - DEBUG - face_id：1，confidence：47.36729832145279
+10/21/2021 18:58:59 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:59 PM - DEBUG - face_id：1，confidence：48.21604474697831
+10/21/2021 18:58:59 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:59 PM - DEBUG - face_id：1，confidence：47.89114711293939
+10/21/2021 18:58:59 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:59 PM - DEBUG - face_id：1，confidence：47.66274612226774
+10/21/2021 18:58:59 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:59 PM - DEBUG - face_id：1，confidence：47.52918032395781
+10/21/2021 18:58:59 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:59 PM - DEBUG - face_id：1，confidence：49.69924840669604
+10/21/2021 18:58:59 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:59 PM - DEBUG - face_id：1，confidence：50.20251518319088
+10/21/2021 18:58:59 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:58:59 PM - DEBUG - face_id：1，confidence：48.35480530402975
+10/21/2021 18:58:59 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:59:00 PM - DEBUG - face_id：1，confidence：48.82773487237593
+10/21/2021 18:59:00 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:59:00 PM - DEBUG - face_id：1，confidence：49.27703241081102
+10/21/2021 18:59:00 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:59:00 PM - DEBUG - face_id：1，confidence：50.007891097675085
+10/21/2021 18:59:00 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:59:00 PM - DEBUG - face_id：1，confidence：49.90830258149702
+10/21/2021 18:59:00 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:59:00 PM - DEBUG - face_id：1，confidence：47.63903369686397
+10/21/2021 18:59:00 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:59:00 PM - DEBUG - face_id：1，confidence：46.61422194359162
+10/21/2021 18:59:00 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:59:00 PM - DEBUG - face_id：1，confidence：46.91292361455635
+10/21/2021 18:59:00 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:59:00 PM - DEBUG - face_id：1，confidence：47.79421274979471
+10/21/2021 18:59:00 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:59:00 PM - DEBUG - face_id：1，confidence：45.19149833094293
+10/21/2021 18:59:00 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:59:00 PM - DEBUG - face_id：1，confidence：46.05604799911614
+10/21/2021 18:59:00 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:59:00 PM - DEBUG - face_id：1，confidence：46.83311675843726
+10/21/2021 18:59:00 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:59:00 PM - DEBUG - face_id：1，confidence：46.57581295858806
+10/21/2021 18:59:00 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:59:00 PM - DEBUG - face_id：1，confidence：49.52844657734995
+10/21/2021 18:59:00 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:59:00 PM - DEBUG - face_id：1，confidence：48.0730910295806
+10/21/2021 18:59:00 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:59:00 PM - DEBUG - face_id：1，confidence：45.06833941220095
+10/21/2021 18:59:00 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:59:00 PM - DEBUG - face_id：1，confidence：45.43729547556378
+10/21/2021 18:59:00 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:59:00 PM - DEBUG - face_id：1，confidence：45.832944297715
+10/21/2021 18:59:00 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:59:01 PM - DEBUG - face_id：1，confidence：45.28455725544457
+10/21/2021 18:59:01 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:59:01 PM - DEBUG - face_id：1，confidence：46.70112770298977
+10/21/2021 18:59:01 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/21/2021 18:59:53 PM - DEBUG - face_id：0，confidence：45.22332054667468
+10/21/2021 19:02:21 PM - INFO - set list item response action
+10/21/2021 19:02:21 PM - INFO - load welcom page...
+10/21/2021 19:02:21 PM - INFO - load welcom page success
+10/21/2021 19:02:21 PM - INFO - finish application initial
+10/21/2021 19:10:22 PM - INFO - set list item response action
+10/21/2021 19:10:22 PM - INFO - load welcom page...
+10/21/2021 19:10:24 PM - INFO - load welcom page success
+10/21/2021 19:10:24 PM - INFO - finish application initial
+10/21/2021 19:11:37 PM - INFO - set list item response action
+10/21/2021 19:11:37 PM - INFO - load welcom page...
+10/21/2021 19:11:37 PM - INFO - load welcom page success
+10/21/2021 19:11:37 PM - INFO - finish application initial
+10/21/2021 19:14:18 PM - INFO - set list item response action
+10/21/2021 19:14:18 PM - INFO - load welcom page...
+10/21/2021 19:14:18 PM - INFO - load welcom page success
+10/21/2021 19:14:18 PM - INFO - finish application initial
+10/21/2021 19:17:05 PM - INFO - set list item response action
+10/21/2021 19:17:05 PM - INFO - load welcom page...
+10/21/2021 19:17:05 PM - INFO - load welcom page success
+10/21/2021 19:17:05 PM - INFO - finish application initial
+10/21/2021 19:22:40 PM - INFO - set list item response action
+10/21/2021 19:24:10 PM - INFO - set list item response action
+10/21/2021 19:24:10 PM - INFO - load welcom page...
+10/21/2021 19:24:10 PM - INFO - load welcom page success
+10/21/2021 19:24:10 PM - INFO - finish application initial
+10/21/2021 19:25:32 PM - INFO - set list item response action
+10/21/2021 19:25:32 PM - INFO - load welcom page...
+10/21/2021 19:25:32 PM - INFO - load welcom page success
+10/21/2021 19:25:32 PM - INFO - finish application initial
+10/21/2021 19:29:35 PM - INFO - begin to train face data
+10/21/2021 19:29:57 PM - DEBUG - face_id：0，confidence：47.07932443056361
+10/21/2021 19:32:40 PM - INFO - third class click:蓝色
+10/21/2021 19:32:48 PM - INFO - third class click:黄色
+10/21/2021 19:32:50 PM - INFO - third class click:红色
+10/21/2021 19:32:51 PM - INFO - click clothitem
+10/21/2021 19:32:51 PM - INFO - search from cloth...
+10/21/2021 19:32:51 PM - INFO - prepare to show second class classifier
+10/21/2021 19:32:51 PM - INFO - show success
+10/21/2021 19:32:51 PM - INFO - load dynamic web
+10/21/2021 19:32:51 PM - INFO - load successfully
+10/21/2021 19:32:52 PM - INFO - third class click:红色
+10/21/2021 19:32:52 PM - INFO - load dynamic web
+10/21/2021 19:32:52 PM - INFO - load successfully
+10/21/2021 19:32:59 PM - INFO - third class click:蓝色
+10/21/2021 19:32:59 PM - INFO - load dynamic web
+10/21/2021 19:32:59 PM - INFO - load successfully
+10/21/2021 19:33:22 PM - INFO - set list item response action
+10/21/2021 19:33:22 PM - INFO - load welcom page...
+10/21/2021 19:33:22 PM - INFO - load welcom page success
+10/21/2021 19:33:22 PM - INFO - finish application initial
+10/21/2021 19:33:40 PM - DEBUG - face_id：0，confidence：51.96140260492513
+10/21/2021 19:33:50 PM - INFO - third class click:红色
+10/21/2021 19:35:03 PM - INFO - set list item response action
+10/21/2021 19:35:03 PM - INFO - load welcom page...
+10/21/2021 19:35:03 PM - INFO - load welcom page success
+10/21/2021 19:35:03 PM - INFO - finish application initial
+10/21/2021 19:35:13 PM - DEBUG - face_id：0，confidence：50.26690237453838
+10/21/2021 19:35:16 PM - INFO - third class click:红色
+10/21/2021 19:35:16 PM - INFO - load dynamic web
+10/21/2021 19:35:16 PM - INFO - load successfully
+10/21/2021 19:35:18 PM - INFO - third class click:黄色
+10/21/2021 19:35:18 PM - INFO - load dynamic web
+10/21/2021 19:35:18 PM - INFO - load successfully
+10/21/2021 19:35:20 PM - INFO - ------------------------------
+10/21/2021 19:35:20 PM - INFO - click clothitem
+10/21/2021 19:35:23 PM - INFO - third class click:LEDIN
+10/21/2021 19:35:23 PM - INFO - load dynamic web
+10/21/2021 19:35:23 PM - INFO - load successfully
+10/21/2021 19:35:30 PM - INFO - click bookitem
+10/21/2021 19:35:30 PM - INFO - search from book...
+10/21/2021 19:35:30 PM - INFO - prepare to show second class classifier
+10/21/2021 19:35:30 PM - INFO - show success
+10/21/2021 19:35:30 PM - INFO - load dynamic web
+10/21/2021 19:35:30 PM - INFO - load successfully
+10/21/2021 19:35:33 PM - INFO - third class click:哈珀·李
+10/21/2021 19:35:33 PM - INFO - load dynamic web
+10/21/2021 19:35:33 PM - INFO - load successfully
+10/21/2021 19:35:35 PM - INFO - third class click:萨默塞特·毛姆
+10/21/2021 19:35:35 PM - INFO - load dynamic web
+10/21/2021 19:35:35 PM - INFO - load successfully
+10/21/2021 19:35:36 PM - INFO - third class click:路易莎·梅·奥尔科特
+10/21/2021 19:35:36 PM - INFO - load dynamic web
+10/21/2021 19:35:36 PM - INFO - load successfully
+10/21/2021 19:35:37 PM - INFO - third class click:弗朗西斯·霍奇森·班纳特
+10/21/2021 19:35:37 PM - INFO - load dynamic web
+10/21/2021 19:35:37 PM - INFO - load successfully
+10/21/2021 19:35:38 PM - INFO - third class click:莫言
+10/21/2021 19:35:38 PM - INFO - load dynamic web
+10/21/2021 19:35:38 PM - INFO - load successfully
+10/21/2021 19:35:39 PM - INFO - third class click:安托万·德·圣埃克苏佩里
+10/21/2021 19:35:39 PM - INFO - load dynamic web
+10/21/2021 19:35:39 PM - INFO - load successfully
+10/21/2021 19:35:40 PM - INFO - click bookitem
+10/21/2021 19:35:40 PM - INFO - search from book...
+10/21/2021 19:35:40 PM - INFO - prepare to show second class classifier
+10/21/2021 19:35:40 PM - INFO - show success
+10/21/2021 19:35:40 PM - INFO - load dynamic web
+10/21/2021 19:35:40 PM - INFO - load successfully
+10/21/2021 19:35:44 PM - INFO - third class click:东野圭吾
+10/21/2021 19:35:44 PM - INFO - load dynamic web
+10/21/2021 19:35:44 PM - INFO - load successfully
+10/22/2021 12:17:01 PM - INFO - set list item response action
+10/22/2021 12:17:01 PM - INFO - load welcom page...
+10/22/2021 12:17:10 PM - INFO - load welcom page success
+10/22/2021 12:17:10 PM - INFO - finish application initial
+10/22/2021 12:17:32 PM - DEBUG - face_id：0，confidence：60.776570516482785
+10/22/2021 12:21:48 PM - INFO - set list item response action
+10/22/2021 12:21:48 PM - INFO - load welcom page...
+10/22/2021 12:21:48 PM - INFO - load welcom page success
+10/22/2021 12:21:48 PM - INFO - finish application initial
+10/22/2021 12:22:20 PM - DEBUG - face_id：0，confidence：42.39029395806849
+10/22/2021 12:22:24 PM - INFO - ------------------------------
+10/22/2021 12:22:25 PM - INFO - click clothitem
+10/22/2021 12:22:27 PM - INFO - third class click:红色
+10/22/2021 12:22:27 PM - INFO - load dynamic web
+10/22/2021 12:22:27 PM - INFO - load successfully
+10/22/2021 12:22:29 PM - INFO - third class click:绿色
+10/22/2021 12:22:29 PM - INFO - load dynamic web
+10/22/2021 12:22:29 PM - INFO - load successfully
+10/22/2021 12:24:25 PM - INFO - click bookitem
+10/22/2021 12:24:25 PM - INFO - search from book...
+10/22/2021 12:24:25 PM - INFO - prepare to show second class classifier
+10/22/2021 12:24:25 PM - INFO - show success
+10/22/2021 12:24:25 PM - INFO - load dynamic web
+10/22/2021 12:24:25 PM - INFO - load successfully
+10/22/2021 12:24:26 PM - INFO - third class click:莫言
+10/22/2021 12:24:26 PM - INFO - load dynamic web
+10/22/2021 12:24:26 PM - INFO - load successfully
+10/22/2021 12:24:36 PM - DEBUG - face_id：0，confidence：62.146508292603976
+10/22/2021 12:24:46 PM - INFO - third class click:莫言
+10/22/2021 12:24:46 PM - INFO - load dynamic web
+10/22/2021 12:24:46 PM - INFO - load successfully
+10/22/2021 12:24:54 PM - INFO - click flavoringitem
+10/22/2021 12:24:54 PM - INFO - search from flavoring...
+10/22/2021 12:24:54 PM - INFO - prepare to show second class classifier
+10/22/2021 12:24:54 PM - INFO - show success
+10/22/2021 12:24:54 PM - INFO - load dynamic web
+10/22/2021 12:24:54 PM - INFO - load successfully
+10/22/2021 12:24:57 PM - INFO - third class click:双晶
+10/22/2021 12:24:57 PM - INFO - load dynamic web
+10/22/2021 12:24:57 PM - INFO - load successfully
+10/22/2021 13:20:42 PM - INFO - set list item response action
+10/22/2021 13:20:42 PM - INFO - load welcom page...
+10/22/2021 13:20:45 PM - INFO - load welcom page success
+10/22/2021 13:20:45 PM - INFO - finish application initial
+10/22/2021 13:21:42 PM - INFO - Serial initial
+10/22/2021 13:21:42 PM - INFO - prot:COM3/bandrate:11520/timex:2
+10/22/2021 13:21:42 PM - INFO - initial failed
+10/22/2021 15:00:34 PM - DEBUG - face_id：1，confidence：56.400324074633446
+10/22/2021 15:00:34 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/22/2021 15:00:35 PM - DEBUG - face_id：1，confidence：53.98754735197842
+10/22/2021 15:00:35 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/22/2021 15:00:35 PM - DEBUG - face_id：1，confidence：54.54656797200252
+10/22/2021 15:00:35 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/22/2021 15:00:35 PM - DEBUG - face_id：1，confidence：53.204416051140896
+10/22/2021 15:00:35 PM - ERROR - 读取数据库异常，系统无法获取Face ID为1的身份信息
+10/22/2021 15:00:35 PM - DEBUG - face_id：0，confidence：54.37199274848
+10/22/2021 15:00:39 PM - INFO - click clothitem
+10/22/2021 15:00:39 PM - INFO - search from cloth...
+10/22/2021 15:00:39 PM - INFO - prepare to show second class classifier
+10/22/2021 15:00:39 PM - INFO - show success
+10/22/2021 15:00:39 PM - INFO - load dynamic web
+10/22/2021 15:00:39 PM - INFO - load successfully
+10/22/2021 15:00:42 PM - INFO - click flavoringitem
+10/22/2021 15:00:42 PM - INFO - search from flavoring...
+10/22/2021 15:00:42 PM - INFO - prepare to show second class classifier
+10/22/2021 15:00:42 PM - INFO - show success
+10/22/2021 15:00:42 PM - INFO - load dynamic web
+10/22/2021 15:00:42 PM - INFO - load successfully
+10/22/2021 15:00:45 PM - INFO - click bookitem
+10/22/2021 15:00:45 PM - INFO - search from book...
+10/22/2021 15:00:45 PM - INFO - prepare to show second class classifier
+10/22/2021 15:00:45 PM - INFO - show success
+10/22/2021 15:00:45 PM - INFO - load dynamic web
+10/22/2021 15:00:45 PM - INFO - load successfully
+10/22/2021 15:00:48 PM - INFO - third class click:哈珀·李
+10/22/2021 15:00:48 PM - INFO - load dynamic web
+10/22/2021 15:00:48 PM - INFO - load successfully
+10/22/2021 15:00:49 PM - INFO - third class click:萨默塞特·毛姆
+10/22/2021 15:00:49 PM - INFO - load dynamic web
+10/22/2021 15:00:49 PM - INFO - load successfully
+10/22/2021 15:00:51 PM - INFO - third class click:路易莎·梅·奥尔科特
+10/22/2021 15:00:51 PM - INFO - load dynamic web
+10/22/2021 15:00:51 PM - INFO - load successfully
+10/22/2021 15:00:52 PM - INFO - third class click:弗朗西斯·霍奇森·班纳特
+10/22/2021 15:00:52 PM - INFO - load dynamic web
+10/22/2021 15:00:52 PM - INFO - load successfully
+10/22/2021 15:00:54 PM - INFO - third class click:莫言
+10/22/2021 15:00:54 PM - INFO - load dynamic web
+10/22/2021 15:00:54 PM - INFO - load successfully
+10/22/2021 15:00:56 PM - INFO - third class click:鲁迅
+10/22/2021 15:00:56 PM - INFO - load dynamic web
+10/22/2021 15:00:56 PM - INFO - load successfully
+10/22/2021 15:16:01 PM - INFO - set list item response action
+10/22/2021 15:16:01 PM - INFO - load welcom page...
+10/22/2021 15:16:01 PM - INFO - load welcom page success
+10/22/2021 15:16:01 PM - INFO - finish application initial
+10/22/2021 15:19:23 PM - DEBUG - face_id：0，confidence：46.12587984459343
+10/22/2021 15:19:36 PM - INFO - click clothitem
+10/22/2021 15:19:36 PM - INFO - search from cloth...
+10/22/2021 15:19:36 PM - INFO - prepare to show second class classifier
+10/22/2021 15:19:36 PM - INFO - show success
+10/22/2021 15:19:36 PM - INFO - load dynamic web
+10/22/2021 15:19:36 PM - INFO - load successfully
+10/22/2021 15:19:39 PM - INFO - third class click:黄色
+10/22/2021 15:19:39 PM - INFO - load dynamic web
+10/22/2021 15:19:39 PM - INFO - load successfully
+10/22/2021 15:19:40 PM - INFO - click flavoringitem
+10/22/2021 15:19:40 PM - INFO - search from flavoring...
+10/22/2021 15:19:40 PM - INFO - prepare to show second class classifier
+10/22/2021 15:19:40 PM - INFO - show success
+10/22/2021 15:19:40 PM - INFO - load dynamic web
+10/22/2021 15:19:40 PM - INFO - load successfully
